@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
     public float speed = 10.0f;
     public float jumpForce;
 
@@ -44,10 +43,11 @@ public class PlayerController : MonoBehaviour {
         float xTranslation = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(xTranslation * speed, rb.velocity.y);
 
-        // flipping sprite
+        // flips sprite if moving the other direction
         if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
             Flip();
 
+        // checks if player is touching the ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
     }
 
