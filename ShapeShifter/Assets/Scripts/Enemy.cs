@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : Character {
 
     private IEnemyState currentState;
-    
+    public GameObject Target { get; set; }
+
 	// Use this for initialization
 	public override void Start () {
         Debug.Log("Enemy start");
@@ -14,11 +15,23 @@ public class Enemy : Character {
         maxHealth = 100;
         currentHealth = maxHealth;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         currentState.Execute();
+        LookAtTarget();
 	}
+
+    private void LookAtTarget()
+    {
+        if(Target != null) {
+            float xDirection = Target.transform.position.x - transform.position.x;
+
+            if ((xDirection < 0 && facingRight) || (xDirection > 0 && !facingRight)) {
+                ChangeDirection();
+            }
+        }
+    }
 
     public void ChangeState(IEnemyState newState) {
         if(currentState != null) {
@@ -37,5 +50,10 @@ public class Enemy : Character {
     public Vector2 GetDirection()
     {
         return facingRight ? Vector2.right : Vector2.left;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        currentState.OnTriggerEnter(other);
     }
 }

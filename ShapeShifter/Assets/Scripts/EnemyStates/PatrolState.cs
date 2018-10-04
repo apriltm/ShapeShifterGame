@@ -8,17 +8,23 @@ public class PatrolState : IEnemyState
 
     private float patrolTimer;
     private float patrolDuration = 20;
+    private float directionDuration = 2; // Time until enemy turns around
 
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;
+        Debug.Log("Knight Patrolling");
     }
 
     public void Execute()
     {
-        Debug.Log("Patrolling");
         Patrol();
         enemy.Move();
+
+        if(enemy.Target != null)
+        {
+            enemy.ChangeState(new AttackState());
+        }
     }
 
     public void Exit()
