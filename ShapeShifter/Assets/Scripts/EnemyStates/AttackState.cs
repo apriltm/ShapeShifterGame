@@ -12,7 +12,6 @@ public class AttackState : IEnemyState
 
     public void Enter(Enemy enemy)
     {
-        Debug.Log("Knight Attacking");
         this.enemy = enemy;
     }
 
@@ -49,6 +48,7 @@ public class AttackState : IEnemyState
         }
         if (canAttack)
         {
+            Debug.Log("Knight Attacking");
             canAttack = false;
             enemy.MyAnimator.SetTrigger("Attack");
         }

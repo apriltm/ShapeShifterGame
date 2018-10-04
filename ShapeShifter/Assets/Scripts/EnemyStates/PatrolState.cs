@@ -6,9 +6,10 @@ public class PatrolState : IEnemyState
 {
     private Enemy enemy;
 
-    private float patrolTimer;
+    private float patrolTimer = 0;
     private float patrolDuration = 20;
-    private float directionDuration = 2; // Time until enemy turns around
+
+    private float collideTimer = 0;
 
     public void Enter(Enemy enemy)
     {
@@ -18,7 +19,6 @@ public class PatrolState : IEnemyState
 
     public void Execute()
     {
-        Debug.Log("Patrolling");
         Patrol();
         enemy.Move();
 
@@ -35,15 +35,19 @@ public class PatrolState : IEnemyState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        Debug.Log("Patrol Colliding");
-        enemy.ChangeDirection();
+        if (collideTimer > 1)
+        {
+            Debug.Log("Patrol Colliding");
+            enemy.ChangeDirection();
+            collideTimer = 0;
+        }
         
     }
 
     void Patrol()
     {
         patrolTimer += Time.deltaTime;
-
+        collideTimer += Time.deltaTime;
         if (patrolTimer >= patrolDuration)
         {
             enemy.ChangeState(new IdleState());
