@@ -25,20 +25,26 @@ public class PlayerController : MonoBehaviour {
     private int extraJumps;
     public int extraJumpsValue;
 
+	private bool attack;
+
 	// Use this for initialization
 	void Start () {
+		attack = false;
 		PlayerSelect = 1;
 		Main = GameObject.Find ("Main");
 		Knight = GameObject.Find ("Knight_P");
 		animator.SetBool ("isJumping", false);
+		//animator.SetBool ("isAttacking", false);
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
 	}
+
 
     // Update is called once per frame
     private void Update() {
 		isGrounded =Physics2D.OverlapArea (new Vector2 (transform.position.x - 0.5f, transform.position.y - 0.5f),
 			new Vector2 (transform.position.x + 0.5f, transform.position.y - 0.5f), groundLayers);
+
 
         if(isGrounded == true) {
 			animator.SetBool ("isJumping", false);
@@ -52,7 +58,15 @@ public class PlayerController : MonoBehaviour {
 			animator.SetBool ("isJumping", true);
             rb.velocity = Vector2.up * jumpForce;
         }
-		
+
+		if (Input.GetButtonDown ("Attack")) {
+			animator.SetBool ("isAttacking", true);
+			animator.SetFloat ("Speed", 0.0f);
+			Debug.Log ("Hit");
+		} else {
+			animator.SetBool ("isAttacking", false);
+		}
+
 
 		if (Input.GetButtonDown ("Change")) { //Grab input and then select a model for the player 
 			if (PlayerSelect == 1) {
