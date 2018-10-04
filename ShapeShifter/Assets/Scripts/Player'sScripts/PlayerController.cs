@@ -10,6 +10,14 @@ public class PlayerController : MonoBehaviour {
 
     private bool facingRight = true;
 
+	private float timeBtwAttack;
+	public float startTimeBtwAttack;
+
+	public Transform attackPos;
+	public LayerMask whatIsEnemies;
+	public float attackRange;
+	public int damage;
+
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
@@ -59,13 +67,12 @@ public class PlayerController : MonoBehaviour {
             rb.velocity = Vector2.up * jumpForce;
         }
 
-		if (Input.GetButtonDown ("Attack")) {
+		/*if (Input.GetButtonDown ("Attack")) {
 			animator.SetBool ("isAttacking", true);
 			animator.SetFloat ("Speed", 0.0f);
-			Debug.Log ("Hit");
 		} else {
 			animator.SetBool ("isAttacking", false);
-		}
+		}*/
 
 
 		if (Input.GetButtonDown ("Change")) { //Grab input and then select a model for the player 
@@ -86,6 +93,22 @@ public class PlayerController : MonoBehaviour {
 			Main.SetActive (false);
 			Knight.SetActive (true);
 		}
+
+		if (timeBtwAttack <= 0) {
+
+			if(Input.GetKey(KeyCode.Mouse0)){
+				Debug.Log ("attack");
+				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, whatIsEnemies);
+				for (int i =0; i < enemiesToDamage.Length; i++) {
+					enemiesToDamage [i].GetComponent<CubeEnemy> ().TakeDamage (damage);
+				}
+
+				timeBtwAttack = startTimeBtwAttack;
+			} else {
+				timeBtwAttack = Time.deltaTime;
+			}
+
+		}
     }
 
 
@@ -99,7 +122,7 @@ public class PlayerController : MonoBehaviour {
         // flips sprite if moving the other direction
         if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
             Flip();
-		Debug.Log (isGrounded);
+		//Debug.Log (isGrounded);
         // checks if player is touching the ground
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
     }
@@ -111,4 +134,9 @@ public class PlayerController : MonoBehaviour {
         scaler.x *= -1;
         transform.localScale = scaler;
     }
+
+	void OnDrawGizmosSelected() {
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere (attackPos.position, attackRange);
+	}
 }

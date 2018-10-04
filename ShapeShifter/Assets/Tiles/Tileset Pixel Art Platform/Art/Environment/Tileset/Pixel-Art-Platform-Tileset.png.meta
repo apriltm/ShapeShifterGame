@@ -1,0 +1,1934 @@
+fileFormatVersion: 2
+guid: 7ee50f69fc6a58344ad77644fa206594
+timeCreated: 1513223756
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pixel-Art-Platform-Tileset_0
+    21300002: Pixel-Art-Platform-Tileset_1
+    21300004: Pixel-Art-Platform-Tileset_2
+    21300006: Pixel-Art-Platform-Tileset_3
+    21300008: Pixel-Art-Platform-Tileset_4
+    21300010: Pixel-Art-Platform-Tileset_5
+    21300012: Pixel-Art-Platform-Tileset_6
+    21300014: Pixel-Art-Platform-Tileset_7
+    21300016: Pixel-Art-Platform-Tileset_8
+    21300018: Pixel-Art-Platform-Tileset_9
+    21300020: Pixel-Art-Platform-Tileset_10
+    21300022: Pixel-Art-Platform-Tileset_11
+    21300024: Pixel-Art-Platform-Tileset_12
+    21300026: Pixel-Art-Platform-Tileset_13
+    21300028: Pixel-Art-Platform-Tileset_14
+    21300030: Pixel-Art-Platform-Tileset_15
+    21300032: Pixel-Art-Platform-Tileset_16
+    21300034: Pixel-Art-Platform-Tileset_17
+    21300036: Pixel-Art-Platform-Tileset_18
+    21300038: Pixel-Art-Platform-Tileset_19
+    21300040: Pixel-Art-Platform-Tileset_20
+    21300042: Pixel-Art-Platform-Tileset_21
+    21300044: Pixel-Art-Platform-Tileset_22
+    21300046: Pixel-Art-Platform-Tileset_23
+    21300048: Pixel-Art-Platform-Tileset_24
+    21300050: Pixel-Art-Platform-Tileset_25
+    21300052: Pixel-Art-Platform-Tileset_26
+    21300054: Pixel-Art-Platform-Tileset_27
+    21300056: Pixel-Art-Platform-Tileset_28
+    21300058: Pixel-Art-Platform-Tileset_29
+    21300060: Pixel-Art-Platform-Tileset_30
+    21300062: Pixel-Art-Platform-Tileset_31
+    21300064: Pixel-Art-Platform-Tileset_32
+    21300066: Pixel-Art-Platform-Tileset_33
+    21300068: Pixel-Art-Platform-Tileset_34
+    21300070: Pixel-Art-Platform-Tileset_35
+    21300072: Pixel-Art-Platform-Tileset_36
+    21300074: Pixel-Art-Platform-Tileset_37
+    21300076: Pixel-Art-Platform-Tileset_38
+    21300078: Pixel-Art-Platform-Tileset_39
+    21300080: Pixel-Art-Platform-Tileset_40
+    21300082: Pixel-Art-Platform-Tileset_41
+    21300084: Pixel-Art-Platform-Tileset_42
+    21300086: Pixel-Art-Platform-Tileset_43
+    21300088: Pixel-Art-Platform-Tileset_44
+    21300090: Pixel-Art-Platform-Tileset_45
+    21300092: Pixel-Art-Platform-Tileset_46
+    21300094: Pixel-Art-Platform-Tileset_47
+    21300096: Pixel-Art-Platform-Tileset_48
+    21300098: Pixel-Art-Platform-Tileset_49
+    21300100: Pixel-Art-Platform-Tileset_50
+    21300102: Pixel-Art-Platform-Tileset_51
+    21300104: Pixel-Art-Platform-Tileset_52
+    21300106: Pixel-Art-Platform-Tileset_53
+    21300108: Pixel-Art-Platform-Tileset_54
+    21300110: Pixel-Art-Platform-Tileset_55
+    21300112: Pixel-Art-Platform-Tileset_56
+    21300114: Pixel-Art-Platform-Tileset_57
+    21300116: Pixel-Art-Platform-Tileset_58
+    21300118: Pixel-Art-Platform-Tileset_59
+    21300120: Pixel-Art-Platform-Tileset_60
+    21300122: Pixel-Art-Platform-Tileset_61
+    21300124: Pixel-Art-Platform-Tileset_62
+    21300126: Pixel-Art-Platform-Tileset_63
+    21300128: Pixel-Art-Platform-Tileset_64
+    21300130: Pixel-Art-Platform-Tileset_65
+    21300132: Pixel-Art-Platform-Tileset_66
+    21300134: Pixel-Art-Platform-Tileset_67
+    21300136: Pixel-Art-Platform-Tileset_68
+    21300138: Pixel-Art-Platform-Tileset_69
+    21300140: Pixel-Art-Platform-Tileset_70
+    21300142: Pixel-Art-Platform-Tileset_71
+    21300144: Pixel-Art-Platform-Tileset_72
+    21300146: Pixel-Art-Platform-Tileset_73
+    21300148: Pixel-Art-Platform-Tileset_74
+    21300150: Pixel-Art-Platform-Tileset_75
+    21300152: Pixel-Art-Platform-Tileset_76
+    21300154: Pixel-Art-Platform-Tileset_77
+    21300156: Pixel-Art-Platform-Tileset_78
+    21300158: Pixel-Art-Platform-Tileset_79
+    21300160: Pixel-Art-Platform-Tileset_80
+    21300162: Pixel-Art-Platform-Tileset_81
+    21300164: Pixel-Art-Platform-Tileset_82
+    21300166: Pixel-Art-Platform-Tileset_83
+    21300168: Pixel-Art-Platform-Tileset_84
+    21300170: Pixel-Art-Platform-Tileset_85
+    21300172: Pixel-Art-Platform-Tileset_86
+    21300174: Pixel-Art-Platform-Tileset_87
+    21300176: Pixel-Art-Platform-Tileset_88
+    21300178: Pixel-Art-Platform-Tileset_89
+    21300180: Pixel-Art-Platform-Tileset_90
+    21300182: Pixel-Art-Platform-Tileset_91
+    21300184: Pixel-Art-Platform-Tileset_92
+    21300186: Pixel-Art-Platform-Tileset_93
+    21300188: Pixel-Art-Platform-Tileset_94
+    21300190: Pixel-Art-Platform-Tileset_95
+    21300192: Pixel-Art-Platform-Tileset_96
+    21300194: Pixel-Art-Platform-Tileset_97
+    21300196: Pixel-Art-Platform-Tileset_98
+    21300198: Pixel-Art-Platform-Tileset_99
+    21300200: Pixel-Art-Platform-Tileset_100
+    21300202: Pixel-Art-Platform-Tileset_101
+    21300204: Pixel-Art-Platform-Tileset_102
+    21300206: Pixel-Art-Platform-Tileset_103
+    21300208: Pixel-Art-Platform-Tileset_104
+    21300210: Pixel-Art-Platform-Tileset_105
+    21300212: Pixel-Art-Platform-Tileset_106
+    21300214: Pixel-Art-Platform-Tileset_107
+    21300216: Pixel-Art-Platform-Tileset_108
+    21300218: Pixel-Art-Platform-Tileset_109
+    21300220: Pixel-Art-Platform-Tileset_110
+    21300222: Pixel-Art-Platform-Tileset_111
+    21300224: Pixel-Art-Platform-Tileset_112
+    21300226: Pixel-Art-Platform-Tileset_113
+    21300228: Pixel-Art-Platform-Tileset_114
+    21300230: Pixel-Art-Platform-Tileset_115
+    21300232: Pixel-Art-Platform-Tileset_116
+    21300234: Pixel-Art-Platform-Tileset_117
+    21300236: Pixel-Art-Platform-Tileset_118
+    21300238: Pixel-Art-Platform-Tileset_119
+    21300240: Pixel-Art-Platform-Tileset_120
+    21300242: Pixel-Art-Platform-Tileset_121
+    21300244: Pixel-Art-Platform-Tileset_122
+    21300246: Pixel-Art-Platform-Tileset_123
+    21300248: Pixel-Art-Platform-Tileset_124
+    21300250: Pixel-Art-Platform-Tileset_125
+    21300252: Pixel-Art-Platform-Tileset_126
+    21300254: Pixel-Art-Platform-Tileset_127
+    21300256: Pixel-Art-Platform-Tileset_128
+    21300258: Pixel-Art-Platform-Tileset_129
+    21300260: Pixel-Art-Platform-Tileset_130
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 940
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 940
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 946
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 945
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 940
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 940
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 940
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 940
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 940
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 905
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 905
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 905
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 905
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 905
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 905
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 905
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 905
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 905
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 905
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 905
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 905
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 886
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 888
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_37
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_38
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_39
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 870
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_40
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 888
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_41
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 835
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_42
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 835
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_43
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 835
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_44
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 835
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_45
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 835
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_46
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 835
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_47
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 835
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_48
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 835
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_49
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 835
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_50
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 835
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_51
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 835
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_52
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 835
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_53
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 835
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_54
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 835
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_55
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 835
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_56
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 780
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_57
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 780
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_58
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 781
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_59
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 800
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_60
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 800
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_61
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 780
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_62
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 780
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_63
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 781
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_64
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 800
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_65
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 800
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_66
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 780
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_67
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 780
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_68
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 781
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_69
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 800
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_70
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 800
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_71
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 765
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_72
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 765
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_73
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 765
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_74
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 605
+        width: 112
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_75
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 533
+        width: 112
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_76
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 625
+        width: 132
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_77
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 625
+        width: 132
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_78
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 625
+        width: 132
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_79
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 541
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_80
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 541
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 541
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_82
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 541
+        width: 42
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_83
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 541
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_84
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 561
+        width: 89
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_85
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 561
+        width: 89
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_86
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 561
+        width: 89
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_87
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 486
+        width: 101
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_88
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 489
+        width: 91
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_89
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 490
+        width: 67
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_90
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 489
+        width: 61
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_91
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 490
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_92
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 499
+        width: 90
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_93
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 499
+        width: 90
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_94
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 499
+        width: 90
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_95
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 402
+        width: 112
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_96
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 329
+        width: 112
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_97
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 454
+        width: 78
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_98
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 454
+        width: 78
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_99
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 454
+        width: 78
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_100
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 420
+        width: 89
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_101
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 420
+        width: 89
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_102
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 420
+        width: 89
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_103
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 337
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_104
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 337
+        width: 42
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_105
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 337
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_106
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 394
+        width: 69
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_107
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 394
+        width: 69
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_108
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 394
+        width: 69
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_109
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 337
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_110
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 337
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_111
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 363
+        width: 57
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_112
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 363
+        width: 57
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_113
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 363
+        width: 57
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_114
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 282
+        width: 101
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_115
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 285
+        width: 91
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_116
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 286
+        width: 67
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_117
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 285
+        width: 61
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_118
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 286
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_119
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 198
+        width: 112
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_120
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 135
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_121
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 127
+        width: 112
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_122
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 135
+        width: 42
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_123
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 135
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_124
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 135
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_125
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 135
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_126
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 80
+        width: 101
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_127
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 83
+        width: 91
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_128
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 84
+        width: 67
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_129
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 83
+        width: 61
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pixel-Art-Platform-Tileset_130
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 84
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
