@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 149538983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.21, y: 0.52, z: -6.36046}
+  m_LocalPosition: {x: -9.21, y: 0.8, z: -6.36046}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 1648366301}
@@ -583,6 +583,48 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!1001 &922542488
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 268816169}
+    m_Modifications:
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8261d49de50db84428b03243fdceee09, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &966960074
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,8 +944,9 @@ MonoBehaviour:
 --- !u!1 &1669365615
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1593718015143776, guid: 8261d49de50db84428b03243fdceee09,
+    type: 2}
+  m_PrefabInternal: {fileID: 922542488}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669365616}
@@ -920,8 +963,9 @@ GameObject:
 --- !u!4 &1669365616
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4334216920846062, guid: 8261d49de50db84428b03243fdceee09,
+    type: 2}
+  m_PrefabInternal: {fileID: 922542488}
   m_GameObject: {fileID: 1669365615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -933,8 +977,9 @@ Transform:
 --- !u!483693784 &1669365617
 TilemapRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3664157343094609326, guid: 8261d49de50db84428b03243fdceee09,
+    type: 2}
+  m_PrefabInternal: {fileID: 922542488}
   m_GameObject: {fileID: 1669365615}
   m_Enabled: 1
   m_CastShadows: 0
@@ -975,8 +1020,9 @@ TilemapRenderer:
 --- !u!1839735485 &1669365618
 Tilemap:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8195094282794506588, guid: 8261d49de50db84428b03243fdceee09,
+    type: 2}
+  m_PrefabInternal: {fileID: 922542488}
   m_GameObject: {fileID: 1669365615}
   m_Enabled: 1
   m_Tiles:
@@ -3055,8 +3101,9 @@ Tilemap:
 --- !u!19719996 &1669365619
 TilemapCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2113883507072354602, guid: 8261d49de50db84428b03243fdceee09,
+    type: 2}
+  m_PrefabInternal: {fileID: 922542488}
   m_GameObject: {fileID: 1669365615}
   m_Enabled: 1
   m_Density: 1

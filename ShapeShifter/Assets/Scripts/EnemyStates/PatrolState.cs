@@ -34,6 +34,8 @@ public class PatrolState : IEnemyState
 
     public void OnTriggerEnter(Collider2D other)
     {
+        Debug.Log("Patrol Colliding");
+        enemy.ChangeDirection();
         
     }
 

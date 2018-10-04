@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class AttackState : IEnemyState
 {
-
     private Enemy enemy;
+
+    private float attackTimer = 0;
+    private float attackCooldown = 2;
+    private bool canAttack = true;
 
     public void Enter(Enemy enemy)
     {
@@ -32,6 +35,22 @@ public class AttackState : IEnemyState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        throw new System.NotImplementedException();
+        AttackPlayer();
+    }
+
+    private void AttackPlayer()
+    {
+        attackTimer += Time.deltaTime;
+
+        if(attackTimer >= attackCooldown)
+        {
+            canAttack = true;
+            attackTimer = 0;
+        }
+        if (canAttack)
+        {
+            canAttack = false;
+            enemy.MyAnimator.SetTrigger("Attack");
+        }
     }
 }

@@ -28,6 +28,7 @@ public abstract class Character : MonoBehaviour {
 	}
 
     public void ChangeDirection() {
+        Debug.Log("Changing Direction");
         facingRight = !facingRight;
         transform.localScale = new Vector3(transform.localScale.x * -1, 1, 1);
     }

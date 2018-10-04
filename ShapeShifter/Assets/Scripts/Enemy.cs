@@ -54,6 +54,7 @@ public class Enemy : Character {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Enemy Colliding");
         currentState.OnTriggerEnter(other);
     }
 }
