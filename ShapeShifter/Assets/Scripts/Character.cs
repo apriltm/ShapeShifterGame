@@ -12,7 +12,7 @@ public abstract class Character : MonoBehaviour {
     protected bool facingRight;
 
     protected int maxHealth;
-    protected int currentHealth;
+    public int currentHealth;
 
     public bool Attack { get; set; }
 
@@ -28,6 +28,12 @@ public abstract class Character : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public void TakeDamage(int dam){
+		maxHealth -= dam;
+		Debug.Log ("Damaged");
+	}
+
 
     public void ChangeDirection() {
         Debug.Log("Changing Direction");
