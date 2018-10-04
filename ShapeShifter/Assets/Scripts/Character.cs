@@ -14,6 +14,8 @@ public abstract class Character : MonoBehaviour {
     protected int maxHealth;
     public int currentHealth;
 
+    public bool Attack { get; set; }
+
 
 	// Use this for initialization
 	public virtual void Start () {
@@ -34,7 +36,8 @@ public abstract class Character : MonoBehaviour {
 
 
     public void ChangeDirection() {
+        Debug.Log("Changing Direction");
         facingRight = !facingRight;
-        transform.localScale = new Vector3(transform.localScale.x * -1, 1, 1);
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, 1);
     }
 }

@@ -13,11 +13,17 @@ public class IdleState : IEnemyState
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;
+        Debug.Log("Knight Idle");
     }
 
     public void Execute()
     {
         Idle();
+
+        if(enemy.Target != null)
+        {
+            enemy.ChangeState(new PatrolState());
+        }
     }
 
     public void Exit()
