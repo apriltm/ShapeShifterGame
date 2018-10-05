@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 			new Vector2 (transform.position.x + 0.5f, transform.position.y - 0.5f), groundLayers);
 
 
-		Debug.Log (isGrounded);
+		//Debug.Log (isGrounded);
 		Jump ();
 		selectF ();
 		Shift ();
@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("Attack")) {
 			attack = true;
 			animator.SetBool ("isAttacking", true);
+			animator2.SetBool ("isAttacking", true);
 			Debug.Log ("attack");
 			Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, whatIsEnemies);
 			for (int i = 0; i < enemiesToDamage.Length; i++) {
@@ -112,6 +113,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		} else {
 			animator.SetBool ("isAttacking", false);
+			animator2.SetBool ("isAttacking", false);
 			attack = false;
 		}
 	}
@@ -129,12 +131,12 @@ public class PlayerController : MonoBehaviour {
 
 	void Shift(){
 		if (PlayerSelect == 1) { //the actually changing of the models
-			speed = 12.0f; //base form will the fastest
-			jumpForce = 10.0f;
+			speed = 7.0f; //base form will the fastest
+			jumpForce = 9.0f;
 			Main.SetActive (true); 
 			Knight.SetActive (false);
 	} 	else { //just using else statement for now. will change whenever we start to put in more forms
-			speed = 5.5f; //knight will the slowest
+			speed = 3.5f; //knight will the slowest
 			jumpForce = 0.0f; // knights will be unable to jump
 			Main.SetActive (false);
 			Knight.SetActive (true);
