@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rb;
 
+	public GameObject SE;
+
     private bool facingRight = true;
 
 	private float timeBtwAttack;
@@ -116,11 +118,12 @@ public class PlayerController : MonoBehaviour {
 
 	void selectF(){
 		if (Input.GetButtonDown ("Change")) { //Grab input and then select a model for the player 
+			Instantiate(SE,transform.position, transform.rotation = Quaternion.identity);
 			if (PlayerSelect == 1) {
 				PlayerSelect = 2;
 			} else
 				PlayerSelect = 1;
-		}
+		} 
 	}
 
 
