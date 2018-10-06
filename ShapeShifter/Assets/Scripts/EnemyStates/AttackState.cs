@@ -17,11 +17,12 @@ public class AttackState : IEnemyState
 
     public void Execute()
     {
-        if(enemy.Target != null)
+        AttackPlayer();
+        if (!enemy.InMeleeRange)
         {
-            enemy.Move();
+            enemy.ChangeState(new PatrolState());
         }
-        else
+        else if(enemy.Target == null)
         {
             enemy.ChangeState(new IdleState());
         }
@@ -29,7 +30,7 @@ public class AttackState : IEnemyState
 
     public void Exit()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnTriggerEnter(Collider2D other)
@@ -39,6 +40,9 @@ public class AttackState : IEnemyState
 
     private void AttackPlayer()
     {
+        enemy.MyAnimator.SetTrigger("Attack");
+        
+        /*
         attackTimer += Time.deltaTime;
 
         if(attackTimer >= attackCooldown)
@@ -52,5 +56,6 @@ public class AttackState : IEnemyState
             canAttack = false;
             enemy.MyAnimator.SetTrigger("Attack");
         }
+        */
     }
 }

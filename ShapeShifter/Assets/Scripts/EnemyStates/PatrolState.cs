@@ -7,7 +7,7 @@ public class PatrolState : IEnemyState
     private Enemy enemy;
 
     private float patrolTimer = 0;
-    private float patrolDuration = 20;
+    private float patrolDuration = 10;
 
     private float collideTimer = 0;
 
@@ -22,7 +22,7 @@ public class PatrolState : IEnemyState
         Patrol();
         enemy.Move();
 
-        if(enemy.Target != null)
+        if(enemy.Target != null && enemy.InMeleeRange)
         {
             enemy.ChangeState(new AttackState());
         }
@@ -37,9 +37,11 @@ public class PatrolState : IEnemyState
     {
         if (collideTimer > 1)
         {
-            Debug.Log("Patrol Colliding");
-            enemy.ChangeDirection();
-            collideTimer = 0;
+            if (other.tag == "Edge")
+            {
+                enemy.ChangeDirection();
+                collideTimer = 0;
+            }
         }
         
     }

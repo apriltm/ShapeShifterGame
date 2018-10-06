@@ -21,6 +21,7 @@ public class EnemySight : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
+            Debug.Log("Can't see player");
             enemy.Target = null;
         }
     }
