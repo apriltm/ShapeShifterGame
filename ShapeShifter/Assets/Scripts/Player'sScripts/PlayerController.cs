@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb;
 
 	public GameObject SE;
-
     private bool facingRight = true;
 
 	private float timeBtwAttack;
@@ -102,20 +101,46 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void CharAttack() {
-		if (Input.GetButtonDown ("Attack")) {
+		/*if (Input.GetButtonDown ("Attack")) {
 			attack = true;
 			animator.SetBool ("isAttacking", true);
 			animator2.SetBool ("isAttacking", true);
 			Debug.Log ("attack");
 			Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, whatIsEnemies);
-			for (int i = 0; i < enemiesToDamage.Length; i++) {
-				enemiesToDamage [i].GetComponent<CubeEnemy> ().TakeDamage (damage);
+			if (PlayerSelect == 1) {
+				damage = 45;
+			} else if (PlayerSelect == 2) {
+				damage = 75;
 			}
+			for (int i = 0; i < enemiesToDamage.Length; i++) {
+				enemiesToDamage [i].GetComponent<KE_Health> ().TakeDamage (damage);
+			}
+
 		} else {
 			animator.SetBool ("isAttacking", false);
 			animator2.SetBool ("isAttacking", false);
 			attack = false;
+		}*/
+
+		if (timeBtwAttack <= 0) {
+			if(Input.GetButtonDown("Attack" )){
+				animator.SetBool ("isAttacking", true);
+				animator2.SetBool ("isAttacking", true);
+				timeBtwAttack = startTimeBtwAttack;
+				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+				DamageFactor ();
+				for (int i = 0; i < enemiesToDamage.Length; i++) {
+					enemiesToDamage [i].GetComponent < Enemy> ().TakeDamage (damage);
+				}
+
+			}
+			timeBtwAttack = startTimeBtwAttack;
+		} else {
+			timeBtwAttack -= Time.deltaTime;
+			animator.SetBool ("isAttacking", false);
+			animator2.SetBool ("isAttacking", false);
 		}
+
 	}
 
 	void selectF(){
@@ -162,5 +187,17 @@ public class PlayerController : MonoBehaviour {
 			rb.velocity = Vector2.up * jumpForce;
 		}
 	}
+
+	void DamageFactor()
+	{
+		if (PlayerSelect == 1) {
+			damage = 45;
+		} else if (PlayerSelect == 2) {
+			damage = 75;
+		}
+	}
+	/*void OnDrawGizmosSelected(){
+
+	}*/
 
 }

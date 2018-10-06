@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Enemy : Character {
 
+	public int maxHealth;
     private IEnemyState currentState;
     public GameObject Target { get; set; }
 
 	// Use this for initialization
 	public override void Start () {
+		//MyAnimator.SetBool ("Dead", false);
+		currentHealth = maxHealth;
         Debug.Log("Enemy start");
         base.Start();
         ChangeState(new IdleState());
-        maxHealth = 100;
+       
         currentHealth = maxHealth;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (currentHealth <= 0) {
+			Destroy (gameObject);
+		}
+
         currentState.Execute();
         LookAtTarget();
 	}
@@ -56,4 +63,9 @@ public class Enemy : Character {
     {
         currentState.OnTriggerEnter(other);
     }
+
+	public void TakeDamage(int damage){
+		currentHealth -= damage;
+		Debug.Log (currentHealth);
+	}
 }

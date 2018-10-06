@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KE_Health : MonoBehaviour {
+public class KE_Health : Enemy {
 
 	public int maxHealth;
 	public int currentHealth;
@@ -11,13 +11,14 @@ public class KE_Health : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
+		MyAnimator.SetFloat ("HP", currentHealth);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-
-			Destroy (gameObject);
+			MyAnimator.SetFloat ("HP", currentHealth);
+			Destroy (gameObject, 2.5f);
 		}
 	}
 
