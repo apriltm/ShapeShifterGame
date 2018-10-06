@@ -101,31 +101,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void CharAttack() {
-		/*if (Input.GetButtonDown ("Attack")) {
-			attack = true;
-			animator.SetBool ("isAttacking", true);
-			animator2.SetBool ("isAttacking", true);
-			Debug.Log ("attack");
-			Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, whatIsEnemies);
-			if (PlayerSelect == 1) {
-				damage = 45;
-			} else if (PlayerSelect == 2) {
-				damage = 75;
-			}
-			for (int i = 0; i < enemiesToDamage.Length; i++) {
-				enemiesToDamage [i].GetComponent<KE_Health> ().TakeDamage (damage);
-			}
-
-		} else {
-			animator.SetBool ("isAttacking", false);
-			animator2.SetBool ("isAttacking", false);
-			attack = false;
-		}*/
 
 		if (timeBtwAttack <= 0) {
 			if(Input.GetButtonDown("Attack" )){
 				animator.SetBool ("isAttacking", true);
 				animator2.SetBool ("isAttacking", true);
+				AttDelay ();
 				timeBtwAttack = startTimeBtwAttack;
 				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 				DamageFactor ();
@@ -134,7 +115,7 @@ public class PlayerController : MonoBehaviour {
 				}
 
 			}
-			timeBtwAttack = startTimeBtwAttack;
+
 		} else {
 			timeBtwAttack -= Time.deltaTime;
 			animator.SetBool ("isAttacking", false);
@@ -194,6 +175,14 @@ public class PlayerController : MonoBehaviour {
 			damage = 45;
 		} else if (PlayerSelect == 2) {
 			damage = 75;
+		}
+	}
+
+	void AttDelay(){
+		if (PlayerSelect == 1) {
+			startTimeBtwAttack = 0.3f;
+		} else if (PlayerSelect == 2) {
+			startTimeBtwAttack = 0.6f;
 		}
 	}
 	/*void OnDrawGizmosSelected(){
