@@ -68,9 +68,9 @@ public class PlayerController : MonoBehaviour {
 
 
     void FixedUpdate () {
-		if(canMove) {
-			MoveHor ();
-		}
+
+		MoveHor ();
+		
     }
 
     void Flip()
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour {
 
 	void CharAttack() {
 
-		if (timeBtwAttack <= 0) {
+		if (timeBtwAttack <= 0 && isGrounded == true) {
 			if(Input.GetButtonDown("Attack" )){
 				canMove = false;
 				animator.SetBool ("isAttacking", true);

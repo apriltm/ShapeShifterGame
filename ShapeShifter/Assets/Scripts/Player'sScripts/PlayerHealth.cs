@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-
+		
 	}
 
 	public void TakeDamage(int dam){
