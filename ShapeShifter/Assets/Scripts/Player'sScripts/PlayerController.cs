@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed = 10.0f;
     public float jumpForce;
+	public int Player_current_lvl;
+	public int Player_current_exp;
+
 
     private Rigidbody2D rb;
 	private bool canMove;
@@ -38,6 +41,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Player_current_lvl = 0;
 		canMove = true;
 		attack = false;
 		PlayerSelect = 1;
@@ -60,8 +64,10 @@ public class PlayerController : MonoBehaviour {
 		HandleJumpAndFall ();
 		//Debug.Log ();
 		Jump ();
+	
 		selectF ();
 		Shift ();
+		
 		CharAttack ();
 
     }
@@ -129,7 +135,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void selectF(){
-		if (Input.GetButtonDown ("Change")) { //Grab input and then select a model for the player 
+		if (Input.GetButtonDown ("Change")&& Player_current_lvl >= 1) { //Grab input and then select a model for the player 
 			Instantiate(SE,transform.position, transform.rotation = Quaternion.identity);
 			if (PlayerSelect == 1) {
 				PlayerSelect = 2;
@@ -142,7 +148,7 @@ public class PlayerController : MonoBehaviour {
 	void Shift(){
 		if (PlayerSelect == 1) { //the actually changing of the models
 			speed = 7.0f; //base form will the fastest
-			jumpForce = 9.0f;
+			jumpForce = 13.0f;
 			Main.SetActive (true); 
 			Knight.SetActive (false);
 	} 	else { //just using else statement for now. will change whenever we start to put in more forms
@@ -209,4 +215,28 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	public IEnumerator Knockback(float KnockDur){
+
+		float timer = 0;
+		while (KnockDur > timer) {
+
+			timer += Time.deltaTime;
+			rb.AddForce (new Vector3 (-.3f, 1500f, transform.position.z));
+		}
+
+		yield return 0;
+	}
+
+	/*void addExp(int exp) {
+		Player_current_exp += exp;
+		lvlcheck ();
+		Debug.Log (Player_current_exp);
+	}
+
+	void lvlcheck(){
+		if (Player_current_exp == 20) {
+			Player_current_lvl = +1;
+			Player_current_exp = 0;
+		}
+	}*/
 }
