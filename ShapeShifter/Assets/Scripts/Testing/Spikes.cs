@@ -17,8 +17,8 @@ public class Spikes : MonoBehaviour {
 
 		if (col.CompareTag ("Player")) {
 
-			player.TakeDamage (25);
-			Debug.Log ("hurt");
+			player.TakeDamage (10);
+			Debug.Log (player.currentHealth);
 		}
 
 	}
