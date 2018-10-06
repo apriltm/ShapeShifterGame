@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
 
     private Rigidbody2D rb;
-
+	private bool canMove;
 	public GameObject SE;
     private bool facingRight = true;
 
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		canMove = true;
 		attack = false;
 		PlayerSelect = 1;
 		Main = GameObject.Find ("Main");
@@ -56,8 +57,8 @@ public class PlayerController : MonoBehaviour {
 		isGrounded =Physics2D.OverlapArea (new Vector2 (transform.position.x - 0.5f, transform.position.y - 0.5f),
 			new Vector2 (transform.position.x + 0.5f, transform.position.y - 0.5f), groundLayers);
 
-
-		//Debug.Log (isGrounded);
+		HandleJumpAndFall ();
+		//Debug.Log ();
 		Jump ();
 		selectF ();
 		Shift ();
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour {
 
 
     void FixedUpdate () {
-		if (attack == false) {	
+		if(canMove) {
 			MoveHor ();
 		}
     }
@@ -88,22 +89,24 @@ public class PlayerController : MonoBehaviour {
 	void MoveHor()
 	{
 		// left & right movement
-		float xTranslation = Input.GetAxis("Horizontal");
-		animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
-		animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
-		rb.velocity = new Vector2(xTranslation * speed, rb.velocity.y);
+		if (canMove) {
+			float xTranslation = Input.GetAxis ("Horizontal");
+			animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
+			animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
+			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
 
-		// flips sprite if moving the other direction
-		if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
-			Flip();
+			// flips sprite if moving the other direction
+			if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
+				Flip ();
 
-	
+		}
 	}
 
 	void CharAttack() {
 
 		if (timeBtwAttack <= 0) {
 			if(Input.GetButtonDown("Attack" )){
+				canMove = false;
 				animator.SetBool ("isAttacking", true);
 				animator2.SetBool ("isAttacking", true);
 				AttDelay ();
@@ -117,6 +120,7 @@ public class PlayerController : MonoBehaviour {
 			}
 
 		} else {
+			canMove = true;
 			timeBtwAttack -= Time.deltaTime;
 			animator.SetBool ("isAttacking", false);
 			animator2.SetBool ("isAttacking", false);
@@ -152,21 +156,26 @@ public class PlayerController : MonoBehaviour {
 	void Jump(){
 		if(isGrounded == true) {
 			animator.SetBool ("isJumping", false);
+			animator.SetBool ("isFalling", false);
 			extraJumps = extraJumpsValue;
 		}
 		if (isGrounded == false) {
-			animator.SetBool ("isJumping", true);
+			HandleJumpAndFall ();
 		}
 		if (Input.GetButtonDown("Jump") && extraJumps > 0) {
-			animator.SetBool ("isJumping", false);
-			animator.SetBool ("isJumping", true);
+			HandleJumpAndFall ();
+			//animator.SetBool ("isJumping", false);
+			//animator.SetBool ("isJumping", true);
 			rb.velocity = Vector2.up * jumpForce;
 			extraJumps--;
 		} else if(Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true) {
-			animator.SetBool ("isJumping", false);
-			animator.SetBool ("isJumping", true);
+			HandleJumpAndFall();
+			//animator.SetBool ("isJumping", false);
+			//animator.SetBool ("isJumping", true);
 			rb.velocity = Vector2.up * jumpForce;
 		}
+
+
 	}
 
 	void DamageFactor()
@@ -188,5 +197,16 @@ public class PlayerController : MonoBehaviour {
 	/*void OnDrawGizmosSelected(){
 
 	}*/
+
+	void HandleJumpAndFall(){
+		if (isGrounded == false) {
+			if (rb.velocity.y > 0) {
+				animator.SetBool ("isJumping", true);
+			} else if (rb.velocity.y < 0) {
+				animator.SetBool ("isJumping", false);
+				animator.SetBool ("isFalling", true);
+			}
+		}
+	}
 
 }
