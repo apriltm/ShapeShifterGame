@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : Character {
 
     private IEnemyState currentState;
+	public GameObject Drop;
+	public bool drops;
     public GameObject Target { get; set; }
 
     [SerializeField]
@@ -34,6 +36,7 @@ public class Enemy : Character {
     public override void Start () {
         //MyAnimator.SetBool ("Dead", false);
         maxHealth = 1000;
+		drops = false;
 		currentHealth = maxHealth;
 
         Debug.Log("Enemy start");
@@ -44,6 +47,10 @@ public class Enemy : Character {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
+			drops = true;
+			if (drops) {
+				Instantiate (Drop, transform.position, transform.rotation);
+			}
 			Destroy (gameObject);
 		}
 

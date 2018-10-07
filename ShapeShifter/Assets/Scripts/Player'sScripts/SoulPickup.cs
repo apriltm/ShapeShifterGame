@@ -5,6 +5,8 @@ using UnityEngine;
 public class SoulPickup : MonoBehaviour {
 
 	public float exp;
+	public float knight_Exp;
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,9 +20,9 @@ public class SoulPickup : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag == "Player") {
-			//PlayerController player = col.gameObject.GetComponent<PlayerController> ();
-			//player.addEXP (exp);
-			Destroy(gameObject);
+			PlayerEXP player = col.gameObject.GetComponent<PlayerEXP> ();
+			player.addExp ();
+			Destroy (gameObject);
 		}
 	}
 }

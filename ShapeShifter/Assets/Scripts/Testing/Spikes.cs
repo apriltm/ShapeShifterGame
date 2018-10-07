@@ -5,11 +5,11 @@ using UnityEngine;
 public class Spikes : MonoBehaviour {
 
 	private PlayerHealth player;
-
+	private PlayerController p;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerHealth> ();
-
+		p = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
@@ -17,8 +17,9 @@ public class Spikes : MonoBehaviour {
 
 		if (col.CompareTag ("Player")) {
 
-			player.TakeDamage (25);
-			Debug.Log ("hurt");
+			player.TakeDamage (10);
+			StartCoroutine (p.Knockback (0.001f));
+			Debug.Log (player.currentHealth);
 		}
 
 	}

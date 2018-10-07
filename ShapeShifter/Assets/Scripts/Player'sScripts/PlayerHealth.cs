@@ -6,11 +6,12 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int maxHealth;
 	public int currentHealth;
-	public float speed;
+	private PlayerController player;
 
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
+		player = gameObject.GetComponent<PlayerController> ();
 	}
 
 	// Update is called once per frame
@@ -25,7 +26,10 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage(int dam){
+		player.animator.Play ("hurt");
 		currentHealth -= dam;
 		Debug.Log ("damage TAKEN");
 	}
+	 
+
 }
