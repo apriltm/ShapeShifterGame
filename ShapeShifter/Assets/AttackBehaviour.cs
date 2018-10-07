@@ -8,6 +8,17 @@ public class AttackBehaviour : StateMachineBehaviour {
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         animator.GetComponent<Character>().Attack = true;
         animator.SetFloat("Speed", 0);
+        Debug.Log("Attacking");
+
+        /*
+        if(animator.tag == "Player")
+        {
+            if (Player.Instance.OnGround)
+            {
+                Player.Instance.MyRigidbody.velocity = Vector2.zero;
+            }
+        }
+        */
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -19,6 +30,7 @@ public class AttackBehaviour : StateMachineBehaviour {
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         animator.GetComponent<Character>().Attack = false;
         animator.ResetTrigger("Attack");
+        Debug.Log("Attack reset");
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

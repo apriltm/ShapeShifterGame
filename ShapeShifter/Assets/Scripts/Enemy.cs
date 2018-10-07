@@ -4,22 +4,44 @@ using UnityEngine;
 
 public class Enemy : Character {
 
-	public int maxHealth;
     private IEnemyState currentState;
 	public GameObject Drop;
 	public bool drops;
     public GameObject Target { get; set; }
 
-	// Use this for initialization
-	public override void Start () {
+    [SerializeField]
+    private float meleeRange;
+
+    public bool InMeleeRange
+    {
+        get
+        {
+            if (Target != null)
+            {
+                return Vector2.Distance(transform.position, Target.transform.position) <= meleeRange;
+            }
+            return false;
+        }
+    }
+
+    public override bool IsDead
+    {
+        get
+        {
+            return currentHealth <= 0;
+        }
+    }
+
+    // Use this for initialization
+    public override void Start () {
+        //MyAnimator.SetBool ("Dead", false);
+        maxHealth = 1000;
 		drops = false;
-		//MyAnimator.SetBool ("Dead", false);
 		currentHealth = maxHealth;
+
         Debug.Log("Enemy start");
         base.Start();
         ChangeState(new IdleState());
-       
-        currentHealth = maxHealth;
 	}
 
 	// Update is called once per frame
@@ -32,8 +54,10 @@ public class Enemy : Character {
 			Destroy (gameObject);
 		}
 
-        currentState.Execute();
-        LookAtTarget();
+        if (!IsDead) {
+            currentState.Execute();
+            LookAtTarget();
+        }
 	}
 
     private void LookAtTarget()
@@ -57,8 +81,11 @@ public class Enemy : Character {
 
     public void Move()
     {
-        MyAnimator.SetFloat("Speed", 1);
-        transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
+        if (!Attack)
+        {
+            MyAnimator.SetFloat("Speed", 1);
+            transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
+        }
     }
 
     public Vector2 GetDirection()
@@ -70,9 +97,4 @@ public class Enemy : Character {
     {
         currentState.OnTriggerEnter(other);
     }
-
-	public void TakeDamage(int damage){
-		currentHealth -= damage;
-		Debug.Log (currentHealth);
-	}
 }
