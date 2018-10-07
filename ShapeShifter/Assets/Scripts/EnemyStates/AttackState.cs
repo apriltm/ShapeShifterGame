@@ -6,8 +6,8 @@ public class AttackState : IEnemyState
 {
     private Enemy enemy;
 
-    private float attackTimer = 0;
-    private float attackCooldown = 2;
+    private float attackTimer = 4;
+    private float attackCooldown = 6;
     private bool canAttack = true;
 
     public void Enter(Enemy enemy)
@@ -40,9 +40,10 @@ public class AttackState : IEnemyState
 
     private void AttackPlayer()
     {
+		/*
         enemy.MyAnimator.SetTrigger("Attack");
+        */
         
-        /*
         attackTimer += Time.deltaTime;
 
         if(attackTimer >= attackCooldown)
@@ -56,6 +57,6 @@ public class AttackState : IEnemyState
             canAttack = false;
             enemy.MyAnimator.SetTrigger("Attack");
         }
-        */
+        
     }
 }

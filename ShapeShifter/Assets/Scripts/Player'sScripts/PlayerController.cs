@@ -67,9 +67,10 @@ public class PlayerController : MonoBehaviour {
 	
 		selectF ();
 		Shift ();
-		
-		CharAttack ();
-
+		if(isGrounded == true)
+		{
+			CharAttack ();
+		}
     }
 
 
@@ -110,7 +111,7 @@ public class PlayerController : MonoBehaviour {
 
 	void CharAttack() {
 
-		if (timeBtwAttack <= 0 && isGrounded == true) {
+		if (timeBtwAttack <= 0 ) {
 			if(Input.GetButtonDown("Attack" )){
 				canMove = false;
 				animator.SetBool ("isAttacking", true);
@@ -120,7 +121,7 @@ public class PlayerController : MonoBehaviour {
 				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 				DamageFactor ();
 				for (int i = 0; i < enemiesToDamage.Length; i++) {
-					enemiesToDamage [i].GetComponent < Enemy> ().TakeDamage (damage);
+					enemiesToDamage [i].GetComponent <Enemy> ().TakeDamage (damage);
 				}
 
 			}
@@ -148,7 +149,7 @@ public class PlayerController : MonoBehaviour {
 	void Shift(){
 		if (PlayerSelect == 1) { //the actually changing of the models
 			speed = 7.0f; //base form will the fastest
-			jumpForce = 13.0f;
+			jumpForce = 13.5f;
 			Main.SetActive (true); 
 			Knight.SetActive (false);
 	} 	else { //just using else statement for now. will change whenever we start to put in more forms

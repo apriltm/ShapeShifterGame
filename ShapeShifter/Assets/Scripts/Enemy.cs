@@ -35,7 +35,7 @@ public class Enemy : Character {
     // Use this for initialization
     public override void Start () {
         //MyAnimator.SetBool ("Dead", false);
-        maxHealth = 1000;
+        
 		drops = false;
 		currentHealth = maxHealth;
 
@@ -87,6 +87,12 @@ public class Enemy : Character {
             transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
         }
     }
+
+	public void TakeDamage(int dam){
+
+		currentHealth -= dam;
+		Debug.Log (currentHealth);
+	}
 
     public Vector2 GetDirection()
     {
