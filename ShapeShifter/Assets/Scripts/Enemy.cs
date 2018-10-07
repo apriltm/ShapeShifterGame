@@ -6,10 +6,13 @@ public class Enemy : Character {
 
 	public int maxHealth;
     private IEnemyState currentState;
+	public GameObject Drop;
+	public bool drops;
     public GameObject Target { get; set; }
 
 	// Use this for initialization
 	public override void Start () {
+		drops = false;
 		//MyAnimator.SetBool ("Dead", false);
 		currentHealth = maxHealth;
         Debug.Log("Enemy start");
@@ -22,6 +25,10 @@ public class Enemy : Character {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
+			drops = true;
+			if (drops) {
+				Instantiate (Drop, transform.position, transform.rotation);
+			}
 			Destroy (gameObject);
 		}
 

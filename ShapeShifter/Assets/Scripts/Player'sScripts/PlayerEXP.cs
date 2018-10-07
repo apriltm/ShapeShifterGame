@@ -18,8 +18,8 @@ public class PlayerEXP : MonoBehaviour {
 
 	}
 
-	public void addExp(int exp) {
-		player.Player_current_exp += exp;
+	public void addExp() {
+		player.Player_current_exp += 1;
 		if (player.Player_current_exp == 20) {
 			player.Player_current_lvl = +1;
 			player.Player_current_exp = 0;

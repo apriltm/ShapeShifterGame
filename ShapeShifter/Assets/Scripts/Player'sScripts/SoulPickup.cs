@@ -21,7 +21,7 @@ public class SoulPickup : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag == "Player") {
 			PlayerEXP player = col.gameObject.GetComponent<PlayerEXP> ();
-			player.addExp (1);
+			player.addExp ();
 			Destroy (gameObject);
 		}
 	}

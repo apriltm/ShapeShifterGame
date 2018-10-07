@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour {
 		if (PlayerSelect == 1) {
 			damage = 45;
 		} else if (PlayerSelect == 2) {
-			damage = 75;
+			damage = 100;
 		}
 	}
 
