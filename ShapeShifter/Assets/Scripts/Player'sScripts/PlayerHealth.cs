@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage(int dam){
-		player.animator.Play ("Hurt");
+		player.animator.Play ("hurt");
 		currentHealth -= dam;
 		Debug.Log ("damage TAKEN");
 	}
