@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour {
 	public int currentHealth;
 	private PlayerController player;
     public Animator animator;
+    public Animator animator2;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,8 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage(int dam){
-		player.animator.Play ("hurt");
+        //player.animator.Play ("hurt");
+        animator.SetBool("isHurt", true);
 		currentHealth -= dam;
 		Debug.Log ("damage TAKEN");
 	}
