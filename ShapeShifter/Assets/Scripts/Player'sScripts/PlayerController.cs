@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour {
 		HandleJumpAndFall ();
 		//Debug.Log ();
 		Jump ();
-	
+        crouch();
 		selectF ();
 		Shift ();
 		if(isGrounded == true)
@@ -158,7 +158,21 @@ public class PlayerController : MonoBehaviour {
 			Main.SetActive (false);
 			Knight.SetActive (true);
 	}
+
+        
 }
+
+    void crouch(){
+        if (Input.GetButton("Crouch"))
+        {
+            animator.SetBool("isCrouch", true);
+        } else
+        {
+
+            animator.SetBool("isCrouch", false);
+        }
+
+    }
 
 	void Jump(){
 		if(isGrounded == true) {
