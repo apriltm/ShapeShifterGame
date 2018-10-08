@@ -1,0 +1,63 @@
+    1  git clone https://github.com/apriltm/ShapeShifterGame.git
+    2  cd ShapeShifter
+    3  cd ShapeShifterGame
+    4  ls
+    5  pwd
+    6  git status
+    7  git checkout -f
+    8  git checkout -b deecontrib
+    9  git status
+   10  git commit -a
+   11  git status
+   12  git commit -m "added stuff"
+   13  git add
+   14  git add .
+   15  git commit -m "added level?"
+   16  git status
+   17  git push origin deecontrib
+   18  git pull origin master
+   19  git status
+   20  ls
+   21  cd ShapeShifterGame/ShapeShifter
+   22  cd ShapeShifterGame/ShapeShifter/Assets
+   23  cd ShapeShifterGame/ShapeShifter/
+   24  cd ShapeShifter/Assets
+   25  ls
+   26  git pull origin master
+   27  git pull origin master
+   28* 
+   29  git pull origin master
+   30  git pull origin master
+   31  git pull origin master
+   32  git status
+   33  git stash
+   34  git status
+   35  git reset HEAD
+   36  git status
+   37  git pull origin master
+   38  rm ShapeShifter/Assets/New Palette.prefab.meta
+   39  rm ShapeShifter/Assets/NewPalette.prefab.meta
+   40  rm ShapeShifter/Assets/New Palette.prefab.meta
+   41  git reset HEAD
+   42  git status
+   43  git reset HEAD
+   44  git status
+   45* 
+   46  git status
+   47  git status
+   48  git pull origin master
+   49  git pull origin master
+   50  git status
+   51  git commit -m "played around with nathan's testing scence"
+   52  git status
+   53  git commit -m "played around with nathan's testing scence"
+   54  git commit -a
+   55  git commit -m "played around with nathan's testing scence"
+   56  git commit -m "played around with nathan's testing scence"
+   57  git add .
+   58  git commit -m "played around with nathan's testing scence"
+   59  git status
+   60  git push origin deecontrib
+   61  git pull origin master
+   62  history -> historyShapeShiftGame
+   63  history > historyShapeShiftGame.txt

@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 	public int maxHealth;
 	public int currentHealth;
 	private PlayerController player;
+    public Animator animator;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		if (currentHealth <= 0) {
 			Destroy (gameObject);
+            animator.SetBool("playerDies", true);
 		}
 	}
 
@@ -26,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage(int dam){
-		player.animator.Play ("hurt");
+		player.animator.Play ("Hurt");
 		currentHealth -= dam;
 		Debug.Log ("damage TAKEN");
 	}
