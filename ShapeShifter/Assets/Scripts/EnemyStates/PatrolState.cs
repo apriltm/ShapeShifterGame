@@ -7,7 +7,7 @@ public class PatrolState : IEnemyState
     private Enemy enemy;
 
     private float patrolTimer = 0;
-    private float patrolDuration = 10;
+    private float patrolDuration = 1000;
 
     private float collideTimer = 0;
 

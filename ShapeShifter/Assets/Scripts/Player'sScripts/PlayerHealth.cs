@@ -8,8 +8,10 @@ public class PlayerHealth : MonoBehaviour {
 	public int currentHealth;
 	private PlayerController player;
 
+	
 	// Use this for initialization
 	void Start () {
+		
 		currentHealth = maxHealth;
 		player = gameObject.GetComponent<PlayerController> ();
 	}
@@ -17,8 +19,11 @@ public class PlayerHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-			Destroy (gameObject);
+			player.animator.SetTrigger ("Dies");
+			Destroy (gameObject, 3.0f);
+
 		}
+
 	}
 
 	void FixedUpdate() {
@@ -26,9 +31,12 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage(int dam){
-		player.animator.Play ("hurt");
-		currentHealth -= dam;
-		Debug.Log ("damage TAKEN");
+
+			//player.animator.SetTrigger ("Damaged");
+			//gameObject.GetComponent<Animation> ().Play ("Hurt");
+			currentHealth -= dam;
+			Debug.Log (currentHealth);
+			
 	}
 	 
 

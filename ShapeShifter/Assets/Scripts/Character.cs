@@ -11,6 +11,9 @@ public abstract class Character : MonoBehaviour {
 
     protected bool facingRight;
 
+	[SerializeField]
+	private CircleCollider2D Sword;
+
     [SerializeField]
 	public int maxHealth;
     public int currentHealth;
@@ -28,7 +31,7 @@ public abstract class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
     public void ChangeDirection() {
@@ -36,19 +39,31 @@ public abstract class Character : MonoBehaviour {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, 1);
     }
 
-   /* public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-    }*/
-    /* 16.6
-    public abstract IEnumerator TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if(!IsDead){
-            MyAnimator.SetTrigger("Damaged")
-        } else {
-            MyAnimator.SetTrigger("Die")
-        }
     }
-    */
+    
+	void Melee(){
+		Sword.enabled = !Sword.enabled;
+	}
+
+
+	//public abstract IEnumerator TakeDamage (int damage);
+    
+       /* currentHealth -= damage;
+        if(!IsDead){
+			MyAnimator.SetTrigger ("Damaged");
+        } else {
+			MyAnimator.SetTrigger ("Die");
+			yield return null;
+        }*/
+    
+    
+
+	/*public virtual void OnTriggerEnter2D(Collider2D col){
+		if (col.tag = "Enemy_sword") {
+			StartCoroutine (TakeDamage ());
+		}
+	}*/
 }

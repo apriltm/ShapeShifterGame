@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour {
 
 		HandleJumpAndFall ();
 		//Debug.Log ();
+		MoveHor ();
 		Jump ();
         crouch();
 		selectF ();
@@ -74,9 +75,10 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    void FixedUpdate () {
 
-		MoveHor ();
+    void FixedUpdate () {
+		
+
 		
     }
 
@@ -96,7 +98,7 @@ public class PlayerController : MonoBehaviour {
 	void MoveHor()
 	{
 		// left & right movement
-		if (canMove) {
+
 			float xTranslation = Input.GetAxis ("Horizontal");
 			animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
 			animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
@@ -106,14 +108,17 @@ public class PlayerController : MonoBehaviour {
 			if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
 				Flip ();
 
-		}
+
 	}
+
+	/*void Melee(){
+		Sword.enabled = !Sword.enabled;
+	}*/
 
 	void CharAttack() {
 
 		if (timeBtwAttack <= 0 ) {
 			if(Input.GetButtonDown("Attack" )){
-				canMove = false;
 				animator.SetBool ("isAttacking", true);
 				animator2.SetBool ("isAttacking", true);
 				AttDelay ();
@@ -127,7 +132,7 @@ public class PlayerController : MonoBehaviour {
 			}
 
 		} else {
-			canMove = true;
+			
 			timeBtwAttack -= Time.deltaTime;
 			animator.SetBool ("isAttacking", false);
 			animator2.SetBool ("isAttacking", false);
@@ -236,7 +241,7 @@ public class PlayerController : MonoBehaviour {
 		while (KnockDur > timer) {
 
 			timer += Time.deltaTime;
-			rb.AddForce (new Vector3 (-.3f, 1500f, transform.position.z));
+			rb.AddForce (new Vector3 (-.3f, 1000f, transform.position.z));
 		}
 
 		yield return 0;

@@ -8,7 +8,7 @@ public class IdleState : IEnemyState
     private Enemy enemy;
 
     private float idleTimer;
-    private float idleDuration = 5;
+    private float idleDuration = 0;
 
     public void Enter(Enemy enemy)
     {

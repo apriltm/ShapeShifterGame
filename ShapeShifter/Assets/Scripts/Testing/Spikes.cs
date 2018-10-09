@@ -14,13 +14,13 @@ public class Spikes : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerEnter2D (Collider2D col) {
+		if (player.currentHealth > 0) {
+			if (col.CompareTag ("Player")) {
 
-		if (col.CompareTag ("Player")) {
-
-			player.TakeDamage (10);
-			StartCoroutine (p.Knockback (0.001f));
-			Debug.Log (player.currentHealth);
+				player.TakeDamage (20);
+				StartCoroutine (p.Knockback (0.001f));
+				Debug.Log (player.currentHealth);
+			}
 		}
-
 	}
 }

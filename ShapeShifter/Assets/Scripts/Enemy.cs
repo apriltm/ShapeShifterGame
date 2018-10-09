@@ -8,6 +8,9 @@ public class Enemy : Character {
 	public GameObject Drop;
 	public bool drops;
     public GameObject Target { get; set; }
+	public Transform attackPos;
+	public float attackRange;
+	public LayerMask Player;
 
     [SerializeField]
     private float meleeRange;
@@ -46,13 +49,7 @@ public class Enemy : Character {
 
 	// Update is called once per frame
 	void Update () {
-		if (currentHealth <= 0) {
-			drops = true;
-			if (drops) {
-				Instantiate (Drop, transform.position, transform.rotation);
-			}
-			Destroy (gameObject);
-		}
+
 
         if (!IsDead) {
             currentState.Execute();
@@ -86,13 +83,14 @@ public class Enemy : Character {
             MyAnimator.SetFloat("Speed", 1);
             transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
         }
+
     }
 
-	public void TakeDamage(int dam){
+	/*public void TakeDamage(int dam){
 
 		currentHealth -= dam;
 		Debug.Log (currentHealth);
-	}
+	}*/
 
     public Vector2 GetDirection()
     {
@@ -103,4 +101,33 @@ public class Enemy : Character {
     {
         currentState.OnTriggerEnter(other);
     }
+
+	/*public override void OnTriggerEnter2D(Collider2D col) {
+		base.OnTriggerEnter2D (col);
+		currentState.OnTriggerEnter (col);
+	}*/
+
+	public void TakeDamage(int damage)
+	{
+		currentHealth -= damage;
+		if(!IsDead){
+			MyAnimator.SetTrigger ("Damaged");
+			Debug.Log (currentHealth);
+
+		} else {
+			MyAnimator.SetTrigger ("Die");
+			Instantiate (Drop, transform.position, transform.rotation);
+			Destroy (gameObject, 1.5f);
+
+		}
+	}
+
+	public void giveDamage(int dam) {
+		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, Player);
+
+		for (int i = 0; i < enemiesToDamage.Length; i++) {
+			enemiesToDamage [i].GetComponent <PlayerHealth> ().TakeDamage (dam);
+		}
+
+	}
 }
