@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		if (currentHealth <= 0) {
 			player.animator.SetTrigger ("Dies");
+			player.enabled = false;
 			Destroy (gameObject, 3.0f);
 
 		}
@@ -31,13 +32,13 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage(int dam){
-
+		if (currentHealth > 0) {
 			player.animator.SetTrigger ("Damaged");
 			//gameObject.GetComponent<Animation> ().Play ("Hurt");
 
 			currentHealth -= dam;
 			Debug.Log (currentHealth);
-			
+		}		
 	}
 	 
 
