@@ -116,6 +116,7 @@ public class Enemy : Character {
 
 		} else {
 			MyAnimator.SetTrigger ("Die");
+
 			Instantiate (Drop, transform.position, transform.rotation);
 			Destroy (gameObject, 1.5f);
 
@@ -127,6 +128,7 @@ public class Enemy : Character {
 
 		for (int i = 0; i < enemiesToDamage.Length; i++) {
 			enemiesToDamage [i].GetComponent <PlayerHealth> ().TakeDamage (dam);
+
 		}
 
 	}
