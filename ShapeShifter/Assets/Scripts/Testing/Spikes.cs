@@ -19,7 +19,7 @@ public class Spikes : MonoBehaviour {
 
 				player.TakeDamage (20);
 				StartCoroutine (p.Knockback (0.001f));
-				Debug.Log (player.currentHealth);
+
 			}
 		}
 	}
