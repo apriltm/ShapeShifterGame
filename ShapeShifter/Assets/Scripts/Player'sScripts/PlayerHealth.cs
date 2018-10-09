@@ -32,8 +32,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void TakeDamage(int dam){
 
-			//player.animator.SetTrigger ("Damaged");
+			player.animator.SetTrigger ("Damaged");
 			//gameObject.GetComponent<Animation> ().Play ("Hurt");
+
 			currentHealth -= dam;
 			Debug.Log (currentHealth);
 			
