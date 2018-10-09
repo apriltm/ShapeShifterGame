@@ -22,6 +22,7 @@ public class SoulPickup : MonoBehaviour {
 		if (col.tag == "Player") {
 			PlayerEXP player = col.gameObject.GetComponent<PlayerEXP> ();
 			player.addExp ();
+			Audio.PlaySound ("PickUp");
 			Destroy (gameObject);
 		}
 	}

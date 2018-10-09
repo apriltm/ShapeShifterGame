@@ -112,6 +112,7 @@ public class Enemy : Character {
 		currentHealth -= damage;
 		if(!IsDead){
 			MyAnimator.SetTrigger ("Damaged");
+			Audio.PlaySound ("EnemyHurt");
 			Debug.Log (currentHealth);
 
 		} else {
@@ -125,7 +126,7 @@ public class Enemy : Character {
 
 	public void giveDamage(int dam) {
 		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, Player);
-
+		Audio.PlaySound ("EnemyAttack");
 		for (int i = 0; i < enemiesToDamage.Length; i++) {
 			enemiesToDamage [i].GetComponent <PlayerHealth> ().TakeDamage (dam);
 

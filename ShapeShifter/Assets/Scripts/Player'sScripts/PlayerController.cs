@@ -98,12 +98,13 @@ public class PlayerController : MonoBehaviour {
 	void MoveHor()
 	{
 		// left & right movement
-
+		/*if (Input.GetButtonDown ("Horizontal")) {
+			Audio.PlaySound ("PlayMove");
+		}*/
 			float xTranslation = Input.GetAxis ("Horizontal");
 			animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
 			animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
-
 			// flips sprite if moving the other direction
 			if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
 				Flip ();
@@ -119,6 +120,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (timeBtwAttack <= 0 ) {
 			if(Input.GetButtonDown("Attack" )){
+				Audio.PlaySound ("PlayerAttack");
 				animator.SetBool ("isAttacking", true);
 				animator2.SetBool ("isAttacking", true);
 				AttDelay ();
@@ -143,6 +145,7 @@ public class PlayerController : MonoBehaviour {
 	void selectF(){
 		if (Input.GetButtonDown ("Change")&& Player_current_lvl >= 1) { //Grab input and then select a model for the player 
 			Instantiate(SE,transform.position, transform.rotation = Quaternion.identity);
+			Audio.PlaySound ("Shift");
 			if (PlayerSelect == 1) {
 				PlayerSelect = 2;
 			} else
@@ -189,12 +192,18 @@ public class PlayerController : MonoBehaviour {
 			HandleJumpAndFall ();
 		}
 		if (Input.GetButtonDown("Jump") && extraJumps > 0) {
+			if (PlayerSelect ==1){
+				Audio.PlaySound ("Jumping");
+			}
 			HandleJumpAndFall ();
 			//animator.SetBool ("isJumping", false);
 			//animator.SetBool ("isJumping", true);
 			rb.velocity = Vector2.up * jumpForce;
 			extraJumps--;
 		} else if(Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true) {
+			if (PlayerSelect ==1){
+				Audio.PlaySound ("Jumping");
+			}
 			HandleJumpAndFall();
 			//animator.SetBool ("isJumping", false);
 			//animator.SetBool ("isJumping", true);
@@ -241,7 +250,7 @@ public class PlayerController : MonoBehaviour {
 		while (KnockDur > timer) {
 
 			timer += Time.deltaTime;
-			rb.AddForce (new Vector3 (-.3f, 1000f, transform.position.z));
+			rb.AddForce (new Vector3 (-.3f, 1300f, transform.position.z));
 		}
 
 		yield return 0;

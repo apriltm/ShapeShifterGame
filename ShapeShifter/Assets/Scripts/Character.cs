@@ -11,8 +11,7 @@ public abstract class Character : MonoBehaviour {
 
     protected bool facingRight;
 
-	[SerializeField]
-	private CircleCollider2D Sword;
+
 
     [SerializeField]
 	public int maxHealth;
@@ -44,9 +43,7 @@ public abstract class Character : MonoBehaviour {
         currentHealth -= damage;
     }
     
-	void Melee(){
-		Sword.enabled = !Sword.enabled;
-	}
+
 
 
 	//public abstract IEnumerator TakeDamage (int damage);
