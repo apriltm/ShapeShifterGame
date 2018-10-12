@@ -38,9 +38,10 @@ public class PlayerController : MonoBehaviour {
     public int extraJumpsValue;
 
 	private bool attack;
-
+	private PlayerHealth PlayerH;
 	// Use this for initialization
 	void Start () {
+		PlayerH = gameObject.GetComponent<PlayerHealth> ();
 		Player_current_lvl = 0;
 		canMove = true;
 		attack = false;
@@ -104,7 +105,9 @@ public class PlayerController : MonoBehaviour {
 			float xTranslation = Input.GetAxis ("Horizontal");
 			animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
 			animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
+		if (PlayerH.currentHealth > 0) {
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
+		}
 			// flips sprite if moving the other direction
 			if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
 				Flip ();
@@ -118,7 +121,7 @@ public class PlayerController : MonoBehaviour {
 
 	void CharAttack() {
 
-		if (timeBtwAttack <= 0 ) {
+		if (Input.GetButtonDown("Attack") && timeBtwAttack <= 0 ) {
 			if(Input.GetButtonDown("Attack" )){
 				Audio.PlaySound ("PlayerAttack");
 				animator.SetBool ("isAttacking", true);
@@ -224,9 +227,9 @@ public class PlayerController : MonoBehaviour {
 
 	void AttDelay(){
 		if (PlayerSelect == 1) {
-			startTimeBtwAttack = 0.3f;
+			startTimeBtwAttack = .5f;
 		} else if (PlayerSelect == 2) {
-			startTimeBtwAttack = 0.6f;
+			startTimeBtwAttack = 1.0f;
 		}
 	}
 	/*void OnDrawGizmosSelected(){

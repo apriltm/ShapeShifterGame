@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour {
 	public float maxHealth;
 	public float currentHealth;
 	private PlayerController player;
+	private float hurtTime = 1.0f;
 
     public Image currentHPBar;
     public Text HPText;
@@ -62,7 +63,7 @@ public class PlayerHealth : MonoBehaviour {
 		if (currentHealth > 0) {
             currentHealth -= dam;
             Debug.Log(currentHealth);
-            player.animator.SetTrigger ("Damaged");
+			StartCoroutine(HurtBlinker(hurtTime));
 			Audio.PlaySound ("PlayerHurt");
 			//gameObject.GetComponent<Animation> ().Play ("Hurt");
 
@@ -72,5 +73,20 @@ public class PlayerHealth : MonoBehaviour {
         UpdateHealthBar();
 	}
 	 
+
+	IEnumerator HurtBlinker(float hurtTime){
+
+		//int enemyLayer = LayerMask.NameToLayer ("Enemy");
+		//int playerLayer = LayerMask.NameToLayer ("Player");
+		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
+
+		player.animator.SetLayerWeight (1, 1f);
+
+		yield return new WaitForSeconds(hurtTime);
+
+		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
+
+		player.animator.SetLayerWeight (1, 0f);
+	}
 
 }

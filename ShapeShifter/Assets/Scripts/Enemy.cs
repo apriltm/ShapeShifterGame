@@ -86,11 +86,6 @@ public class Enemy : Character {
 
     }
 
-	/*public void TakeDamage(int dam){
-
-		currentHealth -= dam;
-		Debug.Log (currentHealth);
-	}*/
 
     public Vector2 GetDirection()
     {
@@ -102,16 +97,13 @@ public class Enemy : Character {
         currentState.OnTriggerEnter(other);
     }
 
-	/*public override void OnTriggerEnter2D(Collider2D col) {
-		base.OnTriggerEnter2D (col);
-		currentState.OnTriggerEnter (col);
-	}*/
 
 	public void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
 		if(!IsDead){
-			MyAnimator.SetTrigger ("Damaged");
+			
+			StartCoroutine(HurtBlinker(1.0f));
 			Audio.PlaySound ("EnemyHurt");
 			Debug.Log (currentHealth);
 
@@ -132,5 +124,19 @@ public class Enemy : Character {
 
 		}
 
+	}
+	IEnumerator HurtBlinker(float hurtTime){
+
+		//int enemyLayer = LayerMask.NameToLayer ("Enemy");
+		//int playerLayer = LayerMask.NameToLayer ("Player");
+		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
+
+		MyAnimator.SetLayerWeight (1, 1f);
+
+		yield return new WaitForSeconds(hurtTime);
+
+		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
+
+		MyAnimator.SetLayerWeight (1, 0f);
 	}
 }

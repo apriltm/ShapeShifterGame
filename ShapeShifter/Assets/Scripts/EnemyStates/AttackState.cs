@@ -7,7 +7,7 @@ public class AttackState : IEnemyState
     private Enemy enemy;
 
     private float attackTimer = 0;
-    private float attackCooldown = 2f;
+    private float attackCooldown = 2.0f;
     private bool canAttack = true;
 
 
