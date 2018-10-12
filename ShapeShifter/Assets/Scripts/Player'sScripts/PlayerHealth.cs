@@ -24,7 +24,9 @@ public class PlayerHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
+			
 			player.animator.SetTrigger ("Dies");
+			player.animator2.SetTrigger("Dies");
 			 
 			player.enabled = false;
 			Destroy (gameObject, 3.0f);
@@ -36,7 +38,8 @@ public class PlayerHealth : MonoBehaviour {
     
 
 	void FixedUpdate() {
-		
+		Debug.Log(currentHealth);
+		UpdateHealthBar();
 	}
 
     public void UpdateHealthBar()
@@ -56,11 +59,12 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-	public void TakeDamage(int dam){
+	public void TakeDamage(float dam){
 
 		
 
 		if (currentHealth > 0) {
+			DamageReduce (dam);
             currentHealth -= dam;
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
@@ -73,6 +77,11 @@ public class PlayerHealth : MonoBehaviour {
         UpdateHealthBar();
 	}
 	 
+	public void addHealth(int Health){
+		currentHealth += Health;
+		if (currentHealth > 100)
+			currentHealth = 100;
+	}
 
 	IEnumerator HurtBlinker(float hurtTime){
 
@@ -81,12 +90,18 @@ public class PlayerHealth : MonoBehaviour {
 		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
 
 		player.animator.SetLayerWeight (1, 1f);
-
+		player.animator2.SetLayerWeight (1, 1f);
 		yield return new WaitForSeconds(hurtTime);
 
 		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
 
 		player.animator.SetLayerWeight (1, 0f);
+		player.animator2.SetLayerWeight (1, 0f);
+	}
+
+	void DamageReduce(float dam) {
+		if (player.PlayerSelect == 2)
+			dam = dam*.5f;
 	}
 
 }

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 	public Animator animator2;
 
 	public GameObject Main, Knight;
-	int PlayerSelect;
+	public int PlayerSelect;
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour {
 			animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
 		if (PlayerH.currentHealth > 0) {
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
+
 		}
 			// flips sprite if moving the other direction
 			if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
@@ -186,7 +187,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void Jump(){
-		if(isGrounded == true) {
+		if(isGrounded == true ) {
 			animator.SetBool ("isJumping", false);
 			animator.SetBool ("isFalling", false);
 			extraJumps = extraJumpsValue;
@@ -194,7 +195,7 @@ public class PlayerController : MonoBehaviour {
 		if (isGrounded == false) {
 			HandleJumpAndFall ();
 		}
-		if (Input.GetButtonDown("Jump") && extraJumps > 0) {
+		if (Input.GetButtonDown("Jump") && extraJumps > 0 ) {
 			if (PlayerSelect ==1){
 				Audio.PlaySound ("Jumping");
 			}
@@ -203,7 +204,7 @@ public class PlayerController : MonoBehaviour {
 			//animator.SetBool ("isJumping", true);
 			rb.velocity = Vector2.up * jumpForce;
 			extraJumps--;
-		} else if(Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true) {
+		} else if(Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true ) {
 			if (PlayerSelect ==1){
 				Audio.PlaySound ("Jumping");
 			}

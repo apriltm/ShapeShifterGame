@@ -73,10 +73,28 @@ AnimatorController:
     m_Name: hurt
     m_StateMachine: {fileID: 1107744843836381668}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: 1102783855563217636}
+      m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102740430946123712}
+      m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102644618278330176}
+      m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102819181032401794}
+      m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102833902492588426}
+      m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 1102003717690865880}
+      m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
     m_Behaviours: []
-    m_BlendingMode: 1
-    m_SyncedLayerIndex: -1
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: 0
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
@@ -594,31 +612,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102303832029009902
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hurt
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &1102513990017681746
 AnimatorState:
   serializedVersion: 5
@@ -639,6 +632,31 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 0e00cb204ad786a4982aa475444e6551, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &1102522944635717446
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hurt
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 562d0280ce48d6b4a8d4b761d40128c5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -861,8 +879,8 @@ AnimatorStateMachine:
   m_Name: hurt
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1102303832029009902}
-    m_Position: {x: 96, y: -96, z: 0}
+    m_State: {fileID: 1102522944635717446}
+    m_Position: {x: 276, y: -84, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -872,4 +890,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 288, y: 48, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102303832029009902}
+  m_DefaultState: {fileID: 1102522944635717446}
