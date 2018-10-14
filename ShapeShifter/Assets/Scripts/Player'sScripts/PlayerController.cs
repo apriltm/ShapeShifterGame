@@ -30,8 +30,9 @@ public class PlayerController : MonoBehaviour {
 
 	public Animator animator;
 	public Animator animator2;
+	public Animator animator3;
 
-	public GameObject Main, Knight;
+	public GameObject Main, Knight, Mage;
 	public int PlayerSelect;
 
     private int extraJumps;
@@ -102,9 +103,11 @@ public class PlayerController : MonoBehaviour {
 		/*if (Input.GetButtonDown ("Horizontal")) {
 			Audio.PlaySound ("PlayMove");
 		}*/
-			float xTranslation = Input.GetAxis ("Horizontal");
-			animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
-			animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
+		float xTranslation = Input.GetAxis ("Horizontal");
+		animator.SetFloat ("Speed", Mathf.Abs (xTranslation)); //set the speed for the animator
+		animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
+		animator3.SetFloat ("Speed", Mathf.Abs (xTranslation));
+
 		if (PlayerH.currentHealth > 0) {
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
 
@@ -122,7 +125,8 @@ public class PlayerController : MonoBehaviour {
 
 	void CharAttack() {
 
-		if (Input.GetButtonDown("Attack") && timeBtwAttack <= 0 ) {
+		if (Input.GetButtonDown("Attack") && timeBtwAttack <= 0 &&
+			(PlayerSelect==1 || PlayerSelect ==2)) {
 			if(Input.GetButtonDown("Attack" )){
 				Audio.PlaySound ("PlayerAttack");
 				animator.SetBool ("isAttacking", true);
@@ -147,14 +151,19 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void selectF(){
-		if (Input.GetButtonDown ("Change")&& Player_current_lvl >= 1) { //Grab input and then select a model for the player 
-			Instantiate(SE,transform.position, transform.rotation = Quaternion.identity);
+		if (Input.GetButtonDown ("Base") && PlayerSelect != 1) { //Grab input and then select a model for the player 
+			Instantiate (SE, transform.position, transform.rotation = Quaternion.identity);
 			Audio.PlaySound ("Shift");
-			if (PlayerSelect == 1) {
-				PlayerSelect = 2;
-			} else
-				PlayerSelect = 1;
-		} 
+			PlayerSelect = 1;
+		} else if (Input.GetButtonDown ("Knight") && PlayerSelect != 2) {
+			Instantiate (SE, transform.position, transform.rotation = Quaternion.identity);
+			Audio.PlaySound ("Shift");
+			PlayerSelect = 2;
+		} else if (Input.GetButtonDown ("Mage") && PlayerSelect != 3) {
+			Instantiate (SE, transform.position, transform.rotation = Quaternion.identity);
+			Audio.PlaySound ("Shift");
+			PlayerSelect = 3;
+		}
 	}
 
 
@@ -164,13 +173,20 @@ public class PlayerController : MonoBehaviour {
 			jumpForce = 13.5f;
 			Main.SetActive (true); 
 			Knight.SetActive (false);
-	} 	else { //just using else statement for now. will change whenever we start to put in more forms
+			Mage.SetActive (false);
+		} else if (PlayerSelect == 2) { //just using else statement for now. will change whenever we start to put in more forms
 			speed = 3.5f; //knight will the slowest
 			jumpForce = 0.0f; // knights will be unable to jump
 			Main.SetActive (false);
 			Knight.SetActive (true);
-	}
-
+			Mage.SetActive (false);
+		} else if (PlayerSelect ==3) {
+			speed = 5.0f; //knight will the slowest
+			jumpForce = 11.0f; // knights will be unable to jump
+			Main.SetActive (false);
+			Knight.SetActive (false);
+			Mage.SetActive (true);
+		}
         
 }
 

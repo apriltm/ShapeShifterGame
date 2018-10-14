@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 41ff7b57e727e454980e070f657bdd8a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayStation - Vandal Hearts - Dark Mage_0
+    21300002: PlayStation - Vandal Hearts - Dark Mage_1
+    21300004: PlayStation - Vandal Hearts - Dark Mage_2
+    21300006: PlayStation - Vandal Hearts - Dark Mage_3
+    21300008: PlayStation - Vandal Hearts - Dark Mage_4
+    21300010: PlayStation - Vandal Hearts - Dark Mage_5
+    21300012: PlayStation - Vandal Hearts - Dark Mage_6
+    21300014: PlayStation - Vandal Hearts - Dark Mage_7
+    21300016: PlayStation - Vandal Hearts - Dark Mage_8
+    21300018: PlayStation - Vandal Hearts - Dark Mage_9
+    21300020: PlayStation - Vandal Hearts - Dark Mage_10
+    21300022: PlayStation - Vandal Hearts - Dark Mage_11
+    21300024: PlayStation - Vandal Hearts - Dark Mage_12
+    21300026: PlayStation - Vandal Hearts - Dark Mage_13
+    21300028: PlayStation - Vandal Hearts - Dark Mage_14
+    21300030: PlayStation - Vandal Hearts - Dark Mage_15
+    21300032: PlayStation - Vandal Hearts - Dark Mage_16
+    21300034: PlayStation - Vandal Hearts - Dark Mage_17
+    21300036: PlayStation - Vandal Hearts - Dark Mage_18
+    21300038: PlayStation - Vandal Hearts - Dark Mage_19
+    21300040: PlayStation - Vandal Hearts - Dark Mage_20
+    21300042: PlayStation - Vandal Hearts - Dark Mage_21
+    21300044: PlayStation - Vandal Hearts - Dark Mage_22
+    21300046: PlayStation - Vandal Hearts - Dark Mage_23
+    21300048: PlayStation - Vandal Hearts - Dark Mage_24
+    21300050: PlayStation - Vandal Hearts - Dark Mage_25
+    21300052: PlayStation - Vandal Hearts - Dark Mage_26
+    21300054: PlayStation - Vandal Hearts - Dark Mage_27
+    21300056: PlayStation - Vandal Hearts - Dark Mage_28
+    21300058: PlayStation - Vandal Hearts - Dark Mage_29
+    21300060: PlayStation - Vandal Hearts - Dark Mage_30
+    21300062: PlayStation - Vandal Hearts - Dark Mage_31
+    21300064: PlayStation - Vandal Hearts - Dark Mage_32
+    21300066: PlayStation - Vandal Hearts - Dark Mage_33
+    21300068: PlayStation - Vandal Hearts - Dark Mage_34
+    21300070: PlayStation - Vandal Hearts - Dark Mage_35
+    21300072: PlayStation - Vandal Hearts - Dark Mage_36
+    21300074: PlayStation - Vandal Hearts - Dark Mage_37
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 402
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4ccf189b9b5c143a2c768025fab61e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 403
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f825ac8399f1d454584a1e59cf27486b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 402
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956de2317b60d6a46862d6da40f8c02e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 403
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb14325bfecaf7e4ea0428f9e01408d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 402
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd100bdc83286647b2ea1ce6439f663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 355
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a191721f97415b4fa50eee57190f605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 354
+        width: 46
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec4a538088ae5a49b3a268608e8f7e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_7
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 354
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd699951934efe40ab9b13291945aab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 354
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da34dd8af0b8cbc4d9c52366a48fe139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 354
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d41cb4be78c6dc449b96c92d403e4f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 307
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1641166186394594d94bc6cf1a39accf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 307
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fb5ad223665d0438a686ac23fb24f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_12
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 306
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06e5852fe7e5714ab50f95a2d04c95a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_13
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 306
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9b9495ab32c6c449e90e31448ada31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_14
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 306
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb628246e5affe44bf0527aec5b0e31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 258
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4990ff7dd6ef84795348571b19d56a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 258
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a33d3b515e949468250660ebf25120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 259
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a79a550db0fac45b0c75b00c2fe363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_18
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 258
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be3b889a3fc5004cbb4247bb4ebfdb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 258
+        width: 56
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66a375f5bf81704cb8719c55ef98671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 210
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051dbf07ce1816348b8b327bb53b9c7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_21
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 210
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1985638a4858b4db1b5d4f9ac14ff6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 210
+        width: 55
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e200e9fac03e28488ff7a0f01a7ac1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 146
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ac4648dddf6bd4e8db85f3eb2fdbc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 98
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5aa7840be135040a3341528e2a70a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_25
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 99
+        width: 61
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ce928b52b07b247b05e3a036b2c847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 99
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d36f39440a90e41bbebd1f9816aa09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 99
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ccd684a4a74c44b980ba852cfece2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0299e6496f0af4391a7bfb399d1b20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_29
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 49
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3bb5e3d1d476b4c9ca2973a4a2c609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_30
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 50
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40acf587a64b0d74a867715844d6d0f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_31
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 49
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eb3b051a5be2949a3f1d18c2e0a410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 50
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808182527d7e9754ba8dfc177927909a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_33
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6136894ff82fe343b1c8aebec8191b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_34
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 2
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14e4a1ad4a8c7247a404c0cc95c8c4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_35
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3076a0e0ffcba14aa51b89743195eaa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_36
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b933afe92254784429ec9e42e5cdee5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Vandal Hearts - Dark Mage_37
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb3be6d66d5ec5458b84853417016e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 01a260c0cb307a54395185f7a4c6c543
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
