@@ -48,15 +48,22 @@ public class PlayerHealth : MonoBehaviour {
         currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         HPText.text = currentHealth.ToString();
 
-        if (currentHealth <= 60)
+        
+        if (currentHealth > 60)
+        {
+            currentHPBar.color = new Color32(27, 188, 48, 255);
+        }
+        if (currentHealth <= 60 && currentHealth > 30)
         {
             currentHPBar.color = new Color32(188, 141, 88, 255);
         }
 
-        if (currentHealth <= 30)
+        if (currentHealth <= 30 && currentHealth > 0)
         {
             currentHPBar.color = new Color32(188, 44, 28, 255);
         }
+
+        
     }
 
 	public void TakeDamage(float dam){
