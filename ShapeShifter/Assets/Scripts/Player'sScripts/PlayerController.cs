@@ -127,17 +127,22 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetButtonDown("Attack") && timeBtwAttack <= 0 &&
 			(PlayerSelect==1 || PlayerSelect ==2)) {
-			if(Input.GetButtonDown("Attack" )){
+			if (Input.GetButtonDown ("Attack")) {
 				Audio.PlaySound ("PlayerAttack");
 				animator.SetBool ("isAttacking", true);
 				animator2.SetBool ("isAttacking", true);
 				AttDelay ();
 				timeBtwAttack = startTimeBtwAttack;
-				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll (attackPos.position, attackRange, whatIsEnemies);
 				DamageFactor ();
 				for (int i = 0; i < enemiesToDamage.Length; i++) {
 					enemiesToDamage [i].GetComponent <Enemy> ().TakeDamage (damage);
 				}
+
+			} else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
+				PlayerSelect ==3) {
+
+
 
 			}
 
