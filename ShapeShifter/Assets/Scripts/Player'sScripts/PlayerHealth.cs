@@ -27,8 +27,9 @@ public class PlayerHealth : MonoBehaviour {
 			
 			player.animator.SetTrigger ("Dies");
 			player.animator2.SetTrigger("Dies");
-			 
-			player.enabled = false;
+			player.animator.SetBool("isJumping", false);
+            player.animator.SetBool("isFalling", false);
+            player.enabled = false;
 			Destroy (gameObject, 3.0f);
 
 		}
