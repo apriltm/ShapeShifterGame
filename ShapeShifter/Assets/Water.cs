@@ -23,7 +23,7 @@ public class Water : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
  
-        rb.drag = 30f;
+        rb.drag = 10f;
         player = gameObject.GetComponent<PlayerController>();
         player.Invoke("Dies", 5f);
 
@@ -32,9 +32,9 @@ public class Water : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D player)
     {
-        if(player.CompareTag("Player")){
+        /*if(player.CompareTag("Player")){
             rb.gravityScale = 3.55f;
-        }
+        }*/
     }
 
 }
