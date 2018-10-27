@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 7009c7ead6cbd854dadf05f4e8692a77
   - enabled: 1
-    path: Assets/Scenes/Nathan's.unity
-    guid: c42aa9a18bb500e4991ca7ba799736f5
+    path: Assets/Scenes/Kaif's Scene.unity
+    guid: 14ffad4c5f6959043acc2cfb4d86f387
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 442082cf693f2334682ad567223c7747
   m_configObjects: {}
