@@ -44,12 +44,13 @@ public class PlayerController : MonoBehaviour {
 
 
     //Updating UI Selection of Shape Visual;
-    public Image baseshapeimage;
-    public Image shape1image;
-    public Image shape2image;
+    
     public GameObject actionbar_baseform;
     public GameObject actionbar_shape1;
     public GameObject actionbar_shape2;
+    public Image baseform_inactive;
+    public Image shape1_inactive;
+    public Image shape2_inactive;
 
 
 	// Use this for initialization
@@ -192,29 +193,31 @@ public class PlayerController : MonoBehaviour {
 			Knight.SetActive (false);
 			Mage.SetActive (false);
 
-            baseshapeimage.color = new Color32(212, 240, 241, 255);
-            shape1image.color = new Color32(0, 0, 0, 255);
-            shape2image.color = new Color32(0, 0, 0, 255);
+           
 
             actionbar_baseform.SetActive(true);
             actionbar_shape1.SetActive(false);
             actionbar_shape2.SetActive(false);
-           
 
-		} else if (PlayerSelect == 2) { //just using else statement for now. will change whenever we start to put in more forms
+            baseform_inactive.enabled = false;
+            shape1_inactive.enabled = true;
+            shape2_inactive.enabled = true;
+
+        } else if (PlayerSelect == 2) { //just using else statement for now. will change whenever we start to put in more forms
 			speed = 3.5f; //knight will the slowest
 			jumpForce = 0.0f; // knights will be unable to jump
 			Main.SetActive (false);
 			Knight.SetActive (true);
 			Mage.SetActive (false);
-
-            baseshapeimage.color = new Color32(0, 0, 0, 255);
-            shape1image.color = new Color32(212, 240, 241, 255);
-            shape2image.color = new Color32(0, 0, 0, 255);
+            
 
             actionbar_baseform.SetActive(false);
             actionbar_shape1.SetActive(true);
             actionbar_shape2.SetActive(false);
+
+            baseform_inactive.enabled = true;
+            shape1_inactive.enabled = false;
+            shape2_inactive.enabled = true;
 
         } else if (PlayerSelect ==3) {
 			speed = 5.0f; //knight will the slowest
@@ -223,13 +226,15 @@ public class PlayerController : MonoBehaviour {
 			Knight.SetActive (false);
 			Mage.SetActive (true);
 
-            baseshapeimage.color = new Color32(0, 0, 0, 255);
-            shape1image.color = new Color32(0, 0, 0, 255);
-            shape2image.color = new Color32(212, 240, 241, 255);
+        
 
             actionbar_baseform.SetActive(false);
             actionbar_shape1.SetActive(false);
             actionbar_shape2.SetActive(true);
+
+            baseform_inactive.enabled = true;
+            shape1_inactive.enabled = true;
+            shape2_inactive.enabled = false;
 
         }
         
@@ -325,6 +330,8 @@ public class PlayerController : MonoBehaviour {
 		if (other.transform.tag == "MovingPlatform") {
 			transform.parent = other.transform;
 		}
+
+        Debug.Log("HITTING SOMETHING");
 	}
 
 	void OnCollisionExit2D (Collision2D other){
