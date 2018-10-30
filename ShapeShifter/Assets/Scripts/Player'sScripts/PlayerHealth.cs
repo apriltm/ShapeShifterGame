@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
-
+    
 	public float maxHealth;
 	public float currentHealth;
 	private PlayerController player;
@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour {
             return 1.0f;
         }
     }
-
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -44,7 +44,9 @@ public class PlayerHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-			
+            FindObjectOfType<GameManager>().EndGame();
+           
+
 			player.animator.SetTrigger ("Dies");
 			player.animator2.SetTrigger("Dies");
 			player.animator.SetBool("isJumping", false);
@@ -59,7 +61,7 @@ public class PlayerHealth : MonoBehaviour {
     
 
 	void FixedUpdate() {
-		Debug.Log(currentHealth);
+		//Debug.Log(currentHealth);
 		UpdateHealthBar();
 	}
 
@@ -70,7 +72,7 @@ public class PlayerHealth : MonoBehaviour {
         currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         HPText.text = currentHealth.ToString();
 
-        
+        /*
         if (currentHealth > 60)
         {
             currentHPBar.color = new Color32(27, 188, 48, 255);
@@ -84,7 +86,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             currentHPBar.color = new Color32(188, 44, 28, 255);
         }
-        
+        */
         
     }
 

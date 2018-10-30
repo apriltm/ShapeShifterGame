@@ -10,6 +10,7 @@ public class KnightAbilities : MonoBehaviour {
     public PlayerHealth playerHealth;
 
     public Rigidbody2D playerRigidbody;
+    public PlayerController playerController;
 
     private void Start()
     {
@@ -64,24 +65,53 @@ public class KnightAbilities : MonoBehaviour {
     float buttonTimer = 0.5f;
 
     void Dash() {
-        if (Input.anyKeyDown) {
-            if(buttonTimer > 0 && buttonCount == 1) {
-                /*
-                 * set to block animation
-                 * push character in direction
-                 */
-                playerRigidbody.position += new Vector2(playerRigidbody.velocity.x * Time.deltaTime, 0.1f);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (playerController.facingRight == true)
+            {
+                // dashTimer += Time.deltaTime * 3;
+                playerRigidbody.AddForce(Vector3.right * 50);
+
             }
-            else {
-                buttonTimer = 0.5f;
-                buttonCount += 1;
+            if (direction == false)
+            {
+                // dashTimer += Time.deltaTime * 3;
+                playerRigidbody.AddForce(Vector3.left * 50);
             }
         }
-        if (buttonTimer > 0) {
-            buttonTimer -= 1 * Time.deltaTime;
+        /*
+        if (dashTimer > .5f)
+        {
+            canIDash = false;
+            dashCooldown = true;
+        }
+        if (dashTimer < .5f && dashCooldown == false)
+        {
+            canIDash = true;
+        }
+        if (dashTimer <= 0)
+        {
+            dashCooldown = false;
+        }
+        */
+
+    }
+    /*
+    if (Input.anyKeyDown) {
+        if(buttonTimer > 0 && buttonCount == 1) {
+            playerRigidbody.position += new Vector2(playerRigidbody.velocity.x * Time.deltaTime, 0.1f);
         }
         else {
-            buttonCount = 0;
+            buttonTimer = 0.5f;
+            buttonCount += 1;
         }
     }
+    if (buttonTimer > 0) {
+        buttonTimer -= 1 * Time.deltaTime;
+    }
+    else {
+        buttonCount = 0;
+    }
+    */
+}
 }

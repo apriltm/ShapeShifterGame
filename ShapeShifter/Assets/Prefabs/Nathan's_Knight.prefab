@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114971493158524478}
   m_Layer: 9
   m_Name: Nathan's_Knight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6a73701c5deed43a348264a8076594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1029515106121064, guid: 653dd7e796bb3984fb2d153bcb6897cd, type: 2}
+  other: {fileID: 1080598036387096}
 --- !u!114 &114597225545819752
 MonoBehaviour:
   m_ObjectHideFlags: 1

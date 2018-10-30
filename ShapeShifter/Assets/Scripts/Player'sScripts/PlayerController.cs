@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
     public float speed = 10.0f;
@@ -39,6 +40,15 @@ public class PlayerController : MonoBehaviour {
 
 	private bool attack;
 	private PlayerHealth playerHealth;
+
+    //Updating UI Selection of Shape Visual;
+    public Image baseshapeimage;
+    public Image shape1image;
+    public Image shape2image;
+    public GameObject actionbar_baseform;
+    public GameObject actionbar_shape1;
+    public GameObject actionbar_shape2;
+
 	// Use this for initialization
 	void Start () {
 		playerHealth = gameObject.GetComponent<PlayerHealth> ();
@@ -143,12 +153,12 @@ public class PlayerController : MonoBehaviour {
 					enemiesToDamage [i].GetComponent <Enemy> ().TakeDamage (damage);
 				}
 
-			} else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
+			} /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
 				PlayerSelect ==3) {
 
 
 
-			}
+			}*/
 
 		} else {
 			
@@ -183,19 +193,47 @@ public class PlayerController : MonoBehaviour {
 			Main.SetActive (true); 
 			Knight.SetActive (false);
 			Mage.SetActive (false);
+
+            baseshapeimage.color = new Color32(212, 240, 241, 255);
+            shape1image.color = new Color32(0, 0, 0, 255);
+            shape2image.color = new Color32(0, 0, 0, 255);
+
+            actionbar_baseform.SetActive(true);
+            actionbar_shape1.SetActive(false);
+            actionbar_shape2.SetActive(false);
+           
+
 		} else if (PlayerSelect == 2) { //just using else statement for now. will change whenever we start to put in more forms
 			speed = 3.5f; //knight will the slowest
 			jumpForce = 0.0f; // knights will be unable to jump
 			Main.SetActive (false);
 			Knight.SetActive (true);
 			Mage.SetActive (false);
-		} else if (PlayerSelect ==3) {
+
+            baseshapeimage.color = new Color32(0, 0, 0, 255);
+            shape1image.color = new Color32(212, 240, 241, 255);
+            shape2image.color = new Color32(0, 0, 0, 255);
+
+            actionbar_baseform.SetActive(false);
+            actionbar_shape1.SetActive(true);
+            actionbar_shape2.SetActive(false);
+
+        } else if (PlayerSelect ==3) {
 			speed = 5.0f; //knight will the slowest
 			jumpForce = 11.0f; // knights will be unable to jump
 			Main.SetActive (false);
 			Knight.SetActive (false);
 			Mage.SetActive (true);
-		}
+
+            baseshapeimage.color = new Color32(0, 0, 0, 255);
+            shape1image.color = new Color32(0, 0, 0, 255);
+            shape2image.color = new Color32(212, 240, 241, 255);
+
+            actionbar_baseform.SetActive(false);
+            actionbar_shape1.SetActive(false);
+            actionbar_shape2.SetActive(true);
+
+        }
         
 }
 
@@ -283,6 +321,18 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		yield return 0;
+	}
+
+	void OnCollisionEnter2D (Collision2D other){
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = other.transform;
+		}
+	}
+
+	void OnCollisionExit2D (Collision2D other){
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = null;
+		}
 	}
 
 	/*void addExp(int exp) {

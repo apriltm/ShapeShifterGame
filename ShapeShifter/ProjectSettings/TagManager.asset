@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Sword
   - Water
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

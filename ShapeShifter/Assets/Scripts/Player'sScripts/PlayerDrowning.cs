@@ -27,7 +27,8 @@ public class PlayerDrowning : MonoBehaviour {
 		}
 
 		if (drownTimer > drownTime) {
-			player.currentHealth = 0;
+            player.currentHealth = 0;
+            player.UpdateHealthBar();
 		}
 	}
 }
