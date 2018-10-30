@@ -51,7 +51,7 @@ public class PlayerHealth : MonoBehaviour {
         currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         HPText.text = currentHealth.ToString();
 
-        
+        /*
         if (currentHealth > 60)
         {
             currentHPBar.color = new Color32(27, 188, 48, 255);
@@ -65,7 +65,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             currentHPBar.color = new Color32(188, 44, 28, 255);
         }
-
+        */
         
     }
 
