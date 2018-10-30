@@ -151,12 +151,12 @@ public class PlayerController : MonoBehaviour {
 					enemiesToDamage [i].GetComponent <Enemy> ().TakeDamage (damage);
 				}
 
-			} else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
+			} /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
 				PlayerSelect ==3) {
 
 
 
-			}
+			}*/
 
 		} else {
 			
@@ -319,6 +319,18 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		yield return 0;
+	}
+
+	void OnCollisionEnter2D (Collision2D other){
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = other.transform;
+		}
+	}
+
+	void OnCollisionExit2D (Collision2D other){
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = null;
+		}
 	}
 
 	/*void addExp(int exp) {
