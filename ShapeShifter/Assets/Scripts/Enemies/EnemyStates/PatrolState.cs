@@ -22,7 +22,7 @@ public class PatrolState : IEnemyState
         Patrol();
         enemy.Move();
 
-        if(enemy.Target != null && enemy.InMeleeRange)
+        if(enemy.Target != null && enemy.InAttackRange)
         {
             enemy.ChangeState(new AttackState());
         }

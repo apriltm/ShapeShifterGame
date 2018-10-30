@@ -4,29 +4,30 @@ using UnityEngine;
 
 public class Enemy : Character {
 
-    private IEnemyState currentState;
+    protected IEnemyState currentState;
 	public GameObject Drop;
 	public bool drops;
     public GameObject Target { get; set; }
 	public Transform attackPos;
-	public float attackRange;
 	public LayerMask Player;
 
     [SerializeField]
-    private float meleeRange;
+    protected float attackRange;
 
-    public bool InMeleeRange
+    // returns true if player is in attack range, false otherwise
+    public bool InAttackRange
     {
         get
         {
             if (Target != null)
             {
-                return Vector2.Distance(transform.position, Target.transform.position) <= meleeRange;
+                return Vector2.Distance(transform.position, Target.transform.position) <= attackRange;
             }
             return false;
         }
     }
 
+    // returns if this enemy should be dead (health < 0)
     public override bool IsDead
     {
         get
@@ -49,15 +50,14 @@ public class Enemy : Character {
 
 	// Update is called once per frame
 	void Update () {
-
-
         if (!IsDead) {
             currentState.Execute();
             LookAtTarget();
         }
 	}
 
-    private void LookAtTarget()
+    // turns enemy around if player moves past enemy
+    protected void LookAtTarget()
     {
         if(Target != null) {
             float xDirection = Target.transform.position.x - transform.position.x;
@@ -76,6 +76,7 @@ public class Enemy : Character {
         currentState.Enter(this);
     }
 
+    // makes enemy walk, if not attacking
     public void Move()
     {
         if (!Attack)
@@ -86,19 +87,19 @@ public class Enemy : Character {
 
     }
 
-
+    // return which direction the enemy is facing
     public Vector2 GetDirection()
     {
         return facingRight ? Vector2.right : Vector2.left;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         currentState.OnTriggerEnter(other);
     }
 
-
-	public void TakeDamage(int damage)
+    
+	public override void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
 		if(!IsDead){
@@ -115,13 +116,14 @@ public class Enemy : Character {
 
 		}
 	}
-
+    /*
+     * looks to only work with melee
+     */ 
 	public void giveDamage(int dam) {
 		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, Player);
 		Audio.PlaySound ("EnemyAttack");
 		for (int i = 0; i < enemiesToDamage.Length; i++) {
 			enemiesToDamage [i].GetComponent <PlayerHealth> ().TakeDamage (dam);
-
 		}
 
 	}

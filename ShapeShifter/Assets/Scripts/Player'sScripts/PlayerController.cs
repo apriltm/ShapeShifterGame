@@ -8,11 +8,10 @@ public class PlayerController : MonoBehaviour {
 	public int Player_current_lvl;
 	public int Player_current_exp;
 
-
     private Rigidbody2D rb;
 	private bool canMove;
 	public GameObject SE;
-    private bool facingRight = true;
+    public bool facingRight = true;
 
 	private float timeBtwAttack;
 	public float startTimeBtwAttack;
@@ -39,10 +38,10 @@ public class PlayerController : MonoBehaviour {
     public int extraJumpsValue;
 
 	private bool attack;
-	private PlayerHealth PlayerH;
+	private PlayerHealth playerHealth;
 	// Use this for initialization
 	void Start () {
-		PlayerH = gameObject.GetComponent<PlayerHealth> ();
+		playerHealth = gameObject.GetComponent<PlayerHealth> ();
 		Player_current_lvl = 0;
 		canMove = true;
 		attack = false;
@@ -68,8 +67,13 @@ public class PlayerController : MonoBehaviour {
 		MoveHor ();
 		Jump ();
         crouch();
-		selectF ();
+		selectForm ();
 		Shift ();
+
+        // if(currentForm == knight)
+        KnightBlock();
+        KnightDash();
+
 		if(isGrounded == true)
 		{
 			CharAttack ();
@@ -108,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 		animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
 		animator3.SetFloat ("Speed", Mathf.Abs (xTranslation));
 
-		if (PlayerH.currentHealth > 0) {
+		if (playerHealth.currentHealth > 0) {
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
 
 		}
@@ -155,7 +159,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	void selectF(){
+	void selectForm(){
 		if (Input.GetButtonDown ("Base") && PlayerSelect != 1) { //Grab input and then select a model for the player 
 			Instantiate (SE, transform.position, transform.rotation = Quaternion.identity);
 			Audio.PlaySound ("Shift");
@@ -293,4 +297,85 @@ public class PlayerController : MonoBehaviour {
 			Player_current_exp = 0;
 		}
 	}*/
+
+    // Knight abilities: block, dash
+
+    void KnightBlock()
+    {
+        // Set animator to trigger
+        if (Input.GetButton("Block"))
+        {
+            Debug.Log("Is Blocking");
+            animator2.SetBool("isBlocking", true);
+            playerHealth.isBlocking = true;
+        }
+        else
+        {
+            animator2.SetBool("isBlocking", false);
+            playerHealth.isBlocking = false;
+        }
+    }
+    /*
+    int buttonCount = 0;
+    float buttonTimer = 0.5f;
+    */
+
+    float dashTimer = 0f;
+    bool canDash = true;
+
+    int buttonCount = 0;
+    float buttonTimer = 0.5f;
+
+    void KnightDash()
+    {
+        if (Input.anyKeyDown)
+        {
+            if (buttonTimer > 0 && buttonCount == 1)
+            {
+                rb.velocity += new Vector2(rb.velocity.x * 5, 0.1f);
+            }
+            else
+            {
+                buttonTimer = 0.5f;
+                buttonCount += 1;
+            }
+        }
+        if (buttonTimer > 0)
+        {
+            buttonTimer -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            buttonCount = 0;
+        }
+        /*
+        if (Input.GetKey(KeyCode.LeftShift) && canDash)
+        {
+            if (facingRight)
+            {
+                rb.AddForce(Vector3.right * 500);
+
+            }
+            else
+            {
+                rb.AddForce(Vector3.left * 100);
+            }
+
+            dashTimer += Time.deltaTime * 3;
+        }
+        if (dashTimer > .5f)
+        {
+            canDash = false;
+        }
+        if (dashTimer < .5f && dashCooldown == false)
+        {
+            canIDash = true;
+        }
+        if (dashTimer <= 0)
+        {
+            dashCooldown = false;
+        }
+        */
+
+    }
 }

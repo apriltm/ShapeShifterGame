@@ -9,9 +9,29 @@ public class PlayerHealth : MonoBehaviour {
 	public float currentHealth;
 	private PlayerController player;
 	private float hurtTime = 1.0f;
+    public bool isBlocking = false;
 
+    
     public Image currentHPBar;
     public Text HPText;
+    
+    // Player only takes 75% of damage if in knight form; 25% if he is also blocking. Otherwise, he takes 100% of damage.
+    [SerializeField]
+    private float damageReductionMultiplier
+    {
+        get
+        {
+            if (player.PlayerSelect == 2)
+            {
+                if (isBlocking)
+                {
+                    return 0.25f;
+                }
+                return 0.50f;
+            }
+            return 1.0f;
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +65,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public void UpdateHealthBar()
     {
+        
         float ratio = currentHealth / maxHealth;
         currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         HPText.text = currentHealth.ToString();
@@ -63,17 +84,14 @@ public class PlayerHealth : MonoBehaviour {
         {
             currentHPBar.color = new Color32(188, 44, 28, 255);
         }
-
+        
         
     }
 
-	public void TakeDamage(float dam){
-
-		
+	public void TakeDamage(float damage){
 
 		if (currentHealth > 0) {
-			DamageReduce (dam);
-            currentHealth -= dam;
+            currentHealth -= (damage * damageReductionMultiplier);
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
 			Audio.PlaySound ("PlayerHurt");
@@ -105,11 +123,6 @@ public class PlayerHealth : MonoBehaviour {
 
 		player.animator.SetLayerWeight (1, 0f);
 		player.animator2.SetLayerWeight (1, 0f);
-	}
-
-	void DamageReduce(float dam) {
-		if (player.PlayerSelect == 2)
-			dam = dam*.5f;
 	}
 
 }

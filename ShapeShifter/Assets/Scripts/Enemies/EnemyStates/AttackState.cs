@@ -20,7 +20,7 @@ public class AttackState : IEnemyState
     public void Execute()
     {
         AttackPlayer();
-        if (!enemy.InMeleeRange)
+        if (!enemy.InAttackRange)
         {
             enemy.ChangeState(new PatrolState());
         }

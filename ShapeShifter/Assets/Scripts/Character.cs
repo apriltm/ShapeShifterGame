@@ -38,10 +38,7 @@ public abstract class Character : MonoBehaviour {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, 1);
     }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-    }
+    public abstract void TakeDamage(int damage);
     
 
 
