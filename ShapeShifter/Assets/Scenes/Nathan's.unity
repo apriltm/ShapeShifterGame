@@ -94138,6 +94138,7 @@ MonoBehaviour:
   RotateOffset: -90
   projectile: {fileID: 1504694759372998, guid: b0b22ad14dc297949aec61c4af7cbc7d, type: 2}
   shotPoint: {fileID: 474601873}
+  startTimeBtwShots: 1
 --- !u!212 &1273571286
 SpriteRenderer:
   m_ObjectHideFlags: 0

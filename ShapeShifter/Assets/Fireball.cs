@@ -7,6 +7,7 @@ public class Fireball : MonoBehaviour {
 	public float speed;
 	public float lifeTime;
 	public float distance;
+	public int damage;
 
 	public LayerMask whatIsSolid;
 
@@ -22,7 +23,7 @@ public class Fireball : MonoBehaviour {
 		if (hitinfo.collider != null) {
 			if (hitinfo.collider.CompareTag ("Enemy")) {
 				Debug.Log ("ENEMY HIT!");
-				hitinfo.collider.GetComponent<Enemy> ().TakeDamage (50);
+				hitinfo.collider.GetComponent<Enemy> ().TakeDamage (damage);
 			}
 			DestoryProjectile (0);
 		}

@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour {
     
 
 	void FixedUpdate() {
-		Debug.Log(currentHealth);
+		//Debug.Log(currentHealth);
 		UpdateHealthBar();
 	}
 

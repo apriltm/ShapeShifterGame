@@ -9,6 +9,9 @@ public class Aimming : MonoBehaviour {
 	public GameObject projectile;
 	public Transform shotPoint;
 
+	private float timeBtwShots;
+	public float startTimeBtwShots;
+
 	private PlayerController player;
 
 	void Start() {
@@ -23,9 +26,14 @@ public class Aimming : MonoBehaviour {
 		float rotZ = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg; //convert angle to degrees
 		transform.rotation =Quaternion.Euler (0f, 0f, rotZ + RotateOffset);
 
-		if(Input.GetMouseButtonDown(0) ) {
-			//player.animator3.SetTrigger ("BasicAtt");
-			Instantiate(projectile, shotPoint.position, transform.rotation);
+		if (timeBtwShots <= 0) {
+			if (Input.GetMouseButtonDown (0)) {
+				//player.animator3.SetTrigger ("BasicAtt");
+				Instantiate (projectile, shotPoint.position, transform.rotation);
+				timeBtwShots = startTimeBtwShots;
+			}
+		} else {
+			timeBtwShots -= Time.deltaTime;
 		}
 	}
 }
