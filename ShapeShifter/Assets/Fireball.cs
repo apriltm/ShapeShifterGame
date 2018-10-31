@@ -22,7 +22,7 @@ public class Fireball : MonoBehaviour {
 		RaycastHit2D hitinfo = Physics2D.Raycast (transform.position, transform.up, distance, whatIsSolid);
 		if (hitinfo.collider != null) {
 			if (hitinfo.collider.CompareTag ("Enemy")) {
-				Debug.Log ("ENEMY HIT!");
+				//Debug.Log ("ENEMY HIT!");
 				hitinfo.collider.GetComponent<Enemy> ().TakeDamage (damage);
 			}
 			DestoryProjectile (0);

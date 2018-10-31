@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-            FindObjectOfType<GameManager>().EndGame();
+           
            
 
 			player.animator.SetTrigger ("Dies");
@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour {
             player.animator.SetBool("isFalling", false);
             player.enabled = false;
 			Destroy (gameObject, 3.0f);
-
+			FindObjectOfType<GameManager>().EndGame();
 		}
 
 	}
