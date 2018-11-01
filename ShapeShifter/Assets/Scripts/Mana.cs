@@ -15,6 +15,7 @@ public class Mana : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentMana = maxMana;
+        StartCoroutine(restoreMana());
 		//player = gameObject.GetComponent<PlayerController> ();
 
 	}
@@ -23,7 +24,7 @@ public class Mana : MonoBehaviour {
 	void Update () {
 
 		Debug.Log ("Current mana is at " + currentMana);
-
+        
 		//Invoke ("RestoreMana", 5.0f);
 	}
 
@@ -36,13 +37,19 @@ public class Mana : MonoBehaviour {
 
 	}
 
-	/*void RestoreMana() {
-
-
-		currentMana = +5.0f;
-
-		if (currentMana > 100) {
-			currentMana = maxMana;
-		}
-	}*/
+    IEnumerator restoreMana()
+    {
+        while (true)
+        { // loops forever...
+            if (currentMana < 100)
+            { // if health < 100...
+                currentMana += 1; // increase health and wait the specified time
+                yield return new WaitForSeconds(1);
+            }
+            else
+            { // if health >= 100, just yield 
+                yield return null;
+            }
+        }
+    }
 }
