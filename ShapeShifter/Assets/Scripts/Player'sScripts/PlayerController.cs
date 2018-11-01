@@ -122,6 +122,10 @@ public class PlayerController : MonoBehaviour {
 		animator3.SetFloat ("Speed", Mathf.Abs (xTranslation));
 
 		if (PlayerH.currentHealth > 0) {
+            if (attack)
+            {
+                rb.velocity = new Vector2(0.0f, 0.0f);
+            } else
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
 
 		}
@@ -151,8 +155,10 @@ public class PlayerController : MonoBehaviour {
 				for (int i = 0; i < enemiesToDamage.Length; i++) {
 					enemiesToDamage [i].GetComponent <Enemy> ().TakeDamage (damage);
 				}
+                attack = true;
+                Invoke("resetAttack", .25f);
 
-			} /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
+            } /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
 				PlayerSelect ==3) {
 
 
@@ -164,9 +170,15 @@ public class PlayerController : MonoBehaviour {
 			timeBtwAttack -= Time.deltaTime;
 			animator.SetBool ("isAttacking", false);
 			animator2.SetBool ("isAttacking", false);
+            
 		}
 
 	}
+
+    void resetAttack()
+    {
+        attack = false;
+    }
 
 	void selectF(){
 		if (Input.GetButtonDown ("Base") && PlayerSelect != 1) { //Grab input and then select a model for the player 

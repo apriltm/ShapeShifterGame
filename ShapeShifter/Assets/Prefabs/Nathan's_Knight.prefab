@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114065967418247302}
   - component: {fileID: 114597225545819752}
   - component: {fileID: 114433792377959504}
-  - component: {fileID: 114971493158524478}
   m_Layer: 9
   m_Name: Nathan's_Knight
   m_TagString: Enemy
@@ -227,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6a73701c5deed43a348264a8076594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1080598036387096}
+  other: {fileID: 1572722530932688, guid: 653dd7e796bb3984fb2d153bcb6897cd, type: 2}
 --- !u!114 &114597225545819752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,17 +239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 114065967418247302}
---- !u!114 &114971493158524478
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1080598036387096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b86aca867772fb640bd0b181ed07f771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212328327862005858
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mana : MonoBehaviour {
 
 	public float maxMana= 100.0f;
 	public float currentMana;
+    public Image CurrrentManaBar;
+    public Text ManaText;
+    public float restoreRate;
+
 	//private PlayerController player;
 
 	//public Image currentManaBar;
@@ -16,9 +21,10 @@ public class Mana : MonoBehaviour {
 	void Start () {
 		currentMana = maxMana;
         StartCoroutine(restoreMana());
-		//player = gameObject.GetComponent<PlayerController> ();
+        UpdateManaBar();
+        //player = gameObject.GetComponent<PlayerController> ();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,14 +34,16 @@ public class Mana : MonoBehaviour {
 		//Invoke ("RestoreMana", 5.0f);
 	}
 
-	public void UseMana(int cost) {
+    private void FixedUpdate()
+    {
+        
+    }
+
+    public void UseMana(int cost) {
 		currentMana -= cost;
-	}
+        UpdateManaBar();
+    }
 
-	void UpdateManaBar(){
-		float ratio = currentMana / maxMana;
-
-	}
 
     IEnumerator restoreMana()
     {
@@ -43,13 +51,22 @@ public class Mana : MonoBehaviour {
         { // loops forever...
             if (currentMana < 100)
             { // if health < 100...
-                currentMana += 1; // increase health and wait the specified time
+                currentMana += restoreRate; // increase health and wait the specified time
                 yield return new WaitForSeconds(1);
             }
             else
             { // if health >= 100, just yield 
                 yield return null;
             }
+            UpdateManaBar();
         }
+    }
+
+    public void UpdateManaBar()
+    {
+        float ratio = currentMana / maxMana;
+        CurrrentManaBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        //HPText.text = currentHealth.ToString();
+
     }
 }

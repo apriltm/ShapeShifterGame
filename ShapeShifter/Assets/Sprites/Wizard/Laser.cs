@@ -9,7 +9,7 @@ public class Laser : MonoBehaviour {
     public Rigidbody2D shootDown;
     void Start()
     {
-
+        shootDown.velocity = new Vector2(0.0f, 0f) ;
         shootDown.velocity = transform.up * laserSpeed;
     }
 

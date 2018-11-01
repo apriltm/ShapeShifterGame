@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f831df9c38bc845934b131a267e166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserSpeed: 10
+  laserSpeed: 8
   damage: 300
   shootDown: {fileID: 50627540006742860}
 --- !u!212 &212500086989732882
