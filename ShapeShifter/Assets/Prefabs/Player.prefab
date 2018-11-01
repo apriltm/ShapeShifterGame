@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 50144248366004960}
   - component: {fileID: 114397409531542866}
   - component: {fileID: 58833479739146716}
+  - component: {fileID: 114618874065048364}
   - component: {fileID: 114362709798526918}
   - component: {fileID: 114655659014794618}
   m_Layer: 10
@@ -580,7 +581,21 @@ MonoBehaviour:
   RotateOffset: -90
   projectile: {fileID: 1504694759372998, guid: b0b22ad14dc297949aec61c4af7cbc7d, type: 2}
   shotPoint: {fileID: 4790009799911314}
+  ManaCost: 0
   startTimeBtwShots: 1
+--- !u!114 &114618874065048364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1572722530932688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76988167c865d0f4387f9b97f1bf1737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMana: 100
+  currentMana: 0
 --- !u!114 &114655659014794618
 MonoBehaviour:
   m_ObjectHideFlags: 1

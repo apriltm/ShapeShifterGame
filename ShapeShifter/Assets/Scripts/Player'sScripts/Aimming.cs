@@ -8,14 +8,17 @@ public class Aimming : MonoBehaviour {
 	public float RotateOffset;
 	public GameObject projectile;
 	public Transform shotPoint;
+	public int ManaCost;
 
 	private float timeBtwShots;
 	public float startTimeBtwShots;
 
+	private Mana pMana;
 	private PlayerController player;
 
 	void Start() {
 		player = gameObject.GetComponent<PlayerController> ();
+		pMana = gameObject.GetComponentInParent<Mana> ();
 	}
 	
 	// Update is called once per frame
@@ -26,11 +29,12 @@ public class Aimming : MonoBehaviour {
 		float rotZ = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg; //convert angle to degrees
 		transform.rotation =Quaternion.Euler (0f, 0f, rotZ + RotateOffset);
 
-		if (timeBtwShots <= 0) {
+		if (timeBtwShots <= 0 && pMana.currentMana >= ManaCost) {
 			if (Input.GetMouseButtonDown (0)) {
 				//player.animator3.SetTrigger ("BasicAtt");
 				Instantiate (projectile, shotPoint.position, transform.rotation);
 				timeBtwShots = startTimeBtwShots;
+				pMana.UseMana (ManaCost);
 			}
 		} else {
 			timeBtwShots -= Time.deltaTime;
