@@ -4,16 +4,36 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour {
 
-	float maxSpeed = 5.0f;
+    PlayerHealth player;
+	float maxSpeed = 3.0f;
 
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+    }
+
+    // Update is called once per frame
+    void Update () {
 		Vector3 pos = transform.position;
 
-		Vector3 velocity = new Vector3 (0, maxSpeed * Time.deltaTime, 0);
+		Vector3 velocity = new Vector3 (maxSpeed * Time.deltaTime, maxSpeed * Time.deltaTime, 0);
 
 		pos += transform.rotation * velocity;
 
 		transform.position = pos;
 	}
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (player.currentHealth > 0)
+        {
+            if (col.CompareTag("Player"))
+            {
+
+                player.TakeDamage(20);
+                Destroy(gameObject);
+            }
+        }
+
+    }
 }
