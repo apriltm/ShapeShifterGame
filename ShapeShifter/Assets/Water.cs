@@ -23,7 +23,7 @@ public class Water : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
  
-        rb.drag = 30f;
+        rb.drag = 5f;
         player = gameObject.GetComponent<PlayerController>();
         player.Invoke("Dies", 5f);
 
