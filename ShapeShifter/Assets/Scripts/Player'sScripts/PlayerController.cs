@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
-    public float speed = 10.0f;
+    public float speed;
     public float jumpForce;
 	public int Player_current_lvl;
 	public int Player_current_exp;
