@@ -115,7 +115,8 @@ public class Enemy : Character {
 			Debug.Log (currentHealth);
 
 		} else {
-			MyAnimator.SetTrigger ("Die");
+            Audio.PlaySound("EnemyHurt");
+            MyAnimator.SetTrigger ("Die");
 
 			Instantiate (Drop, transform.position, transform.rotation);
 			Destroy (gameObject, 1.5f);

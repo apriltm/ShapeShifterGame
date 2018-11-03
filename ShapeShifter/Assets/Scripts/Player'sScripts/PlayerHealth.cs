@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour {
            
 
 			animator.MainAnimator.SetTrigger ("Dies");
-			animator.KnightAnimator.SetTrigger("Dies");
+			animator.KnightAnimator.SetTrigger("Die");
 			animator.MainAnimator.SetBool("isJumping", false);
             animator.MainAnimator.SetBool("isFalling", false);
             player.rb.velocity = new Vector2(0f, 0f);
