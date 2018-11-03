@@ -6,6 +6,8 @@ public class MeleeAttack : MonoBehaviour {
 
     public Animator animator;
     private PlayerMovement player;
+    
+
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
@@ -16,7 +18,8 @@ public class MeleeAttack : MonoBehaviour {
     // Use this for initialization
     void Start () {
         player = gameObject.GetComponentInParent<PlayerMovement>();
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,11 +33,18 @@ public class MeleeAttack : MonoBehaviour {
             Audio.PlaySound("PlayerAttack");
             animator.SetBool("isAttacking", true);
             timeBtwAttack = startTimeBtwAttack;
+            player.canMove = false;
+            Invoke("resetAttack", .25f);
         } else
         {
             timeBtwAttack -= Time.deltaTime;
             animator.SetBool("isAttacking", false);
         }
+    }
+
+    void resetAttack()
+    {
+        player.canMove = true;
     }
 
     void DealDamage(int damage)

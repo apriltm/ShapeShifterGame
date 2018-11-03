@@ -11,6 +11,7 @@ public class Enemy : Character {
 	public Transform attackPos;
 	public float attackRange;
 	public LayerMask Player;
+    //public GameObject EPoint;
 
     [SerializeField]
     private float meleeRange;
@@ -38,13 +39,14 @@ public class Enemy : Character {
     // Use this for initialization
     public override void Start () {
         //MyAnimator.SetBool ("Dead", false);
-        
+        //EPoint.SetActive(false);
 		drops = false;
 		currentHealth = maxHealth;
 
         Debug.Log("Enemy start");
         base.Start();
         ChangeState(new IdleState());
+       
 	}
 
 	// Update is called once per frame
@@ -86,6 +88,11 @@ public class Enemy : Character {
 
     }
 
+    public void setSpeed(float speed)
+    {
+        movementSpeed = speed; 
+    }
+
 
     public Vector2 GetDirection()
     {
@@ -117,12 +124,14 @@ public class Enemy : Character {
 	}
 
 	public void giveDamage(int dam) {
-		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, Player);
+		Collider2D enemiesToDamage = Physics2D.OverlapCircle(attackPos.position, attackRange, Player);
 		Audio.PlaySound ("EnemyAttack");
-		for (int i = 0; i < enemiesToDamage.Length; i++) {
-			enemiesToDamage [i].GetComponent <PlayerHealth> ().TakeDamage (dam);
+        /*for (int i = 0; i < enemiesToDamage.Length; i++) {
+            enemiesToDamage[i].GetComponent<PlayerHealth>().TakeDamage(dam);
 
-		}
+		}*/
+        enemiesToDamage.GetComponent<PlayerHealth>().TakeDamage(dam);
+
 
 	}
 	IEnumerator HurtBlinker(float hurtTime){

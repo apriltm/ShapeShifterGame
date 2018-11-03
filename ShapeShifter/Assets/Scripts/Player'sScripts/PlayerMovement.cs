@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     public bool extraJump;
     private bool facingRight = true;
-    private Rigidbody2D rb;
+    public bool canMove;
+    public Rigidbody2D rb;
     private SelectForm Forms;
 
     public Transform groundCheck;
@@ -17,11 +18,15 @@ public class PlayerMovement : MonoBehaviour {
     public bool wallCheck;
     public bool isGrounded;
 
+    
+
     // Use this for initialization
     void Start () {
+        canMove = true;
         rb = GetComponent<Rigidbody2D>();
         Forms = gameObject.GetComponent<SelectForm>();
         animator = gameObject.GetComponent<AnimatorController>();
+        
     }
 	
 	// Update is called once per frame
@@ -51,6 +56,10 @@ public class PlayerMovement : MonoBehaviour {
         animator.MageAnimator.SetFloat("Speed", Mathf.Abs(xTranslation));
         rb.velocity = new Vector2(xTranslation * speed, rb.velocity.y);
 
+        if (!canMove)
+        {
+            rb.velocity = new Vector2(0.0f, 0.0f);
+        }
         // flips sprite if moving the other direction
         if ((facingRight == true && xTranslation < 0) || (facingRight == false && xTranslation > 0))
             Flip();

@@ -7,8 +7,11 @@ public class PlayerHealth : MonoBehaviour {
     
 	public float maxHealth;
 	public float currentHealth;
-	private PlayerController player;
-	private float hurtTime = 1.0f;
+    private AnimatorController animator;
+    private PlayerMovement player;
+    private SelectForm select;
+    private MeleeAttack MAattack;
+    private float hurtTime = 1.0f;
 
     public Image currentHPBar;
     public Text HPText;
@@ -17,7 +20,10 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
 		
 		currentHealth = maxHealth;
-		player = gameObject.GetComponent<PlayerController> ();
+		player = gameObject.GetComponent<PlayerMovement> ();
+        animator = gameObject.GetComponent<AnimatorController>();
+        select = gameObject.GetComponent<SelectForm>();
+        MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
         UpdateHealthBar();
 	}
 
@@ -27,13 +33,16 @@ public class PlayerHealth : MonoBehaviour {
            
            
 
-			player.animator.SetTrigger ("Dies");
-			player.animator2.SetTrigger("Dies");
-			player.animator.SetBool("isJumping", false);
-            player.animator.SetBool("isFalling", false);
+			animator.MainAnimator.SetTrigger ("Dies");
+			animator.KnightAnimator.SetTrigger("Dies");
+			animator.MainAnimator.SetBool("isJumping", false);
+            animator.MainAnimator.SetBool("isFalling", false);
+            player.rb.velocity = new Vector2(0f, 0f);
+            MAattack.enabled = false;
+            select.enabled = false;
             player.enabled = false;
 			Destroy (gameObject, 3.0f);
-			FindObjectOfType<GameManager>().EndGame();
+			//FindObjectOfType<GameManager>().EndGame();
 		}
 
 	}
@@ -70,11 +79,10 @@ public class PlayerHealth : MonoBehaviour {
     }
 
 	public void TakeDamage(float dam){
+        
 
-		
-
-		if (currentHealth > 0) {
-			DamageReduce (dam);
+        if (IsDead()==false) {
+			
             currentHealth -= dam;
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
@@ -95,23 +103,26 @@ public class PlayerHealth : MonoBehaviour {
 
 	IEnumerator HurtBlinker(float hurtTime){
 
-		//int enemyLayer = LayerMask.NameToLayer ("Enemy");
-		//int playerLayer = LayerMask.NameToLayer ("Player");
-		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
+        //int enemyLayer = LayerMask.NameToLayer ("Enemy");
+        //int playerLayer = LayerMask.NameToLayer ("Player");
+        //Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
 
-		player.animator.SetLayerWeight (1, 1f);
-		player.animator2.SetLayerWeight (1, 1f);
+        animator.MainAnimator.SetLayerWeight (1, 1f);
+        animator.KnightAnimator.SetLayerWeight (1, 1f);
 		yield return new WaitForSeconds(hurtTime);
 
-		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
+        //Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
 
-		player.animator.SetLayerWeight (1, 0f);
-		player.animator2.SetLayerWeight (1, 0f);
+        animator.MainAnimator.SetLayerWeight (1, 0f);
+        animator.KnightAnimator.SetLayerWeight (1, 0f);
 	}
 
-	void DamageReduce(float dam) {
-		if (player.PlayerSelect == 2)
-			dam = dam*.5f;
-	}
+    public bool IsDead()
+    {
+        if (currentHealth > 0)
+            return false;
+        else
+            return true;
+    }
 
 }

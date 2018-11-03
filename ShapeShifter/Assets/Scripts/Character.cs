@@ -7,7 +7,7 @@ public abstract class Character : MonoBehaviour {
     public Animator MyAnimator { get; private set; }
 
     [SerializeField]
-    protected float movementSpeed;
+    public float movementSpeed;
 
     protected bool facingRight;
 

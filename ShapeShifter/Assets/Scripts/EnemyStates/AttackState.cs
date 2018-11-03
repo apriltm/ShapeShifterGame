@@ -6,10 +6,10 @@ public class AttackState : IEnemyState
 {
     private Enemy enemy;
 
-    private float attackTimer = 1.0f;
-    private float attackCooldown = 2.0f;
+    private float attackTimer ;
+    public float attackCooldown = 2.0f;
     private bool canAttack = true;
-
+   
 
 
     public void Enter(Enemy enemy)
@@ -19,6 +19,7 @@ public class AttackState : IEnemyState
 
     public void Execute()
     {
+       
         AttackPlayer();
         if (!enemy.InMeleeRange)
         {
@@ -42,24 +43,31 @@ public class AttackState : IEnemyState
 
     private void AttackPlayer()
     {
-		/*
-        enemy.MyAnimator.SetTrigger("Attack");
-        */
+		
         
-        attackTimer += Time.deltaTime;
+        
 
-        if(attackTimer >= attackCooldown)
+        if(attackTimer <=0)
         {
+            
             canAttack = true;
-            attackTimer = 0;
+            attackTimer = attackCooldown;
+        }else
+        {
+            attackTimer -= Time.deltaTime;
+            canAttack = false;
+
         }
+
         if (canAttack)
         {
             Debug.Log("Knight Attacking");
             canAttack = false;
             enemy.MyAnimator.SetTrigger("Attack");
-
+            //enemy.EPoint.SetActive(true);
         }
         
     }
+
+
 }

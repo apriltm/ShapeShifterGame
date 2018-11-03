@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SoulPickup : MonoBehaviour {
 
-	public float exp;
-	public float knight_Exp;
-
+	
+    private PlayerXP player;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,8 +19,8 @@ public class SoulPickup : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag == "Player") {
-			PlayerEXP player = col.gameObject.GetComponent<PlayerEXP> ();
-			player.addExp ();
+            player = col.gameObject.GetComponent<PlayerXP>();
+            player.AddExp();
 			Audio.PlaySound ("PickUp");
 			Destroy (gameObject);
 		}

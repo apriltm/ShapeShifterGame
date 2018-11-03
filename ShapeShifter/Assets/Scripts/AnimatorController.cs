@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimatorController : MonoBehaviour {
 
-    public Animator MainAnimator, KnightAnimator, MageAnimator;
+    public Animator MainAnimator, KnightAnimator, MageAnimator, ArcherAnimator;
 
     // Use this for initialization
     void Start () {
