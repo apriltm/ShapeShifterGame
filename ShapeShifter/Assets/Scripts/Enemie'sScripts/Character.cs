@@ -9,7 +9,7 @@ public abstract class Character : MonoBehaviour {
     [SerializeField]
     public float movementSpeed;
 
-    protected bool facingRight;
+    public bool facingRight;
 
 
 

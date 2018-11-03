@@ -11,6 +11,7 @@ public class Enemy : Character {
 	public Transform attackPos;
 	public float attackRange;
 	public LayerMask Player;
+    public int LeftRight;
     //public GameObject EPoint;
 
     [SerializeField]
@@ -38,16 +39,23 @@ public class Enemy : Character {
 
     // Use this for initialization
     public override void Start () {
-        //MyAnimator.SetBool ("Dead", false);
-        //EPoint.SetActive(false);
+       
 		drops = false;
 		currentHealth = maxHealth;
-
+        StartingDir();
         Debug.Log("Enemy start");
         base.Start();
         ChangeState(new IdleState());
        
 	}
+
+    void StartingDir()
+    {
+        if (LeftRight == 0)
+            facingRight = true;
+        else
+            facingRight = false;
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -127,25 +135,19 @@ public class Enemy : Character {
 	public void giveDamage(int dam) {
 		Collider2D enemiesToDamage = Physics2D.OverlapCircle(attackPos.position, attackRange, Player);
 		Audio.PlaySound ("EnemyAttack");
-        /*for (int i = 0; i < enemiesToDamage.Length; i++) {
-            enemiesToDamage[i].GetComponent<PlayerHealth>().TakeDamage(dam);
-
-		}*/
+ 
         enemiesToDamage.GetComponent<PlayerHealth>().TakeDamage(dam);
 
 
 	}
 	IEnumerator HurtBlinker(float hurtTime){
 
-		//int enemyLayer = LayerMask.NameToLayer ("Enemy");
-		//int playerLayer = LayerMask.NameToLayer ("Player");
-		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
-
+		
 		MyAnimator.SetLayerWeight (1, 1f);
 
 		yield return new WaitForSeconds(hurtTime);
 
-		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
+		
 
 		MyAnimator.SetLayerWeight (1, 0f);
 	}

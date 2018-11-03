@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour {
         animator.MainAnimator.SetFloat("Speed", Mathf.Abs(xTranslation)); //set the speed for the animator
         animator.KnightAnimator.SetFloat("Speed", Mathf.Abs(xTranslation));
         animator.MageAnimator.SetFloat("Speed", Mathf.Abs(xTranslation));
+        animator.ArcherAnimator.SetFloat("Speed", Mathf.Abs(xTranslation));
         rb.velocity = new Vector2(xTranslation * speed, rb.velocity.y);
 
         if (!canMove)

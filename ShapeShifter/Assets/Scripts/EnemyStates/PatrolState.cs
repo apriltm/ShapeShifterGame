@@ -38,7 +38,7 @@ public class PatrolState : IEnemyState
     {
         if (collideTimer > 1)
         {
-            if (other.tag == "Edge")
+            if (other.tag == "Edge"||other.tag== "Enemy")
             {
                 enemy.ChangeDirection();
                 collideTimer = 0;
