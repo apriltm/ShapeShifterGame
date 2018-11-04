@@ -16,6 +16,7 @@ public class Enemy : Character {
 
     [SerializeField]
     private float meleeRange;
+    private ShakeControl Cam;
 
     public bool InMeleeRange
     {
@@ -39,8 +40,8 @@ public class Enemy : Character {
 
     // Use this for initialization
     public override void Start () {
-       
-		drops = false;
+        Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
+        drops = false;
 		currentHealth = maxHealth;
         StartingDir();
         Debug.Log("Enemy start");
@@ -115,6 +116,7 @@ public class Enemy : Character {
 
 	public void TakeDamage(int damage)
 	{
+        Cam.ShakeCamera(.3f);
 		currentHealth -= damage;
 		if(!IsDead){
 			
@@ -133,13 +135,15 @@ public class Enemy : Character {
 	}
 
 	public void giveDamage(int dam) {
-		Collider2D enemiesToDamage = Physics2D.OverlapCircle(attackPos.position, attackRange, Player);
+		
 		Audio.PlaySound ("EnemyAttack");
- 
-        enemiesToDamage.GetComponent<PlayerHealth>().TakeDamage(dam);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, Player);
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<PlayerHealth>().TakeDamage(dam);
+        }
 
-
-	}
+    }
 	IEnumerator HurtBlinker(float hurtTime){
 
 		

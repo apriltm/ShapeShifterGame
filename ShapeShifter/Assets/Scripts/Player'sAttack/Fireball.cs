@@ -8,6 +8,7 @@ public class Fireball : MonoBehaviour {
 	public float lifeTime;
 	public float distance;
 	public int damage;
+    public GameObject SFX;
 
 	public LayerMask whatIsSolid;
 
@@ -34,6 +35,7 @@ public class Fireball : MonoBehaviour {
 
 	void DestoryProjectile(float time) {
 		//Instantiate (destroyEffect , transform.position, Quaternion.identity);
-		Destroy (gameObject, time);
+		Instantiate(SFX, transform.position, Quaternion.identity);
+        Destroy(gameObject, time);
 	}
 }

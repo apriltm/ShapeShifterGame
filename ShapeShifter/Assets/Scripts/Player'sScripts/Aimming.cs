@@ -16,11 +16,13 @@ public class Aimming : MonoBehaviour {
 	private Mana pMana;
 	private PlayerController player;
     public Animator animator;
+    private ShakeControl Cam;
 
     void Start() {
 		player = gameObject.GetComponent<PlayerController> ();
 		pMana = gameObject.GetComponentInParent<Mana> ();
-	}
+        Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
+    }
 
     // Update is called once per frame
     void Update() {
@@ -31,7 +33,8 @@ public class Aimming : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + RotateOffset);
 
         if (timeBtwShots <= 0 && pMana.currentMana >= ManaCost
-            && Input.GetMouseButtonDown(0)) { 
+            && Input.GetMouseButtonDown(0)) {
+            Cam.ShakeCamera(.3f);
             animator.SetBool("isAttacking", true);
             Invoke("Shoot", .15f);
             timeBtwShots = startTimeBtwShots;

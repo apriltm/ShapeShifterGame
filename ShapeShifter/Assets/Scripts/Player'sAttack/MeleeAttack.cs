@@ -14,11 +14,12 @@ public class MeleeAttack : MonoBehaviour {
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public float attackRange;
+    private ShakeControl Cam;
 
     // Use this for initialization
     void Start () {
         player = gameObject.GetComponentInParent<PlayerMovement>();
-        
+        Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
     }
 	
 	// Update is called once per frame
@@ -30,6 +31,7 @@ public class MeleeAttack : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && player.isGrounded && timeBtwAttack <= 0)
         {
+            Cam.ShakeCamera(.3f);
             Audio.PlaySound("PlayerAttack");
             animator.SetBool("isAttacking", true);
             timeBtwAttack = startTimeBtwAttack;

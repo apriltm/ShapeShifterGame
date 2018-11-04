@@ -29,7 +29,7 @@ public class Mana : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Debug.Log ("Current mana is at " + currentMana);
+		//Debug.Log ("Current mana is at " + currentMana);
         
 		//Invoke ("RestoreMana", 5.0f);
 	}

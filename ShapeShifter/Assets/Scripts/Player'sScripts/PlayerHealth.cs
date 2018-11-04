@@ -12,13 +12,15 @@ public class PlayerHealth : MonoBehaviour {
     private SelectForm select;
     private MeleeAttack MAattack;
     private float hurtTime = 1.0f;
+    
 
     public Image currentHPBar;
     public Text HPText;
+    private ShakeControl Cam;
     
 	// Use this for initialization
 	void Start () {
-		
+        Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
 		currentHealth = maxHealth;
 		player = gameObject.GetComponent<PlayerMovement> ();
         animator = gameObject.GetComponent<AnimatorController>();
@@ -82,15 +84,16 @@ public class PlayerHealth : MonoBehaviour {
         
 
         if (IsDead()==false) {
-			
+            
             currentHealth -= dam;
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
 			Audio.PlaySound ("PlayerHurt");
-			//gameObject.GetComponent<Animation> ().Play ("Hurt");
+            Cam.ShakeCamera(.3f);
+            //gameObject.GetComponent<Animation> ().Play ("Hurt");
 
 
-		}
+        }
 
         UpdateHealthBar();
 	}
@@ -124,5 +127,7 @@ public class PlayerHealth : MonoBehaviour {
         else
             return true;
     }
+
+
 
 }

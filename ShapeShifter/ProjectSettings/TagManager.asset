@@ -10,6 +10,7 @@ TagManager:
   - Sword
   - Water
   - MovingPlatform
+  - ScreenShake
   layers:
   - Default
   - TransparentFX
