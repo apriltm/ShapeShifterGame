@@ -1,0 +1,1015 @@
+fileFormatVersion: 2
+guid: 57454eb0b69065d42a9d028c05d196dc
+timeCreated: 1475503993
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ground1
+    21300002: ground2
+    21300004: ground3
+    21300006: walls1
+    21300008: wall2
+    21300010: walls_top
+    21300012: walls_bottm
+    21300014: walls_right
+    21300016: walls_left
+    21300018: walls_left_down
+    21300020: walls_left_up
+    21300022: walls_up_right
+    21300024: walls_right_down
+    21300026: walls_corner_up_right
+    21300028: walls_corner_down_right
+    21300030: walls_corner_down_left
+    21300032: walls_corner_up_left
+    21300034: ladder1
+    21300036: ladder2
+    21300038: wood1
+    21300040: wood_vertical1
+    21300042: wood_vertical2
+    21300044: door1a
+    21300046: door1_closed_a
+    21300048: sign
+    21300050: sign2
+    21300052: hole_a
+    21300054: Tiles_27
+    21300056: door2_a
+    21300058: door2closed_a
+    21300060: door3_a
+    21300062: door3closed_a
+    21300064: wood2
+    21300066: wood_vertical3
+    21300068: wood_vertical4
+    21300070: door1b
+    21300072: door1_closed_b
+    21300074: hole_b
+    21300076: door2_b
+    21300078: door2closed_b
+    21300080: door3_b
+    21300082: door3closed_b
+    21300084: chest
+    21300086: chest_open
+    21300088: green1
+    21300090: green2
+    21300092: debris
+    21300094: skeleton
+    21300096: empty_tile
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ground1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: ground2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: ground3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: wall2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_top
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_bottm
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_right
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_left
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_left_down
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_left_up
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_up_right
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_right_down
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 352
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_corner_up_right
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_corner_down_right
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_corner_down_left
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: walls_corner_up_left
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: ladder1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -30}
+        - {x: -30, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -30}
+        - {x: 32, y: 30}
+        - {x: 30, y: 32}
+    - name: ladder2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 32}
+        - {x: -32, y: 30}
+        - {x: -32, y: -30}
+        - {x: -30, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -27}
+        - {x: 32, y: 31}
+        - {x: 16, y: 32}
+    - name: wood1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: 14}
+        - {x: 32, y: 14}
+        - {x: 32, y: 32}
+    - name: wood_vertical1
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -32}
+        - {x: 10, y: 32}
+        - {x: -10, y: 32}
+        - {x: -10, y: -32}
+    - name: wood_vertical2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 288
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: -32}
+        - {x: 14, y: 32}
+        - {x: -6, y: 32}
+        - {x: -6, y: -32}
+    - name: door1a
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 2}
+        - {x: -32, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: -2}
+        - {x: 26, y: 2}
+    - name: door1_closed_a
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 2}
+        - {x: -32, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: -2}
+        - {x: 26, y: 2}
+    - name: sign
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -14}
+        - {x: -27, y: -32}
+        - {x: 2, y: -32}
+        - {x: 32, y: 6}
+        - {x: 32, y: 26}
+        - {x: 30, y: 32}
+    - name: sign2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -19}
+        - {x: -26, y: -32}
+        - {x: 18, y: -32}
+        - {x: 32, y: 4}
+        - {x: 32, y: 32}
+    - name: hole_a
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: -6}
+        - {x: -30, y: -23}
+        - {x: -30, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: -16}
+        - {x: 11, y: -6}
+    - name: Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -6}
+        - {x: -28, y: -10}
+        - {x: 26, y: -10}
+        - {x: 30, y: -5}
+        - {x: 30, y: 30}
+        - {x: 28, y: 32}
+    - name: door2_a
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 2}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: -2}
+        - {x: 28, y: 2}
+    - name: door2closed_a
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 2}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: -2}
+        - {x: 28, y: 2}
+    - name: door3_a
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 22}
+        - {x: -26, y: 21}
+        - {x: -32, y: 9}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 6}
+        - {x: 16, y: 22}
+    - name: door3closed_a
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 22}
+        - {x: -26, y: 21}
+        - {x: -32, y: 9}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 6}
+        - {x: 16, y: 22}
+    - name: wood2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 225
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: 13}
+        - {x: 32, y: 13}
+        - {x: 32, y: 32}
+    - name: wood_vertical3
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -32}
+        - {x: 10, y: 32}
+        - {x: -10, y: 32}
+        - {x: -10, y: -32}
+    - name: wood_vertical4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: -32}
+        - {x: 14, y: 32}
+        - {x: -6, y: 32}
+        - {x: -6, y: -32}
+    - name: door1b
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: door1_closed_b
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: hole_b
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 32}
+        - {x: -32, y: 21}
+        - {x: -32, y: -28}
+        - {x: -30, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -30}
+        - {x: 32, y: 32}
+    - name: door2_b
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: door2closed_b
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: door3_b
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: door3closed_b
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: chest
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 18}
+        - {x: -30, y: 16}
+        - {x: -30, y: -28}
+        - {x: -28, y: -30}
+        - {x: 28, y: -30}
+        - {x: 30, y: -28}
+        - {x: 30, y: 16}
+        - {x: 28, y: 18}
+    - name: chest_open
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 32}
+        - {x: -30, y: -28}
+        - {x: -28, y: -30}
+        - {x: 28, y: -30}
+        - {x: 30, y: -28}
+        - {x: 30, y: 32}
+    - name: green1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: -24}
+        - {x: -26, y: -32}
+        - {x: -18, y: -32}
+        - {x: -18, y: -24}
+        - {x: -20, y: -22}
+        - {x: -24, y: -22}
+      - - {x: 10, y: -20}
+        - {x: 12, y: -22}
+        - {x: 14, y: -32}
+        - {x: 30, y: -32}
+        - {x: 32, y: -27}
+        - {x: 32, y: 31}
+        - {x: 28, y: 30}
+        - {x: 26, y: 28}
+        - {x: 26, y: 22}
+        - {x: 24, y: 22}
+        - {x: 22, y: 20}
+        - {x: 22, y: 22}
+        - {x: 24, y: 22}
+        - {x: 26, y: 24}
+        - {x: 26, y: 32}
+        - {x: 18, y: 32}
+        - {x: 18, y: 26}
+        - {x: 16, y: 26}
+        - {x: 14, y: 24}
+        - {x: 14, y: 22}
+        - {x: 10, y: 22}
+        - {x: 14, y: 23}
+        - {x: 14, y: 26}
+        - {x: 16, y: 26}
+        - {x: 18, y: 28}
+        - {x: 18, y: 32}
+        - {x: -21, y: 32}
+        - {x: -32, y: 30}
+        - {x: -32, y: 6}
+        - {x: -24, y: 6}
+        - {x: -22, y: 8}
+        - {x: -22, y: 6}
+        - {x: -28, y: 6}
+        - {x: -32, y: 5}
+        - {x: -32, y: -20}
+        - {x: -19, y: -32}
+        - {x: 10, y: -32}
+        - {x: 10, y: -20}
+        - {x: 8, y: -18}
+        - {x: 10, y: -18}
+      - - {x: -32, y: -14}
+        - {x: -32, y: -30}
+        - {x: -28, y: -30}
+        - {x: -26, y: -28}
+        - {x: -26, y: -16}
+        - {x: -28, y: -14}
+      - - {x: -22, y: 32}
+        - {x: -22, y: 24}
+        - {x: -20, y: 22}
+        - {x: -16, y: 22}
+        - {x: -14, y: 24}
+        - {x: -14, y: 32}
+    - name: green2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 2}
+        - {x: 6, y: -3}
+        - {x: 6, y: -25}
+        - {x: 11, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: -13}
+        - {x: 22, y: 2}
+      - - {x: -22, y: -14}
+        - {x: -22, y: -30}
+        - {x: -4, y: -30}
+        - {x: -2, y: -28}
+        - {x: -2, y: -20}
+        - {x: -6, y: -14}
+      - - {x: -32, y: 6}
+        - {x: -32, y: -6}
+        - {x: -28, y: -10}
+        - {x: -20, y: -10}
+        - {x: -18, y: -8}
+        - {x: -18, y: 4}
+        - {x: -20, y: 6}
+      - - {x: 3, y: 14}
+        - {x: -14, y: 14}
+        - {x: -14, y: -4}
+        - {x: -10, y: -6}
+        - {x: 4, y: -6}
+        - {x: 6, y: -3}
+        - {x: 6, y: 10}
+      - - {x: 22, y: 20}
+        - {x: 22, y: 8}
+        - {x: 24, y: 6}
+        - {x: 32, y: 6}
+        - {x: 32, y: 22}
+        - {x: 24, y: 22}
+      - - {x: -30, y: 26}
+        - {x: -30, y: 10}
+        - {x: -14, y: 10}
+        - {x: -14, y: 26}
+      - - {x: -2, y: 32}
+        - {x: -2, y: 22}
+        - {x: 1, y: 19}
+        - {x: 4, y: 18}
+        - {x: 10, y: 18}
+        - {x: 14, y: 22}
+        - {x: 14, y: 32}
+    - name: debris
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -18}
+        - {x: 18, y: -16}
+        - {x: 16, y: -14}
+        - {x: 14, y: -14}
+        - {x: 14, y: -12}
+        - {x: 12, y: -10}
+        - {x: 14, y: -10}
+        - {x: 14, y: -12}
+        - {x: 16, y: -14}
+        - {x: 18, y: -14}
+        - {x: 18, y: -16}
+        - {x: 20, y: -18}
+        - {x: 32, y: -18}
+        - {x: 32, y: 23}
+        - {x: 20, y: 22}
+        - {x: 18, y: 20}
+        - {x: 18, y: 18}
+        - {x: 12, y: 18}
+        - {x: 10, y: 16}
+        - {x: 10, y: 18}
+        - {x: 16, y: 18}
+        - {x: 18, y: 20}
+        - {x: 18, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -29, y: -32}
+        - {x: 19, y: -32}
+        - {x: 22, y: -24}
+        - {x: 22, y: -20}
+        - {x: 20, y: -18}
+    - name: skeleton
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: -22}
+        - {x: -6, y: -24}
+        - {x: 0, y: -30}
+        - {x: 23, y: -30}
+        - {x: 32, y: -26}
+        - {x: 32, y: 2}
+        - {x: 10, y: 2}
+        - {x: 14, y: 3}
+        - {x: 14, y: 8}
+        - {x: 12, y: 10}
+        - {x: 14, y: 10}
+        - {x: 14, y: 8}
+        - {x: 20, y: 2}
+        - {x: 32, y: 2}
+        - {x: 32, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -23}
+        - {x: -30, y: -30}
+        - {x: -8, y: -30}
+        - {x: -6, y: -28}
+        - {x: -6, y: -24}
+        - {x: -8, y: -22}
+    - name: empty_tile
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
