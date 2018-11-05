@@ -8,7 +8,7 @@ public class EnemySight : MonoBehaviour {
     private Enemy enemy;
 
     // Target player when enemy spots player
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Player")
         {

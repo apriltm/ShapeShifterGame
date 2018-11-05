@@ -24,7 +24,7 @@ public class introbehaviour : StateMachineBehaviour {
         }
         */
 
-        animator.SetTrigger("idle");
+        animator.SetTrigger("run");
         
 	}
 

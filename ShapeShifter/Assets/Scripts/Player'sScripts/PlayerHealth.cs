@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour {
     private PlayerMovement player;
     private SelectForm select;
     private MeleeAttack MAattack;
+    private Aimming AimAttack;
     private float hurtTime = 1.0f;
     
 
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour {
         animator = gameObject.GetComponent<AnimatorController>();
         select = gameObject.GetComponent<SelectForm>();
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
+        AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
 	}
 
@@ -37,13 +39,17 @@ public class PlayerHealth : MonoBehaviour {
 
 			animator.MainAnimator.SetTrigger ("Dies");
 			animator.KnightAnimator.SetTrigger("Die");
-			animator.MainAnimator.SetBool("isJumping", false);
+            animator.MageAnimator.SetTrigger("Die");
+            animator.ArcherAnimator.SetTrigger("Die");
+            animator.MainAnimator.SetBool("isJumping", false);
             animator.MainAnimator.SetBool("isFalling", false);
+            Destroy(gameObject, 2.0f);
             player.rb.velocity = new Vector2(0f, 0f);
             MAattack.enabled = false;
             select.enabled = false;
             player.enabled = false;
-			Destroy (gameObject, 3.0f);
+            AimAttack.enabled = false;
+			
 			//FindObjectOfType<GameManager>().EndGame();
 		}
 
@@ -112,13 +118,17 @@ public class PlayerHealth : MonoBehaviour {
 
         animator.MainAnimator.SetLayerWeight (1, 1f);
         animator.KnightAnimator.SetLayerWeight (1, 1f);
-		yield return new WaitForSeconds(hurtTime);
+        animator.MageAnimator.SetLayerWeight(1, 1f);
+        animator.ArcherAnimator.SetLayerWeight(1, 1f);
+        yield return new WaitForSeconds(hurtTime);
 
         //Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
 
         animator.MainAnimator.SetLayerWeight (1, 0f);
         animator.KnightAnimator.SetLayerWeight (1, 0f);
-	}
+        animator.MageAnimator.SetLayerWeight(1, 0f);
+        animator.ArcherAnimator.SetLayerWeight(1, 0f);
+    }
 
     public bool IsDead()
     {

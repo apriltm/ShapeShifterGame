@@ -7,6 +7,7 @@ public class Aimming : MonoBehaviour {
 
 	public float RotateOffset;
 	public GameObject projectile;
+    public SelectForm Form;
 	public Transform shotPoint;
 	public int ManaCost;
 
@@ -17,10 +18,13 @@ public class Aimming : MonoBehaviour {
 	private PlayerController player;
     public Animator animator;
     private ShakeControl Cam;
+    private Ammo ammo;
 
     void Start() {
-		player = gameObject.GetComponent<PlayerController> ();
+        Form = gameObject.GetComponentInParent<SelectForm>();
+        player = gameObject.GetComponent<PlayerController> ();
 		pMana = gameObject.GetComponentInParent<Mana> ();
+        ammo = gameObject.GetComponentInParent<Ammo>();
         Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
     }
 
@@ -32,17 +36,41 @@ public class Aimming : MonoBehaviour {
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //convert angle to degrees
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + RotateOffset);
 
-        if (timeBtwShots <= 0 && pMana.currentMana >= ManaCost
-            && Input.GetMouseButtonDown(0)) {
-            Cam.ShakeCamera(.3f);
-            animator.SetBool("isAttacking", true);
-            Invoke("Shoot", .15f);
-            timeBtwShots = startTimeBtwShots;
-            pMana.UseMana(ManaCost);
-        } else
+        if (Form.PlayerSelect == 3)
         {
-            timeBtwShots -= Time.deltaTime;
-            animator.SetBool("isAttacking", false);
+            if (timeBtwShots <= 0 && (pMana.currentMana >= ManaCost)
+                && Input.GetMouseButtonDown(0))
+            {
+                Audio.PlaySound("Flame");
+                Cam.ShakeCamera(.3f);
+                animator.SetBool("isAttacking", true);
+                Invoke("Shoot", .15f);
+                timeBtwShots = startTimeBtwShots;
+                pMana.UseMana(ManaCost);
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+                animator.SetBool("isAttacking", false);
+            }
+        }
+        else if (Form.PlayerSelect == 4)
+        {
+            if (timeBtwShots <= 0 && ammo.CurrentAmmo > 0
+                && Input.GetMouseButtonDown(0))
+            {
+                Audio.PlaySound("BowShoot");
+                Cam.ShakeCamera(.3f);
+                animator.SetBool("isAttacking", true);
+                Invoke("Shoot", .15f);
+                timeBtwShots = startTimeBtwShots;
+                ammo.ShootAmmo();
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+                animator.SetBool("isAttacking", false);
+            }
         }
     }
 
@@ -50,6 +78,8 @@ public class Aimming : MonoBehaviour {
     {
         Instantiate(projectile, shotPoint.position, transform.rotation);
     }
+
+
 
 
 }

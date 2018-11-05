@@ -39,8 +39,8 @@ public class PlayerMovement : MonoBehaviour {
 
     void Check()
     {
-        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x -.2f , transform.position.y - .75f),
-            new Vector2(transform.position.x + .2f, transform.position.y - .75f), groundLayer);
+        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x -.2f , transform.position.y - .775f),
+            new Vector2(transform.position.x + .2f, transform.position.y - .775f), groundLayer);
         wallCheck = Physics2D.OverlapArea(new Vector2(transform.position.x - 1.5f, transform.position.y),
             new Vector2(transform.position.x + 1.5f, transform.position.y), groundLayer);
 
@@ -172,7 +172,7 @@ public class PlayerMovement : MonoBehaviour {
     void OnDrawGizmos()
     {
         Gizmos.color = new Color(0, 1, 0, 0.5f);
-        Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - .75f),
+        Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - .775f),
             new Vector2(1, 0.01f));
     }
 }

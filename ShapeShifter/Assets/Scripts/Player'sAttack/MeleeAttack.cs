@@ -31,8 +31,7 @@ public class MeleeAttack : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && player.isGrounded && timeBtwAttack <= 0)
         {
-            Cam.ShakeCamera(.3f);
-            Audio.PlaySound("PlayerAttack");
+            Cam.ShakeCamera(.3f); 
             animator.SetBool("isAttacking", true);
             timeBtwAttack = startTimeBtwAttack;
             player.canMove = false;
@@ -51,6 +50,7 @@ public class MeleeAttack : MonoBehaviour {
 
     void DealDamage(int damage)
     {
+        Audio.PlaySound("PlayerAttack");
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {

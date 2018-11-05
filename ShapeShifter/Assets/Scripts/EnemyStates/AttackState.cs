@@ -19,7 +19,9 @@ public class AttackState : IEnemyState
 
     public void Execute()
     {
-       
+
+        Timer();
+
         AttackPlayer();
         if (!enemy.InMeleeRange)
         {
@@ -38,7 +40,27 @@ public class AttackState : IEnemyState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        AttackPlayer();
+        if (other.tag == "Edge" || other.tag == "Enemy")
+        {
+            enemy.ChangeDirection();
+            //collideTimer = 0;
+        }
+    }
+
+    public void Timer()
+    {
+        if (attackTimer <= 0)
+        {
+
+            canAttack = true;
+            attackTimer = attackCooldown;
+        }
+        else
+        {
+            attackTimer -= Time.deltaTime;
+            canAttack = false;
+
+        }
     }
 
     private void AttackPlayer()
@@ -47,17 +69,7 @@ public class AttackState : IEnemyState
         
         
 
-        if(attackTimer <=0)
-        {
-            
-            canAttack = true;
-            attackTimer = attackCooldown;
-        }else
-        {
-            attackTimer -= Time.deltaTime;
-            canAttack = false;
-
-        }
+       
 
         if (canAttack)
         {

@@ -23,8 +23,9 @@ public class Fireball : MonoBehaviour {
 		RaycastHit2D hitinfo = Physics2D.Raycast (transform.position, transform.up, distance, whatIsSolid);
 		if (hitinfo.collider != null) {
 			if (hitinfo.collider.CompareTag ("Enemy")) {
-				//Debug.Log ("ENEMY HIT!");
-				hitinfo.collider.GetComponent<Enemy> ().TakeDamage (damage);
+                //Debug.Log ("ENEMY HIT!");
+                Audio.PlaySound("BowHit");
+                hitinfo.collider.GetComponent<Enemy> ().TakeDamage (damage);
 			}
 			DestoryProjectile (0);
 		}
@@ -35,7 +36,8 @@ public class Fireball : MonoBehaviour {
 
 	void DestoryProjectile(float time) {
 		//Instantiate (destroyEffect , transform.position, Quaternion.identity);
-		Instantiate(SFX, transform.position, Quaternion.identity);
+		Destroy(Instantiate(SFX, transform.position, Quaternion.identity),time);
         Destroy(gameObject, time);
+        
 	}
 }

@@ -75,6 +75,7 @@ MonoBehaviour:
   lifeTime: 1.25
   distance: 1
   damage: 150
+  SFX: {fileID: 1174824760638242, guid: e5f3e440455ab9e48822321cdcbe0298, type: 2}
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 512

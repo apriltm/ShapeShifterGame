@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114326862114333866}
   - component: {fileID: 50163785453449408}
   - component: {fileID: 58775833882238254}
+  - component: {fileID: 61478388971080572}
   m_Layer: 9
   m_Name: EnemyBandit
   m_TagString: Enemy
@@ -164,6 +165,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!61 &61478388971080572
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419847397730036}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000074505806, y: 0.025828004}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14107546, y: 0.19336194}
+  m_EdgeRadius: 0
 --- !u!95 &95828409242297580
 Animator:
   serializedVersion: 3
@@ -206,16 +232,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  facingRight: 0
   maxHealth: 300
   currentHealth: 0
   Drop: {fileID: 1388223377404892, guid: 15808a6f870c09c40a42fb8489383663, type: 2}
   drops: 0
   attackPos: {fileID: 4684203515564844}
-  attackRange: 1.4
+  attackRange: 0.95
   Player:
     serializedVersion: 2
     m_Bits: 1024
-  meleeRange: 1.4
+  LeftRight: 1
+  meleeRange: 1.3
 --- !u!212 &212120761972811404
 SpriteRenderer:
   m_ObjectHideFlags: 1

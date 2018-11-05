@@ -5,13 +5,16 @@ using UnityEngine;
 public class Enemy : Character {
 
     private IEnemyState currentState;
-	public GameObject Drop;
-	public bool drops;
+    public GameObject Drop;
+    public bool drops;
     public GameObject Target { get; set; }
-	public Transform attackPos;
-	public float attackRange;
-	public LayerMask Player;
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask Player;
     public int LeftRight;
+    public Transform[] moveSpots;
+    public int currentSpot = 0;
+
     //public GameObject EPoint;
 
     [SerializeField]
@@ -61,7 +64,7 @@ public class Enemy : Character {
 	// Update is called once per frame
 	void Update () {
 
-
+        
         if (!IsDead) {
             currentState.Execute();
             LookAtTarget();
