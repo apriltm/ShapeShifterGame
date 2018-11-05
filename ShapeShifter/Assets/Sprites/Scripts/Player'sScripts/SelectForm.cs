@@ -11,9 +11,19 @@ public class SelectForm : MonoBehaviour {
 
     public int PlayerSelect;
 
+    //FOR UI
+    public GameObject baseform_inactive;
+    public GameObject baseform;
+    public GameObject shape1;
+    public GameObject shape2;
+    public GameObject shape3;
+
+
     // Use this for initialization
     void Start() {
         PlayerSelect = 1;
+
+        baseform_inactive.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,6 +64,12 @@ public class SelectForm : MonoBehaviour {
             Knight.SetActive(false);
             Mage.SetActive(false);
             Archer.SetActive(false);
+
+            //UI
+            baseform.SetActive(true);
+            shape1.SetActive(false);
+            shape2.SetActive(false);
+            shape3.SetActive(false);
         }
         else if (PlayerSelect == 2)
         {
@@ -61,6 +77,12 @@ public class SelectForm : MonoBehaviour {
             Knight.SetActive(true);
             Mage.SetActive(false);
             Archer.SetActive(false);
+
+            //UI
+            baseform.SetActive(false);
+            shape1.SetActive(true);
+            shape2.SetActive(false);
+            shape3.SetActive(false);
         }
         else if (PlayerSelect == 3)
         {
@@ -68,6 +90,12 @@ public class SelectForm : MonoBehaviour {
             Knight.SetActive(false);
             Mage.SetActive(true);
             Archer.SetActive(false);
+
+            //UI
+            baseform.SetActive(false);
+            shape1.SetActive(false);
+            shape2.SetActive(true);
+            shape3.SetActive(false);
         }
         else if (PlayerSelect == 4)
         {
@@ -75,6 +103,12 @@ public class SelectForm : MonoBehaviour {
             Knight.SetActive(false);
             Mage.SetActive(false);
             Archer.SetActive(true);
+
+            //UI
+            baseform.SetActive(false);
+            shape1.SetActive(false);
+            shape2.SetActive(false);
+            shape3.SetActive(true);
         }
 
 
