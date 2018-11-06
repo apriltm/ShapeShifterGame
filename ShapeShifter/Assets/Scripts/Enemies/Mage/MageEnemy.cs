@@ -37,11 +37,35 @@ public class MageEnemy : Enemy {
         }
         timeSinceLastFire += Time.deltaTime;
 	}
+    /*
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+        if(collision.gameObject.tag == "Player")
+        {
+            StartCoroutine("Shooting");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            StopCoroutine("Shooting");
+        }
+    }
+
+    IEnumerator Shooting()
+    {
+        ShootFireball();
+    }
+    */
+
     // Gets position of player and shoots a fireball towards that location
     private void ShootFireball()
     {
         if (canFire) {
-            Instantiate(projectile);
+            Instantiate(projectile, transform.position ,transform.rotation);
             timeSinceLastFire = 0;
         }
     }
