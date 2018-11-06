@@ -62,6 +62,9 @@ TagManager:
   - name: TopOnly
     uniqueID: 1983122399
     locked: 0
+  - name: Touch
+    uniqueID: 3587268689
+    locked: 0
   - name: spikes
     uniqueID: 2470333583
     locked: 0

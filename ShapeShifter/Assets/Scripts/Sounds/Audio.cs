@@ -5,7 +5,7 @@ using UnityEngine;
 public class Audio : MonoBehaviour {
 
 	public static AudioClip PlayerHurt, PlayerMove, PlayerAttack,EnemyAttack, enemyHurt, PickUp, lvlUP, Jumping, Shift
-        , Flame, Bow_shoot, Bow_hit;
+        , Flame, Bow_shoot, Bow_hit, rolled;
 	static AudioSource audioSrc;
 
 	// Use this for initialization
@@ -23,6 +23,7 @@ public class Audio : MonoBehaviour {
         Flame = Resources.Load<AudioClip>("Flame");
         Bow_hit = Resources.Load<AudioClip>("ARROW_Hit");
         Bow_shoot = Resources.Load<AudioClip>("BOW_Release");
+        rolled = Resources.Load<AudioClip>("rolled");
         audioSrc = GetComponent<AudioSource> ();
 
 	}
@@ -42,6 +43,7 @@ public class Audio : MonoBehaviour {
 			break;
 		case "PlayerAttack":
 			audioSrc.PlayOneShot (PlayerAttack);
+                Debug.Log("Played");
 			break;
 		case "EnemyAttack":
 			audioSrc.PlayOneShot (EnemyAttack);
@@ -69,6 +71,9 @@ public class Audio : MonoBehaviour {
                 break;
         case "BowShoot":
                 audioSrc.PlayOneShot(Bow_shoot);
+                break;
+        case "rolled":
+                audioSrc.PlayOneShot(rolled);
                 break;
         }
 }
