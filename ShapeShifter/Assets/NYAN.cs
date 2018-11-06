@@ -21,8 +21,11 @@ public class NYAN : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == ("darkness"))
+        if (collision.tag == ("darkness"))
+        {
+            Audio.PlaySound("Shift");
             Instantiate(SS_Prefab, NYANCAT.transform.position, transform.rotation = Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
@@ -37,8 +40,12 @@ public class NYAN : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        //Instantiate(SS_Prefab, NYANCAT.transform.position, transform.rotation = Quaternion.identity);
-        NYANCAT.SetActive(false);
+        if (collision.tag == ("darkness"))
+        {
+            Audio.PlaySound("Shift");
+            Instantiate(SS_Prefab, NYANCAT.transform.position, transform.rotation = Quaternion.identity);
+            NYANCAT.SetActive(false);
+        }
     }
 
 }

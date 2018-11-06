@@ -59,8 +59,14 @@ TagManager:
   - name: In_Between
     uniqueID: 2474972781
     locked: 0
+  - name: BetweenBetween
+    uniqueID: 569972067
+    locked: 0
   - name: Foreground
     uniqueID: 4055790085
+    locked: 0
+  - name: Front
+    uniqueID: 2144316571
     locked: 0
   - name: Enemies
     uniqueID: 3368791343
