@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b92ae5ecdc46854fa0c2d6e53b9767f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 5
   facingRight: 0
   maxHealth: 300
   currentHealth: 0
@@ -243,6 +243,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   LeftRight: 1
+  moveSpots: []
+  currentSpot: 0
   meleeRange: 1.3
 --- !u!212 &212120761972811404
 SpriteRenderer:

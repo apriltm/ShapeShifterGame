@@ -13,8 +13,8 @@ public class PlayerHealth : MonoBehaviour {
     private MeleeAttack MAattack;
     private Aimming AimAttack;
     private float hurtTime = 1.0f;
-    
 
+    private Rigidbody2D rb;
     public Image currentHPBar;
     public Text HPText;
     private ShakeControl Cam;
@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour {
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
         AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
+        rb = GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
@@ -138,6 +139,19 @@ public class PlayerHealth : MonoBehaviour {
             return true;
     }
 
+    public IEnumerator Knockback(float KnockDur)
+    {
+
+        float timer = 0;
+        while (KnockDur > timer)
+        {
+
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector3(-.3f, 1300f, transform.position.z));
+        }
+
+        yield return 0;
+    }
 
 
 }
