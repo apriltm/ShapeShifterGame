@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 7009c7ead6cbd854dadf05f4e8692a77
   - enabled: 1
-    path: Assets/Scenes/Kaif's Scene.unity
-    guid: 14ffad4c5f6959043acc2cfb4d86f387
+    path: Assets/Scenes/NEWNATHAN.unity
+    guid: e0b31cdf685282b439b9018415fca912
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 442082cf693f2334682ad567223c7747
