@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 4995460255482958}
   - component: {fileID: 212089669298431960}
   - component: {fileID: 95284737717383444}
-  - component: {fileID: 114486687079951532}
   - component: {fileID: 114603840887542154}
   - component: {fileID: 50035907089456278}
   - component: {fileID: 58505506437079698}
@@ -209,27 +208,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114486687079951532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1410952329750222}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b92ae5ecdc46854fa0c2d6e53b9767f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 3
-  maxHealth: 300
-  currentHealth: 0
-  Drop: {fileID: 1388223377404892, guid: 15808a6f870c09c40a42fb8489383663, type: 2}
-  drops: 0
-  attackPos: {fileID: 4382410613165886}
-  Player:
-    serializedVersion: 2
-    m_Bits: 1024
-  attackRange: 1.4
 --- !u!114 &114603840887542154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,13 +235,12 @@ MonoBehaviour:
   currentHealth: 0
   Drop: {fileID: 1388223377404892, guid: 15808a6f870c09c40a42fb8489383663, type: 2}
   drops: 0
-  attackPos: {fileID: 0}
   Player:
     serializedVersion: 2
-    m_Bits: 0
-  attackRange: 0
-  projectile: {fileID: 0}
-  shotPoint: {fileID: 0}
+    m_Bits: 1024
+  attackRange: 10
+  fireRate: 3
+  projectile: {fileID: 1504694759372998, guid: 2cd1d252a307f6247b91f1855c797e15, type: 2}
 --- !u!212 &212089669298431960
 SpriteRenderer:
   m_ObjectHideFlags: 1

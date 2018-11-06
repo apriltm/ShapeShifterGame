@@ -7,6 +7,7 @@ public class EnemyFireball : MonoBehaviour {
     public float speed;
     private Transform player;
     private Vector2 target;
+    public float damage = 50f;
 
     private void Start()
     {
@@ -29,6 +30,8 @@ public class EnemyFireball : MonoBehaviour {
         if(collision.gameObject.tag == "Player")
         {
             // hurt player
+            PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
+            health.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
