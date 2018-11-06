@@ -44,6 +44,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: howmanyattacks
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -68,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6669414e0de2554f88c0d32590a1530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idletimer: 3
 --- !u!114 &114720279909220268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -426,8 +433,8 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 732, y: 276, z: 0}
+  m_AnyStatePosition: {x: 780, y: 288, z: 0}
   m_EntryPosition: {x: 372, y: 576, z: 0}
-  m_ExitPosition: {x: 732, y: 324, z: 0}
+  m_ExitPosition: {x: 780, y: 360, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102793893949604212}

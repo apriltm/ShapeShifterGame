@@ -8,16 +8,19 @@ public class bossattackbehaviour : StateMachineBehaviour {
     private SpriteRenderer playerrender;
     public float speed;
     private float distance;
+    
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerpos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
+        animator.SetInteger("howmanyattacks", animator.GetInteger("howmanyattacks") + 1);
+        Debug.Log("ATTACK # " + animator.GetInteger("howmanyattacks"));
         
     }
 	
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-
+        
         if (animator.GetBool("facingright"))
         {
             Vector2 target = new Vector2(playerpos.position.x + 10f, animator.transform.position.y);
@@ -36,12 +39,21 @@ public class bossattackbehaviour : StateMachineBehaviour {
             
             distance = distance * (-1);
         }
+
        
-        if (distance > 5)
+        
+        if ((distance > 5) && (animator.GetInteger("howmanyattacks") < 3))
         {
-            animator.SetTrigger("run");
-            
+           animator.SetTrigger("run");
+                
+        }else if (animator.GetInteger("howmanyattacks") >= 3)
+        {
+            animator.SetTrigger("idle");
+            animator.SetInteger("howmanyattacks", 0);
         }
+        
+       
+        
     }
 
 	

@@ -15,6 +15,8 @@ public class runbehaviour : StateMachineBehaviour {
 
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+     
+
         Vector2 target = new Vector2(playerpos.position.x, animator.transform.position.y);
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
         
@@ -33,9 +35,9 @@ public class runbehaviour : StateMachineBehaviour {
 
         if (distance <= 5)
         {
-            
             animator.SetTrigger("attack");
         }
+
 
     }
     
