@@ -130,7 +130,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 2.7, y: 1.25, z: 0}
+  m_ChunkCullingBounds: {x: 1.4666667, y: 0.61, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -309,7 +309,7 @@ Tilemap:
   - first: {x: 5, y: -12, z: 0}
     second:
       m_TileIndex: 32
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -774,16 +774,16 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 7f5bc80a13b86494fb9472eca10ae30b, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 31e2332454549884d8e5bb27fc861d3f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300002, guid: 31e2332454549884d8e5bb27fc861d3f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300004, guid: 31e2332454549884d8e5bb27fc861d3f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300006, guid: 31e2332454549884d8e5bb27fc861d3f, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 31e2332454549884d8e5bb27fc861d3f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300010, guid: 31e2332454549884d8e5bb27fc861d3f, type: 3}
   - m_RefCount: 1
@@ -885,69 +885,69 @@ Tilemap:
   - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7719444, g: 0.39049792, b: 0.39482903, a: 1}
+    m_Data: {r: 0.98188555, g: 0.53516966, b: 0.66729254, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8487943, g: 0.40077442, b: 0.43901253, a: 1}
+    m_Data: {r: 0.7617413, g: 0.38409445, b: 0.39535552, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.79565823, g: 0.46254736, b: 0.46846014, a: 1}
+    m_Data: {r: 0.9168946, g: 0.49600527, b: 0.61751443, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7261051, g: 0.4832101, b: 0.5168045, a: 1}
+    m_Data: {r: 0.80065334, g: 0.36229366, b: 0.41350007, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.71395093, g: 0.30288687, b: 0.36040893, a: 1}
+    m_Data: {r: 0.82845, g: 0.4144741, b: 0.42053288, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.75920737, g: 0.4100912, b: 0.4479325, a: 1}
+    m_Data: {r: 0.75763744, g: 0.35227665, b: 0.36918652, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.96257985, g: 0.5452395, b: 0.6839387, a: 1}
+    m_Data: {r: 0.8585688, g: 0.4239664, b: 0.45988205, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9755153, g: 0.4325991, b: 0.5958518, a: 1}
+    m_Data: {r: 0.8231648, g: 0.5076784, b: 0.55111337, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7804861, g: 0.40600955, b: 0.47650266, a: 1}
+    m_Data: {r: 0.8383274, g: 0.5655867, b: 0.6417856, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9277592, g: 0.38928494, b: 0.56778556, a: 1}
+    m_Data: {r: 0.74889845, g: 0.49082315, b: 0.5580184, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9732676, g: 0.4261856, b: 0.5481048, a: 1}
+    m_Data: {r: 0.9108046, g: 0.611019, b: 0.63765365, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8540549, g: 0.41309077, b: 0.42040306, a: 1}
+    m_Data: {r: 0.7076315, g: 0.3732812, b: 0.45455515, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7218084, g: 0.4868244, b: 0.5291968, a: 1}
+    m_Data: {r: 0.7914735, g: 0.33613467, b: 0.38193145, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.71200806, g: 0.4837478, b: 0.50123864, a: 1}
+    m_Data: {r: 0.8399065, g: 0.49362782, b: 0.5332105, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.75064903, g: 0.43884423, b: 0.49492875, a: 1}
+    m_Data: {r: 0.85190916, g: 0.47976685, b: 0.5553111, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7695047, g: 0.4816903, b: 0.49065787, a: 1}
+    m_Data: {r: 0.8287628, g: 0.5730425, b: 0.5952368, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9402185, g: 0.62333614, b: 0.7146217, a: 1}
+    m_Data: {r: 0.72308046, g: 0.32023954, b: 0.36922735, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8421719, g: 0.49623096, b: 0.51801825, a: 1}
+    m_Data: {r: 0.7007055, g: 0.4467916, b: 0.45854416, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8351928, g: 0.57722825, b: 0.6568635, a: 1}
+    m_Data: {r: 0.75218827, g: 0.47117847, b: 0.5375496, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.838543, g: 0.42145014, b: 0.5218936, a: 1}
+    m_Data: {r: 0.8751385, g: 0.5837782, b: 0.6031522, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.93149596, g: 0.37995824, b: 0.38020387, a: 1}
+    m_Data: {r: 0.8160453, g: 0.45008427, b: 0.56328505, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8601026, g: 0.5053465, b: 0.5607864, a: 1}
+    m_Data: {r: 0.9633834, g: 0.62879604, b: 0.71190375, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.88588834, g: 0.48036352, b: 0.4987365, a: 1}
+    m_Data: {r: 0.8167813, g: 0.32856944, b: 0.41592532, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8471576, g: 0.48080704, b: 0.518831, a: 1}
+    m_Data: {r: 0.8841688, g: 0.47509342, b: 0.5770857, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8140629, g: 0.36084104, b: 0.49870625, a: 1}
+    m_Data: {r: 0.8460006, g: 0.58397955, b: 0.6690251, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8925847, g: 0.383555, b: 0.48266733, a: 1}
+    m_Data: {r: 0.8781437, g: 0.5335522, b: 0.6024146, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7313843, g: 0.3416879, b: 0.42595878, a: 1}
+    m_Data: {r: 0.87483853, g: 0.53125244, b: 0.6362835, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.78031725, g: 0.42900956, b: 0.4766878, a: 1}
+    m_Data: {r: 0.86142194, g: 0.4292679, b: 0.510453, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.98435813, g: 0.41200072, b: 0.5662667, a: 1}
+    m_Data: {r: 0.9526296, g: 0.529112, b: 0.66152406, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9998437, g: 0.6524499, b: 0.71154463, a: 1}
+    m_Data: {r: 0.83192885, g: 0.43097395, b: 0.510397, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8643453, g: 0.3668824, b: 0.3758119, a: 1}
+    m_Data: {r: 0.7500651, g: 0.5210758, b: 0.5435562, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.84024906, g: 0.577765, b: 0.6050173, a: 1}
+    m_Data: {r: 0.7077247, g: 0.48062462, b: 0.5367377, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -3, y: -16, z: 0}

@@ -7,21 +7,17 @@ public class PlayerHealth : MonoBehaviour {
     
 	public float maxHealth;
 	public float currentHealth;
-<<<<<<< HEAD
 	private PlayerController player;
 	private float hurtTime = 1.0f;
     public bool isBlocking = false;
-=======
     private AnimatorController animator;
-    private PlayerMovement player;
+    private PlayerMovement playerMovement;
     private SelectForm select;
     private MeleeAttack MAattack;
     private Aimming AimAttack;
     private float hurtTime = 1.0f;
-    
->>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
 
-    
+    private Rigidbody2D rb;
     public Image currentHPBar;
     public Text HPText;
     private ShakeControl Cam;
@@ -54,6 +50,7 @@ public class PlayerHealth : MonoBehaviour {
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
         AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
+        rb = GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
@@ -110,19 +107,12 @@ public class PlayerHealth : MonoBehaviour {
         
     }
 
-<<<<<<< HEAD
-	public void TakeDamage(float damage){
-
-		if (currentHealth > 0) {
-            currentHealth -= (damage * damageReductionMultiplier);
-=======
 	public void TakeDamage(float dam){
         
 
         if (IsDead()==false) {
             
-            currentHealth -= dam;
->>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
+            currentHealth -= dam * damageReductionMultiplier;
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
 			Audio.PlaySound ("PlayerHurt");
@@ -169,9 +159,18 @@ public class PlayerHealth : MonoBehaviour {
             return true;
     }
 
+    public IEnumerator Knockback(float KnockDur)
+    {
 
-<<<<<<< HEAD
-=======
+        float timer = 0;
+        while (KnockDur > timer)
+        {
 
->>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector3(-.3f, 1300f, transform.position.z));
+        }
+
+        yield return 0;
+    }
+
 }
