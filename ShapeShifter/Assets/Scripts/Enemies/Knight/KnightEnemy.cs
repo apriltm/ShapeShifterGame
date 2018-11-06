@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KnightEnemy : Enemy {
 
+    public Transform attackPos;
+
     // Use this for initialization
     public override void Start () {
         base.Start();

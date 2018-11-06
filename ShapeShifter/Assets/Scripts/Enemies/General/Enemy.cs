@@ -8,7 +8,6 @@ public class Enemy : Character {
 	public GameObject Drop;
 	public bool drops;
     public GameObject Target { get; set; }
-	public Transform attackPos;
 	public LayerMask Player;
 
     [SerializeField]
@@ -111,15 +110,6 @@ public class Enemy : Character {
 			Instantiate (Drop, transform.position, transform.rotation);
 			Destroy (gameObject, 1.5f);
 		}
-	}
-    
-	public void giveDamage(int dam) {
-		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, Player);
-		Audio.PlaySound ("EnemyAttack");
-		for (int i = 0; i < enemiesToDamage.Length; i++) {
-			enemiesToDamage [i].GetComponent <PlayerHealth> ().TakeDamage (dam);
-		}
-
 	}
 
 	IEnumerator HurtBlinker(float hurtTime){

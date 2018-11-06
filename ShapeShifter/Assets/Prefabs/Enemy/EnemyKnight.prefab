@@ -37,11 +37,11 @@ GameObject:
   - component: {fileID: 4995460255482958}
   - component: {fileID: 212089669298431960}
   - component: {fileID: 95284737717383444}
-  - component: {fileID: 114486687079951532}
   - component: {fileID: 114603840887542154}
   - component: {fileID: 50035907089456278}
   - component: {fileID: 58505506437079698}
   - component: {fileID: 61629467534127650}
+  - component: {fileID: 114678701150477792}
   m_Layer: 9
   m_Name: EnemyKnight
   m_TagString: Enemy
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1410952329750222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.07, y: -3.2, z: 0}
+  m_LocalPosition: {x: 8.52, y: -3.2, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children:
   - {fileID: 4584981361560762}
@@ -208,30 +208,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114486687079951532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1410952329750222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b92ae5ecdc46854fa0c2d6e53b9767f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 3
-  facingRight: 0
-  maxHealth: 300
-  currentHealth: 0
-  Drop: {fileID: 1388223377404892, guid: 15808a6f870c09c40a42fb8489383663, type: 2}
-  drops: 0
-  attackPos: {fileID: 4382410613165886}
-  attackRange: 1.4
-  Player:
-    serializedVersion: 2
-    m_Bits: 1024
-  LeftRight: 0
-  meleeRange: 1.4
 --- !u!114 &114603840887542154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,7 +219,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6aa433311e261459b645bc9832f268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 114486687079951532}
+--- !u!114 &114678701150477792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410952329750222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9962e9adbe3d7fb478579720abde80df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0
+  maxHealth: 0
+  currentHealth: 0
+  Drop: {fileID: 0}
+  drops: 0
+  Player:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 0
+  attackPos: {fileID: 0}
 --- !u!212 &212089669298431960
 SpriteRenderer:
   m_ObjectHideFlags: 1

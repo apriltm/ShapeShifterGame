@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 50035907089456278}
   - component: {fileID: 58505506437079698}
   - component: {fileID: 61629467534127650}
+  - component: {fileID: 114921384684954524}
   m_Layer: 9
   m_Name: TestEnemyMage
   m_TagString: Enemy
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1410952329750222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.07, y: -3.2, z: 0}
+  m_LocalPosition: {x: -2.3944726, y: 0.67825174, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children:
   - {fileID: 4584981361560762}
@@ -199,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 1410952329750222}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 79943e1f0329ac140ab5f40a363d37d2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 381e69998b1411c49b3473c1727251a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -214,7 +215,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1410952329750222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b92ae5ecdc46854fa0c2d6e53b9767f, type: 3}
   m_Name: 
@@ -240,6 +241,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6aa433311e261459b645bc9832f268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114921384684954524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410952329750222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d02557f000ab7f43a733263d4e89f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 1
+  maxHealth: 100
+  currentHealth: 0
+  Drop: {fileID: 1388223377404892, guid: 15808a6f870c09c40a42fb8489383663, type: 2}
+  drops: 0
+  attackPos: {fileID: 0}
+  Player:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 0
+  projectile: {fileID: 0}
+  shotPoint: {fileID: 0}
 --- !u!212 &212089669298431960
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -275,7 +299,7 @@ SpriteRenderer:
   m_SortingLayerID: -926175953
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c92c935568c1f0f4abf147c55be4bcd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a340948565a8da14d969453bf90283db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
