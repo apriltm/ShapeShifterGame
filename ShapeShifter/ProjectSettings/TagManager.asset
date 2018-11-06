@@ -67,6 +67,9 @@ TagManager:
   - name: Player
     uniqueID: 2693945461
     locked: 0
+  - name: Shield
+    uniqueID: 580252653
+    locked: 0
   - name: effects
     uniqueID: 921422323
     locked: 0
