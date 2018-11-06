@@ -1,19 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * TODO: 
- *  larger attack range
- *  
- * 
- */
+
 public class MageEnemy : Enemy {
 
-    [SerializeField]
-    GameObject fireball;
-
-    float fireRate;
-    float timeSinceFire;
+    private float fireRate = 3;
+    private float timeSinceLastFire = 0;
     
     public GameObject projectile;
     public Transform shotPoint;
@@ -25,7 +17,7 @@ public class MageEnemy : Enemy {
     {
         get
         {
-            return timeSinceFire < fireRate;
+            return timeSinceLastFire < fireRate;
         }
     }
     
@@ -43,11 +35,14 @@ public class MageEnemy : Enemy {
             currentState.Execute();
             LookAtTarget();
         }
+        timeSinceLastFire += Time.deltaTime;
 	}
     // Gets position of player and shoots a fireball towards that location
     private void ShootFireball()
     {
-        Vector2 targetPos = target.transform.position;
-        Instantiate(projectile, shotPoint.position, transform.rotation);
+        if (canFire) {
+            Instantiate(projectile);
+            timeSinceLastFire = 0;
+        }
     }
 }

@@ -7,20 +7,16 @@ public class PlayerHealth : MonoBehaviour {
     
 	public float maxHealth;
 	public float currentHealth;
-<<<<<<< HEAD
-	private PlayerController player;
-	private float hurtTime = 1.0f;
+
+    private PlayerController player;
     public bool isBlocking = false;
-=======
+
     private AnimatorController animator;
-    private PlayerMovement player;
+    private PlayerMovement playerMove;
     private SelectForm select;
     private MeleeAttack MAattack;
     private Aimming AimAttack;
     private float hurtTime = 1.0f;
-    
->>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
-
     
     public Image currentHPBar;
     public Text HPText;
@@ -48,7 +44,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
         Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
 		currentHealth = maxHealth;
-		player = gameObject.GetComponent<PlayerMovement> ();
+		playerMove = gameObject.GetComponent<PlayerMovement> ();
         animator = gameObject.GetComponent<AnimatorController>();
         select = gameObject.GetComponent<SelectForm>();
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
@@ -69,10 +65,10 @@ public class PlayerHealth : MonoBehaviour {
             animator.MainAnimator.SetBool("isJumping", false);
             animator.MainAnimator.SetBool("isFalling", false);
             Destroy(gameObject, 2.0f);
-            player.rb.velocity = new Vector2(0f, 0f);
+            playerMove.rb.velocity = new Vector2(0f, 0f);
             MAattack.enabled = false;
             select.enabled = false;
-            player.enabled = false;
+            playerMove.enabled = false;
             AimAttack.enabled = false;
 			
 			//FindObjectOfType<GameManager>().EndGame();
@@ -109,20 +105,13 @@ public class PlayerHealth : MonoBehaviour {
         */
         
     }
-
-<<<<<<< HEAD
-	public void TakeDamage(float damage){
-
-		if (currentHealth > 0) {
-            currentHealth -= (damage * damageReductionMultiplier);
-=======
+    
 	public void TakeDamage(float dam){
         
 
         if (IsDead()==false) {
             
-            currentHealth -= dam;
->>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
+            currentHealth -= dam * damageReductionMultiplier;
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
 			Audio.PlaySound ("PlayerHurt");
@@ -168,10 +157,4 @@ public class PlayerHealth : MonoBehaviour {
         else
             return true;
     }
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
 }
