@@ -34,8 +34,7 @@ public class PlayerHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-           
-           
+          
 
 			animator.MainAnimator.SetTrigger ("Dies");
 			animator.KnightAnimator.SetTrigger("Die");

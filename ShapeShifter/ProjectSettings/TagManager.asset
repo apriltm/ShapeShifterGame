@@ -11,6 +11,7 @@ TagManager:
   - Water
   - MovingPlatform
   - ScreenShake
+  - boss
   layers:
   - Default
   - TransparentFX
