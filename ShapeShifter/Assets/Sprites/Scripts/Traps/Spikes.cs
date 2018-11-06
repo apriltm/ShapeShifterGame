@@ -8,8 +8,8 @@ public class Spikes : MonoBehaviour {
 	private PlayerController p;
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerHealth> ();
-		p = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+		player = GameObject.Find("Player").GetComponent<PlayerHealth> ();
+		//p = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
@@ -18,7 +18,7 @@ public class Spikes : MonoBehaviour {
 			if (col.CompareTag ("Player")) {
 
 				player.TakeDamage (20);
-				StartCoroutine (p.Knockback (0.001f));
+				//StartCoroutine (player.Knockback (0.001f));
 
 			}
 		}
