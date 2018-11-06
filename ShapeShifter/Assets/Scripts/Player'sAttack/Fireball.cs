@@ -24,7 +24,8 @@ public class Fireball : MonoBehaviour {
 		if (hitinfo.collider != null) {
 			if (hitinfo.collider.CompareTag ("Enemy")) {
                 //Debug.Log ("ENEMY HIT!");
-                Audio.PlaySound("BowHit");
+                if (gameObject.tag == "arrow")
+                    Audio.PlaySound("BowHit");
                 hitinfo.collider.GetComponent<Enemy> ().TakeDamage (damage);
 			}
 			DestoryProjectile (0);
