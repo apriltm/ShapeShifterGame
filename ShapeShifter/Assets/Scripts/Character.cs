@@ -11,8 +11,6 @@ public abstract class Character : MonoBehaviour {
 
     protected bool facingRight;
 
-
-
     [SerializeField]
 	public int maxHealth;
     public int currentHealth;
@@ -39,25 +37,4 @@ public abstract class Character : MonoBehaviour {
     }
 
     public abstract void TakeDamage(int damage);
-    
-
-
-
-	//public abstract IEnumerator TakeDamage (int damage);
-    
-       /* currentHealth -= damage;
-        if(!IsDead){
-			MyAnimator.SetTrigger ("Damaged");
-        } else {
-			MyAnimator.SetTrigger ("Die");
-			yield return null;
-        }*/
-    
-    
-
-	/*public virtual void OnTriggerEnter2D(Collider2D col){
-		if (col.tag = "Enemy_sword") {
-			StartCoroutine (TakeDamage ());
-		}
-	}*/
 }

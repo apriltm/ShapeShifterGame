@@ -25,14 +25,14 @@ public class Fireball : MonoBehaviour {
 				Debug.Log ("ENEMY HIT!");
 				hitinfo.collider.GetComponent<Enemy> ().TakeDamage (damage);
 			}
-			DestoryProjectile (0);
+			DestroyProjectile (0);
 		}
 
 		transform.Translate (Vector2.up * speed * Time.deltaTime);
-		DestoryProjectile (lifeTime);
+		DestroyProjectile (lifeTime);
 	}
 
-	void DestoryProjectile(float time) {
+	void DestroyProjectile(float time) {
 		//Instantiate (destroyEffect , transform.position, Quaternion.identity);
 		Destroy (gameObject, time);
 	}
