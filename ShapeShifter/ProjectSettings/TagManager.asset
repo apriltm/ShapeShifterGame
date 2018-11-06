@@ -12,6 +12,7 @@ TagManager:
   - MovingPlatform
   - ScreenShake
   - boss
+  - darkness
   layers:
   - Default
   - TransparentFX

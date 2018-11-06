@@ -16,16 +16,19 @@ public class MaterialController : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerStay2D (Collider2D col) {
 
-        main.material = Dark;
-        knight.material = Dark;
-        mage.material = Dark;
-        archer.material = Dark;
-        NYAN.material = Dark;
-        arrow.material = Dark;
-        shield.material = Dark;
+        if (col.tag == ("darkness"))
+        {
+            main.material = Dark;
+            knight.material = Dark;
+            mage.material = Dark;
+            archer.material = Dark;
+            NYAN.material = Dark;
+            arrow.material = Dark;
+            shield.material = Dark;
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
 
         main.material = Default;
