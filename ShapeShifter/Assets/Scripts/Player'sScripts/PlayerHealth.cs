@@ -7,13 +7,24 @@ public class PlayerHealth : MonoBehaviour {
     
 	public float maxHealth;
 	public float currentHealth;
+<<<<<<< HEAD
 	private PlayerController player;
 	private float hurtTime = 1.0f;
     public bool isBlocking = false;
+=======
+    private AnimatorController animator;
+    private PlayerMovement player;
+    private SelectForm select;
+    private MeleeAttack MAattack;
+    private Aimming AimAttack;
+    private float hurtTime = 1.0f;
+    
+>>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
 
     
     public Image currentHPBar;
     public Text HPText;
+    private ShakeControl Cam;
     
     // Player only takes 75% of damage if in knight form; 25% if he is also blocking. Otherwise, he takes 100% of damage.
     [SerializeField]
@@ -35,25 +46,36 @@ public class PlayerHealth : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-		
+        Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
 		currentHealth = maxHealth;
-		player = gameObject.GetComponent<PlayerController> ();
+		player = gameObject.GetComponent<PlayerMovement> ();
+        animator = gameObject.GetComponent<AnimatorController>();
+        select = gameObject.GetComponent<SelectForm>();
+        MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
+        AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-            FindObjectOfType<GameManager>().EndGame();
+           
            
 
-			player.animator.SetTrigger ("Dies");
-			player.animator2.SetTrigger("Dies");
-			player.animator.SetBool("isJumping", false);
-            player.animator.SetBool("isFalling", false);
+			animator.MainAnimator.SetTrigger ("Dies");
+			animator.KnightAnimator.SetTrigger("Die");
+            animator.MageAnimator.SetTrigger("Die");
+            animator.ArcherAnimator.SetTrigger("Die");
+            animator.MainAnimator.SetBool("isJumping", false);
+            animator.MainAnimator.SetBool("isFalling", false);
+            Destroy(gameObject, 2.0f);
+            player.rb.velocity = new Vector2(0f, 0f);
+            MAattack.enabled = false;
+            select.enabled = false;
             player.enabled = false;
-			Destroy (gameObject, 3.0f);
-
+            AimAttack.enabled = false;
+			
+			//FindObjectOfType<GameManager>().EndGame();
 		}
 
 	}
@@ -88,17 +110,27 @@ public class PlayerHealth : MonoBehaviour {
         
     }
 
+<<<<<<< HEAD
 	public void TakeDamage(float damage){
 
 		if (currentHealth > 0) {
             currentHealth -= (damage * damageReductionMultiplier);
+=======
+	public void TakeDamage(float dam){
+        
+
+        if (IsDead()==false) {
+            
+            currentHealth -= dam;
+>>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
             Debug.Log(currentHealth);
 			StartCoroutine(HurtBlinker(hurtTime));
 			Audio.PlaySound ("PlayerHurt");
-			//gameObject.GetComponent<Animation> ().Play ("Hurt");
+            Cam.ShakeCamera(.3f);
+            //gameObject.GetComponent<Animation> ().Play ("Hurt");
 
 
-		}
+        }
 
         UpdateHealthBar();
 	}
@@ -111,18 +143,35 @@ public class PlayerHealth : MonoBehaviour {
 
 	IEnumerator HurtBlinker(float hurtTime){
 
-		//int enemyLayer = LayerMask.NameToLayer ("Enemy");
-		//int playerLayer = LayerMask.NameToLayer ("Player");
-		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
+        //int enemyLayer = LayerMask.NameToLayer ("Enemy");
+        //int playerLayer = LayerMask.NameToLayer ("Player");
+        //Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer);
 
-		player.animator.SetLayerWeight (1, 1f);
-		player.animator2.SetLayerWeight (1, 1f);
-		yield return new WaitForSeconds(hurtTime);
+        animator.MainAnimator.SetLayerWeight (1, 1f);
+        animator.KnightAnimator.SetLayerWeight (1, 1f);
+        animator.MageAnimator.SetLayerWeight(1, 1f);
+        animator.ArcherAnimator.SetLayerWeight(1, 1f);
+        yield return new WaitForSeconds(hurtTime);
 
-		//Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
+        //Physics2D.IgnoreLayerCollision (enemyLayer, playerLayer, false);
 
-		player.animator.SetLayerWeight (1, 0f);
-		player.animator2.SetLayerWeight (1, 0f);
-	}
+        animator.MainAnimator.SetLayerWeight (1, 0f);
+        animator.KnightAnimator.SetLayerWeight (1, 0f);
+        animator.MageAnimator.SetLayerWeight(1, 0f);
+        animator.ArcherAnimator.SetLayerWeight(1, 0f);
+    }
 
+    public bool IsDead()
+    {
+        if (currentHealth > 0)
+            return false;
+        else
+            return true;
+    }
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> b31764ebb8aafee45c2e9bd2bdfc9b091a4a9f07
 }

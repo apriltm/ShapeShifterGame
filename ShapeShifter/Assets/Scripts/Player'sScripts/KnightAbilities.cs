@@ -73,11 +73,6 @@ public class KnightAbilities : MonoBehaviour {
                 playerRigidbody.AddForce(Vector3.right * 50);
 
             }
-            if (direction == false)
-            {
-                // dashTimer += Time.deltaTime * 3;
-                playerRigidbody.AddForce(Vector3.left * 50);
-            }
         }
         /*
         if (dashTimer > .5f)
@@ -113,5 +108,4 @@ public class KnightAbilities : MonoBehaviour {
         buttonCount = 0;
     }
     */
-}
 }
