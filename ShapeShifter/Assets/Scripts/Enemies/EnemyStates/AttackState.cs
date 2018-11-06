@@ -23,7 +23,7 @@ public class AttackState : IEnemyState
         Timer();
 
         AttackPlayer();
-        if (!enemy.InMeleeRange)
+        if (!enemy.InAttackRange)
         {
             enemy.ChangeState(new PatrolState());
         }

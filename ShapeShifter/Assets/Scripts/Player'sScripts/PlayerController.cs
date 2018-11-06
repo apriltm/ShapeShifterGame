@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
-    public float speed;
+    public float speed = 10.0f;
     public float jumpForce;
 	public int Player_current_lvl;
 	public int Player_current_exp;
 
-
-    private Rigidbody2D rb;
+  private Rigidbody2D rb;
 	private bool canMove;
 	public GameObject SE;
-    private bool facingRight = true;
-
+  public bool facingRight = true;
+  
 	private float timeBtwAttack;
 	public float startTimeBtwAttack;
 
@@ -40,8 +39,7 @@ public class PlayerController : MonoBehaviour {
     public int extraJumpsValue;
 
 	private bool attack;
-	private PlayerHealth PlayerH;
-
+	private PlayerHealth playerHealth;
 
     //Updating UI Selection of Shape Visual;
     
@@ -55,7 +53,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerH = gameObject.GetComponent<PlayerHealth> ();
+		playerHealth = gameObject.GetComponent<PlayerHealth> ();
 		Player_current_lvl = 0;
 		canMove = true;
 		attack = false;
@@ -81,8 +79,13 @@ public class PlayerController : MonoBehaviour {
 		MoveHor ();
 		Jump ();
         crouch();
-		selectF ();
+		selectForm ();
 		Shift ();
+
+        // if(currentForm == knight)
+        KnightBlock();
+        KnightDash();
+
 		if(isGrounded == true)
 		{
 			CharAttack ();
@@ -121,7 +124,7 @@ public class PlayerController : MonoBehaviour {
 		animator2.SetFloat ("Speed", Mathf.Abs (xTranslation));
 		animator3.SetFloat ("Speed", Mathf.Abs (xTranslation));
 
-		if (PlayerH.currentHealth > 0) {
+		if (playerHealth.currentHealth > 0) {
             if (attack)
             {
                 rb.velocity = new Vector2(0.0f, 0.0f);
@@ -155,6 +158,8 @@ public class PlayerController : MonoBehaviour {
 				for (int i = 0; i < enemiesToDamage.Length; i++) {
 					enemiesToDamage [i].GetComponent <Enemy> ().TakeDamage (damage);
 				}
+
+			} /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
                 attack = true;
                 Invoke("resetAttack", .25f);
 
@@ -170,11 +175,10 @@ public class PlayerController : MonoBehaviour {
 			timeBtwAttack -= Time.deltaTime;
 			animator.SetBool ("isAttacking", false);
 			animator2.SetBool ("isAttacking", false);
-            
 		}
 
 	}
-
+	void selectForm(){
     void resetAttack()
     {
         attack = false;
@@ -205,7 +209,9 @@ public class PlayerController : MonoBehaviour {
 			Knight.SetActive (false);
 			Mage.SetActive (false);
 
-           
+            baseshapeimage.color = new Color32(212, 240, 241, 255);
+            shape1image.color = new Color32(0, 0, 0, 255);
+            shape2image.color = new Color32(0, 0, 0, 255);
 
             actionbar_baseform.SetActive(true);
             actionbar_shape1.SetActive(false);
@@ -221,8 +227,11 @@ public class PlayerController : MonoBehaviour {
 			Main.SetActive (false);
 			Knight.SetActive (true);
 			Mage.SetActive (false);
-            
 
+            baseshapeimage.color = new Color32(0, 0, 0, 255);
+            shape1image.color = new Color32(212, 240, 241, 255);
+            shape2image.color = new Color32(0, 0, 0, 255);
+      
             actionbar_baseform.SetActive(false);
             actionbar_shape1.SetActive(true);
             actionbar_shape2.SetActive(false);
@@ -238,7 +247,9 @@ public class PlayerController : MonoBehaviour {
 			Knight.SetActive (false);
 			Mage.SetActive (true);
 
-        
+            baseshapeimage.color = new Color32(0, 0, 0, 255);
+            shape1image.color = new Color32(0, 0, 0, 255);
+            shape2image.color = new Color32(212, 240, 241, 255);
 
             actionbar_baseform.SetActive(false);
             actionbar_shape1.SetActive(false);
@@ -342,8 +353,6 @@ public class PlayerController : MonoBehaviour {
 		if (other.transform.tag == "MovingPlatform") {
 			transform.parent = other.transform;
 		}
-
-        Debug.Log("HITTING SOMETHING");
 	}
 
 	void OnCollisionExit2D (Collision2D other){
@@ -364,4 +373,85 @@ public class PlayerController : MonoBehaviour {
 			Player_current_exp = 0;
 		}
 	}*/
+
+    // Knight abilities: block, dash
+
+    void KnightBlock()
+    {
+        // Set animator to trigger
+        if (Input.GetButton("Block"))
+        {
+            Debug.Log("Is Blocking");
+            animator2.SetBool("isBlocking", true);
+            playerHealth.isBlocking = true;
+        }
+        else
+        {
+            animator2.SetBool("isBlocking", false);
+            playerHealth.isBlocking = false;
+        }
+    }
+    /*
+    int buttonCount = 0;
+    float buttonTimer = 0.5f;
+    */
+
+    float dashTimer = 0f;
+    bool canDash = true;
+
+    int buttonCount = 0;
+    float buttonTimer = 0.5f;
+
+    void KnightDash()
+    {
+        if (Input.anyKeyDown)
+        {
+            if (buttonTimer > 0 && buttonCount == 1)
+            {
+                rb.velocity += new Vector2(rb.velocity.x * 5, 0.1f);
+            }
+            else
+            {
+                buttonTimer = 0.5f;
+                buttonCount += 1;
+            }
+        }
+        if (buttonTimer > 0)
+        {
+            buttonTimer -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            buttonCount = 0;
+        }
+        /*
+        if (Input.GetKey(KeyCode.LeftShift) && canDash)
+        {
+            if (facingRight)
+            {
+                rb.AddForce(Vector3.right * 500);
+
+            }
+            else
+            {
+                rb.AddForce(Vector3.left * 100);
+            }
+
+            dashTimer += Time.deltaTime * 3;
+        }
+        if (dashTimer > .5f)
+        {
+            canDash = false;
+        }
+        if (dashTimer < .5f && dashCooldown == false)
+        {
+            canIDash = true;
+        }
+        if (dashTimer <= 0)
+        {
+            dashCooldown = false;
+        }
+        */
+
+    }
 }
