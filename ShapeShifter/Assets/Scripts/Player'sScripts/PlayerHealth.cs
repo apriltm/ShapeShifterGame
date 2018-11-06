@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour {
             player.enabled = false;
             AimAttack.enabled = false;
 			
-			//FindObjectOfType<GameManager>().EndGame();
+			FindObjectOfType<GameManager>().EndGame();
 		}
 
 	}
