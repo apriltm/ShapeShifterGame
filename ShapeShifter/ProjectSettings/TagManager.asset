@@ -12,6 +12,7 @@ TagManager:
   - MovingPlatform
   - ScreenShake
   - arrow
+  - darkness
   layers:
   - Default
   - TransparentFX
