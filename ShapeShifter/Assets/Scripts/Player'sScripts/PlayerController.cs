@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour {
 	public int Player_current_lvl;
 	public int Player_current_exp;
 
-    private Rigidbody2D rb;
+  private Rigidbody2D rb;
 	private bool canMove;
 	public GameObject SE;
-    public bool facingRight = true;
-
+  public bool facingRight = true;
+  
 	private float timeBtwAttack;
 	public float startTimeBtwAttack;
 
@@ -42,12 +42,14 @@ public class PlayerController : MonoBehaviour {
 	private PlayerHealth playerHealth;
 
     //Updating UI Selection of Shape Visual;
-    public Image baseshapeimage;
-    public Image shape1image;
-    public Image shape2image;
+    
     public GameObject actionbar_baseform;
     public GameObject actionbar_shape1;
     public GameObject actionbar_shape2;
+    public Image baseform_inactive;
+    public Image shape1_inactive;
+    public Image shape2_inactive;
+
 
 	// Use this for initialization
 	void Start () {
@@ -123,6 +125,10 @@ public class PlayerController : MonoBehaviour {
 		animator3.SetFloat ("Speed", Mathf.Abs (xTranslation));
 
 		if (playerHealth.currentHealth > 0) {
+            if (attack)
+            {
+                rb.velocity = new Vector2(0.0f, 0.0f);
+            } else
 			rb.velocity = new Vector2 (xTranslation * speed, rb.velocity.y);
 
 		}
@@ -154,6 +160,10 @@ public class PlayerController : MonoBehaviour {
 				}
 
 			} /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
+                attack = true;
+                Invoke("resetAttack", .25f);
+
+            } /*else if (Input.GetButtonDown ("Attack") && timeBtwAttack <= 0 &&
 				PlayerSelect ==3) {
 
 
@@ -168,8 +178,13 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
-
 	void selectForm(){
+    void resetAttack()
+    {
+        attack = false;
+    }
+
+	void selectF(){
 		if (Input.GetButtonDown ("Base") && PlayerSelect != 1) { //Grab input and then select a model for the player 
 			Instantiate (SE, transform.position, transform.rotation = Quaternion.identity);
 			Audio.PlaySound ("Shift");
@@ -201,9 +216,12 @@ public class PlayerController : MonoBehaviour {
             actionbar_baseform.SetActive(true);
             actionbar_shape1.SetActive(false);
             actionbar_shape2.SetActive(false);
-           
 
-		} else if (PlayerSelect == 2) { //just using else statement for now. will change whenever we start to put in more forms
+            baseform_inactive.enabled = false;
+            shape1_inactive.enabled = true;
+            shape2_inactive.enabled = true;
+
+        } else if (PlayerSelect == 2) { //just using else statement for now. will change whenever we start to put in more forms
 			speed = 3.5f; //knight will the slowest
 			jumpForce = 0.0f; // knights will be unable to jump
 			Main.SetActive (false);
@@ -213,10 +231,14 @@ public class PlayerController : MonoBehaviour {
             baseshapeimage.color = new Color32(0, 0, 0, 255);
             shape1image.color = new Color32(212, 240, 241, 255);
             shape2image.color = new Color32(0, 0, 0, 255);
-
+      
             actionbar_baseform.SetActive(false);
             actionbar_shape1.SetActive(true);
             actionbar_shape2.SetActive(false);
+
+            baseform_inactive.enabled = true;
+            shape1_inactive.enabled = false;
+            shape2_inactive.enabled = true;
 
         } else if (PlayerSelect ==3) {
 			speed = 5.0f; //knight will the slowest
@@ -232,6 +254,10 @@ public class PlayerController : MonoBehaviour {
             actionbar_baseform.SetActive(false);
             actionbar_shape1.SetActive(false);
             actionbar_shape2.SetActive(true);
+
+            baseform_inactive.enabled = true;
+            shape1_inactive.enabled = true;
+            shape2_inactive.enabled = false;
 
         }
         

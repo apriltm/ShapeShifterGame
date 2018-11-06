@@ -7,17 +7,30 @@ public class PlayerHealth : MonoBehaviour {
     
 	public float maxHealth;
 	public float currentHealth;
+<<<<<<< HEAD
 
     private PlayerController player;
     public bool isBlocking = false;
 
     private AnimatorController animator;
     private PlayerMovement playerMove;
+=======
+	private PlayerController player;
+	private float hurtTime = 1.0f;
+    public bool isBlocking = false;
+    private AnimatorController animator;
+    private PlayerMovement playerMovement;
+>>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
     private SelectForm select;
     private MeleeAttack MAattack;
     private Aimming AimAttack;
     private float hurtTime = 1.0f;
+<<<<<<< HEAD
     
+=======
+
+    private Rigidbody2D rb;
+>>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
     public Image currentHPBar;
     public Text HPText;
     private ShakeControl Cam;
@@ -50,6 +63,7 @@ public class PlayerHealth : MonoBehaviour {
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
         AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
+        rb = GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
@@ -87,7 +101,11 @@ public class PlayerHealth : MonoBehaviour {
         currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         HPText.text = currentHealth.ToString();
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
 	public void TakeDamage(float dam){
         
 
@@ -139,4 +157,22 @@ public class PlayerHealth : MonoBehaviour {
         else
             return true;
     }
+<<<<<<< HEAD
+=======
+
+    public IEnumerator Knockback(float KnockDur)
+    {
+
+        float timer = 0;
+        while (KnockDur > timer)
+        {
+
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector3(-.3f, 1300f, transform.position.z));
+        }
+
+        yield return 0;
+    }
+
+>>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
 }

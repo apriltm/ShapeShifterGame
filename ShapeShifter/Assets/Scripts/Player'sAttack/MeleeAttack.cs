@@ -13,6 +13,7 @@ public class MeleeAttack : MonoBehaviour {
 
     public Transform attackPos;
     public LayerMask whatIsEnemies;
+    public LayerMask WhatIsWall;
     public float attackRange;
     private ShakeControl Cam;
 
@@ -55,6 +56,13 @@ public class MeleeAttack : MonoBehaviour {
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+           
+        }
+        Collider2D[] breakwall = Physics2D.OverlapCircleAll(attackPos.position, attackRange, WhatIsWall);
+        for (int i = 0; i < breakwall.Length; i++)
+        {
+            breakwall[i].GetComponent<DestroyableWall>().Brake();
+
         }
     }
 }
