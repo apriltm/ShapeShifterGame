@@ -9,79 +9,78 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1504694759372998}
+  m_RootGameObject: {fileID: 1649945553446290}
   m_IsPrefabAsset: 1
---- !u!1 &1504694759372998
+--- !u!1 &1649945553446290
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4509554145499280}
-  - component: {fileID: 212071457264341786}
-  - component: {fileID: 95996469635328170}
-  - component: {fileID: 114518487411441234}
+  - component: {fileID: 4018856595063502}
+  - component: {fileID: 212543009899344582}
+  - component: {fileID: 95145967610423530}
   m_Layer: 0
-  m_Name: fireball
+  m_Name: Lantern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1651209942061588
+--- !u!1 &1931897676798206
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4680958506517332}
-  - component: {fileID: 108451909346078610}
+  - component: {fileID: 4931450152980272}
+  - component: {fileID: 108152651524596356}
   m_Layer: 10
-  m_Name: Point Light
+  m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4509554145499280
+--- !u!4 &4018856595063502
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1504694759372998}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5727919, w: 0.81970084}
-  m_LocalPosition: {x: 19.43, y: -23.64, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 6.4245}
+  m_GameObject: {fileID: 1649945553446290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.13, y: -29.75, z: -0.08308704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4680958506517332}
+  - {fileID: 4931450152980272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.89001}
---- !u!4 &4680958506517332
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4931450152980272
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1651209942061588}
-  m_LocalRotation: {x: -0, y: -0, z: 0.5727919, w: 0.81970084}
-  m_LocalPosition: {x: -0, y: 0.042, z: -0.25682932}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.15565413}
+  m_GameObject: {fileID: 1931897676798206}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.435, z: -1.496913}
+  m_LocalScale: {x: 0.87114, y: 0.43557, z: 0.87114}
   m_Children: []
-  m_Father: {fileID: 4509554145499280}
+  m_Father: {fileID: 4018856595063502}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95996469635328170
+--- !u!95 &95145967610423530
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1504694759372998}
+  m_GameObject: {fileID: 1649945553446290}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f42ed4deec7265c488773fc69a6038f3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6df5ab220df1e434caf3931244df0837, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -90,18 +89,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!108 &108451909346078610
+--- !u!108 &108152651524596356
 Light:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1651209942061588}
+  m_GameObject: {fileID: 1931897676798206}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.42477313, b: 0, a: 1}
-  m_Intensity: 6.99
-  m_Range: 7.08
+  m_Color: {r: 1, g: 0.3834195, b: 0, a: 1}
+  m_Intensity: 5.3
+  m_Range: 8.64
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -119,39 +118,20 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 3.53, y: 1}
-  m_BounceIntensity: 0.3
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114518487411441234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1504694759372998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8226f0b1bc57d3a4e861b0e46e68d002, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 1.25
-  distance: 1
-  damage: 150
-  SFX: {fileID: 1432811798886568, guid: 841baf0595429b645aa01bffc9415d2b, type: 2}
-  whatIsSolid:
-    serializedVersion: 2
-    m_Bits: 2560
---- !u!212 &212071457264341786
+--- !u!212 &212543009899344582
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1504694759372998}
+  m_GameObject: {fileID: 1649945553446290}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -161,7 +141,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b41c60ff2d846c1408e28175958d2011, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -178,15 +158,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 921422323
-  m_SortingLayer: 5
+  m_SortingLayerID: -239177211
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: 44a789483c3293944a6a411d444d5e13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d82d0f8f4e96d8e40b6aac70d374c71b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.08, y: 0.19}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
