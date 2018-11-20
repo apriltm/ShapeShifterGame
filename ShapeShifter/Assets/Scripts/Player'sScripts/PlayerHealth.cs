@@ -7,30 +7,19 @@ public class PlayerHealth : MonoBehaviour {
     
 	public float maxHealth;
 	public float currentHealth;
-<<<<<<< HEAD
 
     private PlayerController player;
     public bool isBlocking = false;
 
     private AnimatorController animator;
-    private PlayerMovement playerMove;
-=======
-	private PlayerController player;
 	private float hurtTime = 1.0f;
-    public bool isBlocking = false;
-    private AnimatorController animator;
     private PlayerMovement playerMovement;
->>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
+
     private SelectForm select;
     private MeleeAttack MAattack;
     private Aimming AimAttack;
-    private float hurtTime = 1.0f;
-<<<<<<< HEAD
-    
-=======
-
     private Rigidbody2D rb;
->>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
+
     public Image currentHPBar;
     public Text HPText;
     private ShakeControl Cam;
@@ -57,7 +46,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
         Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
 		currentHealth = maxHealth;
-		playerMove = gameObject.GetComponent<PlayerMovement> ();
+		playerMovement = gameObject.GetComponent<PlayerMovement> ();
         animator = gameObject.GetComponent<AnimatorController>();
         select = gameObject.GetComponent<SelectForm>();
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
@@ -79,10 +68,10 @@ public class PlayerHealth : MonoBehaviour {
             animator.MainAnimator.SetBool("isJumping", false);
             animator.MainAnimator.SetBool("isFalling", false);
             Destroy(gameObject, 2.0f);
-            playerMove.rb.velocity = new Vector2(0f, 0f);
+            playerMovement.rb.velocity = new Vector2(0f, 0f);
             MAattack.enabled = false;
             select.enabled = false;
-            playerMove.enabled = false;
+            playerMovement.enabled = false;
             AimAttack.enabled = false;
 			
 			//FindObjectOfType<GameManager>().EndGame();
@@ -101,11 +90,7 @@ public class PlayerHealth : MonoBehaviour {
         currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         HPText.text = currentHealth.ToString();
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
 	public void TakeDamage(float dam){
         
 
@@ -157,8 +142,6 @@ public class PlayerHealth : MonoBehaviour {
         else
             return true;
     }
-<<<<<<< HEAD
-=======
 
     public IEnumerator Knockback(float KnockDur)
     {
@@ -173,6 +156,4 @@ public class PlayerHealth : MonoBehaviour {
 
         yield return 0;
     }
-
->>>>>>> 29f9858335f10fa61fd35f4a2524da61aba2aa17
 }
