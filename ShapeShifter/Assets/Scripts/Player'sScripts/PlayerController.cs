@@ -178,13 +178,13 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
-	void selectForm(){
+
     void resetAttack()
     {
         attack = false;
     }
 
-	void selectF(){
+	void selectForm(){
 		if (Input.GetButtonDown ("Base") && PlayerSelect != 1) { //Grab input and then select a model for the player 
 			Instantiate (SE, transform.position, transform.rotation = Quaternion.identity);
 			Audio.PlaySound ("Shift");
