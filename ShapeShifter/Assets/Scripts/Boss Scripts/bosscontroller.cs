@@ -57,7 +57,7 @@ public class bosscontroller : MonoBehaviour {
         {
             health -= damage;
             Audio.PlaySound("EnemyHurt");
-            Debug.Log("ENEMY HEALTH IS: " + health);
+            Debug.Log("BOSS HEALTH IS: " + health);
         }
         else
         {
