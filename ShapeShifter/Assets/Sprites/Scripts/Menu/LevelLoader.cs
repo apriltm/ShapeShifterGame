@@ -7,29 +7,33 @@ using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour {
 
-    public GameObject loadingScreen;
-    public Slider slider;
+    
+    public Animator loaderanim;
+    
 
     private string loadProgress = "Loading...";
 	public void LoadLevel (int sceneNum)
     {
+        loaderanim.SetTrigger("end");
         StartCoroutine(LoadAsynchronously(sceneNum));
+        
     }
     
     private string lastloadProgress = null;
     IEnumerator LoadAsynchronously (int sceneNum)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneNum);
-       
-        loadingScreen.SetActive(true);
-        
 
+
+
+        
+        
         while (!operation.isDone)
         {
             if (operation.progress < 0.9f)
             {
                 loadProgress = "Loading: " + (operation.progress * 100f).ToString("F0") + "%";
-                slider.value = operation.progress;
+                //slider.value = operation.progress;
             }
             else // if progress >= 0.9f the scene is loaded and is ready to activate.
             {
@@ -37,6 +41,8 @@ public class LevelLoader : MonoBehaviour {
                 {
                     operation.allowSceneActivation = true;
                 }
+
+                
 
                 loadProgress = "Loading ready for activation, Press any key to continue";
             }
@@ -46,6 +52,8 @@ public class LevelLoader : MonoBehaviour {
                 lastloadProgress = loadProgress;
                 Debug.Log(loadProgress);
             }
+
+           
             yield return null;
            
         }
