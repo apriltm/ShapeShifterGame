@@ -47,7 +47,7 @@ public class Enemy : Character {
         drops = false;
 		currentHealth = maxHealth;
         StartingDir();
-        Debug.Log("Enemy start");
+        //Debug.Log("Enemy start");
         base.Start();
         ChangeState(new IdleState());
        

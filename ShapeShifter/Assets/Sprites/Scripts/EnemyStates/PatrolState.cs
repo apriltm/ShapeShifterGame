@@ -14,7 +14,7 @@ public class PatrolState : IEnemyState
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;
-        Debug.Log("Knight Patrolling");
+        //Debug.Log("Knight Patrolling");
     }
 
     public void Execute()

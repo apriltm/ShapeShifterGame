@@ -9,7 +9,7 @@ public class Arrow : MonoBehaviour {
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        
     }
 
     // Update is called once per frame
@@ -25,11 +25,11 @@ public class Arrow : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (player.currentHealth > 0)
+        if (col.tag == "Player")
         {
-            if (col.CompareTag("Player"))
+            player = col.gameObject.GetComponent<PlayerHealth>();
+            if (player.currentHealth > 0)
             {
-
                 player.TakeDamage(20);
                 Destroy(gameObject);
             }

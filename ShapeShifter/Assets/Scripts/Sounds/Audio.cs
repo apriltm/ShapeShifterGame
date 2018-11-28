@@ -43,7 +43,7 @@ public class Audio : MonoBehaviour {
 			break;
 		case "PlayerAttack":
 			audioSrc.PlayOneShot (PlayerAttack);
-                Debug.Log("Played");
+                //Debug.Log("Played");
 			break;
 		case "EnemyAttack":
 			audioSrc.PlayOneShot (EnemyAttack);

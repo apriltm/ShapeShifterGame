@@ -13,7 +13,7 @@ public class IdleState : IEnemyState
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;
-        Debug.Log("Knight Idle");
+        //Debug.Log("Knight Idle");
     }
 
     public void Execute()
