@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         // left & right movement
 
-        float xTranslation = Input.GetAxis("Horizontal");
+        float xTranslation = Input.GetAxisRaw("Horizontal");
         animator.MainAnimator.SetFloat("Speed", Mathf.Abs(xTranslation)); //set the speed for the animator
         animator.KnightAnimator.SetFloat("Speed", Mathf.Abs(xTranslation));
         animator.MageAnimator.SetFloat("Speed", Mathf.Abs(xTranslation));
