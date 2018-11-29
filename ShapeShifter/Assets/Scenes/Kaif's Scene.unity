@@ -1005,12 +1005,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114850157804474404, guid: d01806e623a0ca24590c92cb5327ccd9,
-        type: 2}
-      propertyPath: contactexplode
-      value: 
-      objectReference: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d01806e623a0ca24590c92cb5327ccd9, type: 2}
   m_IsPrefabAsset: 0
