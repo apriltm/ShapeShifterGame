@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4497773855421834}
   - component: {fileID: 212668066720037138}
   - component: {fileID: 114514722101338996}
+  - component: {fileID: 60134135531146352}
   m_Layer: 0
   m_Name: EnemyArrow
   m_TagString: Untagged
@@ -41,6 +42,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60134135531146352
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736219937709520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 34, y: 43.000004}
+    newSize: {x: 34, y: 43.000004}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.000618, y: -4.4731317}
+      - {x: 3.0345893, y: -2.4990735}
+      - {x: 2.992588, y: -2.4570723}
+      - {x: 4.0426188, y: 8.50525}
+      - {x: 4.0426188, y: 10.500309}
+      - {x: 4.000618, y: 10.542311}
+      - {x: 3.0345893, y: 12.495368}
+      - {x: 2.0895615, y: 13.545399}
+      - {x: 0.97652876, y: 13.545399}
+      - {x: 0.95552814, y: 13.482397}
+      - {x: -2.0265596, y: 11.403336}
+      - {x: -2.0265596, y: 9.84929}
+      - {x: -0.3465102, y: 7.308215}
+      - {x: -2.0265596, y: -2.478073}
+      - {x: -2.0265596, y: -8.589252}
+      - {x: -1.7535516, y: -9.534281}
+      - {x: 4.777641, y: -9.534281}
+      - {x: 5.029648, y: -8.50525}
+      - {x: 5.029648, y: -5.6281657}
+      - {x: 4.0426188, y: -4.515133}
+    - - {x: 1.0605313, y: 11.445337}
+      - {x: 1.9425572, y: 11.445337}
+      - {x: 1.9425572, y: 10.563311}
+      - {x: 1.0605313, y: 10.563311}
 --- !u!114 &114514722101338996
 MonoBehaviour:
   m_ObjectHideFlags: 1
