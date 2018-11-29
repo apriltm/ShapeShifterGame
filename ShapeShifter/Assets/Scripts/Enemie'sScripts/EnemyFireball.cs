@@ -54,7 +54,7 @@ public class EnemyFireball : MonoBehaviour {
 			// DestroyProjectile(0);
 		}
         
-		transform.Translate (direction * speed * Time.deltaTime);
+		transform.Translate (direction.normalized * speed * Time.deltaTime);
         
     }
 
