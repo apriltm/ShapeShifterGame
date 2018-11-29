@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour {
         AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
 
-        if (changescene != null)
+        if (changescene == null)
         {
             changescene = GameObject.Find("SceneManager").GetComponent<SceneTransition>();
         }
@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour {
             select.enabled = false;
             player.enabled = false;
             AimAttack.enabled = false;
-
+            
             changescene.LoadScene("Game Over");
         }
 
