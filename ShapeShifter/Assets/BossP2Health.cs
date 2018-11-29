@@ -9,6 +9,7 @@ public class BossP2Health : MonoBehaviour
     private GameObject fireball;
     Fireball fireballscript;
     public GameObject contactexplode;
+    public Animator bossanimator;
     // Use this for initialization
     void Start()
     {
@@ -77,6 +78,6 @@ public class BossP2Health : MonoBehaviour
 
     void Die()
     {
-        //nothing
+        bossanimator.SetTrigger("death");
     }
 }
