@@ -52,7 +52,6 @@ public class AttackState : IEnemyState
     {
         if (attackTimer <= 0)
         {
-
             canAttack = true;
             attackTimer = attackCooldown;
         }
@@ -60,7 +59,6 @@ public class AttackState : IEnemyState
         {
             attackTimer -= Time.deltaTime;
             canAttack = false;
-
         }
     }
 
