@@ -43,7 +43,7 @@ public class EnemyMage : Enemy {
 
         Debug.Log("Direction = " + ray.direction);
 
-        Instantiate(projectile, transform.position, rotation);
+        Instantiate(projectile, transform.position, transform.rotation);
         //Instantiate(projectile, transform.position, Quaternion.LookRotation(ray.direction));
     }
     

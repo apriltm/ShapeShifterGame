@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(Forms.PlayerSelect ==1)
         {
-            speed = 7.0f; //base form will the fastest
+            speed = 8.0f; //base form will the fastest
             jumpForce = 13.5f;
         }
         else if (Forms.PlayerSelect == 2)

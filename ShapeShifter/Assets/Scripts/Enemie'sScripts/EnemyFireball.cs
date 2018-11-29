@@ -8,7 +8,7 @@ public class EnemyFireball : MonoBehaviour {
 	public float lifeTime;
 	public float distance;
 	public int damage;
-    public GameObject SFX;
+    //public GameObject SFX;
 
 	public LayerMask whatIsSolid;
 
@@ -49,11 +49,12 @@ public class EnemyFireball : MonoBehaviour {
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
         // Particle Effects
-        Destroy(Instantiate(SFX, transform.position, Quaternion.identity), 0.3f);
+        
+        //Destroy(Instantiate(SFX, transform.position, Quaternion.identity), 0.3f);
     }
 
 	void DestroyProjectile(float time) {
-		Destroy(Instantiate(SFX, transform.position, Quaternion.identity), time);
+		//Destroy(Instantiate(SFX, transform.position, Quaternion.identity), time);
         Destroy(gameObject, time);
 	}
 }
