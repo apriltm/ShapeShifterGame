@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Character {
 
-    private IEnemyState currentState;
+    protected IEnemyState currentState;
     public GameObject Drop;
     public bool drops;
     public GameObject Target { get; set; }
@@ -17,17 +17,18 @@ public class Enemy : Character {
 
     //public GameObject EPoint;
 
-    [SerializeField]
+    // meleeRange not being used
+    //[SerializeField]
     private float meleeRange;
-    private ShakeControl Cam;
+    protected ShakeControl Cam;
 
-    public bool InMeleeRange
+    public bool InAttackRange
     {
         get
         {
             if (Target != null)
             {
-                return Vector2.Distance(transform.position, Target.transform.position) <= meleeRange;
+                return Vector2.Distance(transform.position, Target.transform.position) <= attackRange;
             }
             return false;
         }
@@ -43,12 +44,10 @@ public class Enemy : Character {
 
     // Use this for initialization
     public override void Start () {
+        base.Start();
         Cam = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ShakeControl>();
         drops = false;
 		currentHealth = maxHealth;
-        StartingDir();
-        Debug.Log("Enemy start");
-        base.Start();
         ChangeState(new IdleState());
        
 	}
@@ -63,15 +62,13 @@ public class Enemy : Character {
 
 	// Update is called once per frame
 	void Update () {
-
-        
         if (!IsDead) {
             currentState.Execute();
             LookAtTarget();
         }
 	}
 
-    private void LookAtTarget()
+    protected void LookAtTarget()
     {
         if(Target != null) {
             float xDirection = Target.transform.position.x - transform.position.x;
@@ -111,13 +108,13 @@ public class Enemy : Character {
         return facingRight ? Vector2.right : Vector2.left;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         currentState.OnTriggerEnter(other);
     }
 
 
-	public void TakeDamage(int damage)
+	public override void TakeDamage(int damage)
 	{
         Cam.ShakeCamera(.3f);
 		currentHealth -= damage;
@@ -148,14 +145,8 @@ public class Enemy : Character {
 
     }
 	IEnumerator HurtBlinker(float hurtTime){
-
-		
 		MyAnimator.SetLayerWeight (1, 1f);
-
 		yield return new WaitForSeconds(hurtTime);
-
-		
-
 		MyAnimator.SetLayerWeight (1, 0f);
 	}
 }
