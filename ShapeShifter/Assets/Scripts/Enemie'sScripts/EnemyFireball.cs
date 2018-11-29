@@ -44,8 +44,8 @@ public class EnemyFireball : MonoBehaviour {
         
         RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
         if (hitinfo.collider != null) {
-            // Debug.Log("Colliding with " + hitinfo.collider);
-			if (hitinfo.collider.CompareTag ("Player")) {
+            Debug.Log("Colliding with " + hitinfo.collider);
+			if (hitinfo.collider.CompareTag("Player")) {
                 Debug.Log("Player hit!!!");
                 Audio.PlaySound("BowHit");
                 hitinfo.collider.GetComponent<PlayerHealth>().TakeDamage(damage);
