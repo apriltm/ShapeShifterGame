@@ -44,8 +44,10 @@ public class EnemyMage : Enemy {
         Vector3 relativePos = GameObject.Find("Player").transform.position - transform.position;
         
         Ray ray = new Ray(transform.position, relativePos);
-
+        
         Instantiate(projectile, transform.position, rotation);
+
+        //Instantiate(projectile, transform.position, transform.rotation);
     }
     
 	IEnumerator HurtBlinker(float hurtTime)

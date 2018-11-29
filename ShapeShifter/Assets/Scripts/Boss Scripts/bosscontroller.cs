@@ -21,6 +21,10 @@ public class bosscontroller : MonoBehaviour {
     public float attackRange;
     public int health;
     public bool isdead = false;
+    public GameObject deatheffect1;
+    public GameObject deatheffect2;
+    public GameObject Phase2boss;
+    
 
     void Start () {
 
@@ -31,10 +35,9 @@ public class bosscontroller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (health <= 0)
-        {
-            isdead = true;
-        }
+       
+
+        
         
 	}
 
@@ -53,17 +56,21 @@ public class bosscontroller : MonoBehaviour {
     public void TakeDamage(int damage)
     {
         
-        if (!isdead)
+        if (health > 0)
         {
             health -= damage;
             Audio.PlaySound("EnemyHurt");
-            Debug.Log("BOSS HEALTH IS: " + health);
+           
         }
         else
         {
+
+            Die();
             Audio.PlaySound("EnemyHurt");
 
         }
+
+
     }
 
     public void Move()
@@ -81,6 +88,10 @@ public class bosscontroller : MonoBehaviour {
             transform.Translate(-(playerpos) * (movespeed * Time.deltaTime));
         }
        
+    }
+    public void Die()
+    {
+        bossanimator.SetTrigger("death");
     }
 
 
