@@ -11,15 +11,17 @@ public class bossattackbehaviour : StateMachineBehaviour {
     private int rand;
     private GameObject boss;
     private Vector2 target;
-
+    bosscontroller controlboss;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
         rand = Random.Range(0, 2);
         playerpos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         animator.SetInteger("howmanyattacks", animator.GetInteger("howmanyattacks") + 1);
         Debug.Log("ATTAACKS " + animator.GetInteger("howmanyattacks"));
 
         boss = GameObject.FindGameObjectWithTag("boss");
+        controlboss = boss.GetComponent<bosscontroller>();
 
         if (animator.GetBool("facingright"))
         {
@@ -63,8 +65,9 @@ public class bossattackbehaviour : StateMachineBehaviour {
 
 	
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-      
 
+        controlboss.TakeDamage(50);
+        Debug.Log("BOSS HP IS: " + controlboss.health);
      
 
     }
