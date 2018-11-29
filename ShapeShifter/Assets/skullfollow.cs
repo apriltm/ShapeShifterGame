@@ -5,10 +5,12 @@ using UnityEngine;
 public class skullfollow : MonoBehaviour {
 
     private GameObject player;
+    public float skullHP;
     PlayerHealth playerhp;
     public GameObject contactexplode;
     public float damage;
     public float followspeed;
+    private Fireball fire;
 
     void Start()
     {
@@ -26,13 +28,43 @@ public class skullfollow : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        Debug.Log("Shot");
+        if (collision.tag == "Player")
         {
             Destroy(Instantiate(contactexplode, transform.position, Quaternion.identity), 2.0f);
             Destroy(gameObject);
             playerhp.TakeDamage(damage);
             
         }
+
+        /*if (collision.CompareTag("PlayerArrow"))
+        {
+            Debug.Log("COLLIDING WITH ARROW");
+            fire = collision.gameObject.GetComponent<Fireball>();
+            
+            Destroy(Instantiate(contactexplode, transform.position, Quaternion.identity), 2.0f);
+            Destroy(gameObject);
+            fire.Die();
+        }*/
+
         
     }
+
+    public void TakeDamage(float dam)
+    {
+        skullHP = skullHP - dam;
+        die();
+    }
+
+    void die()
+    {
+        if (skullHP <= 0)
+        {
+            Destroy(Instantiate(contactexplode, transform.position, Quaternion.identity), 2.0f);
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }

@@ -22,10 +22,11 @@ GameObject:
   - component: {fileID: 212479010384173936}
   - component: {fileID: 95881922261039708}
   - component: {fileID: 114605298160077038}
-  - component: {fileID: 60753040702046860}
+  - component: {fileID: 114752001300927164}
+  - component: {fileID: 58656869092114164}
   m_Layer: 0
   m_Name: fireskull
-  m_TagString: Untagged
+  m_TagString: Skull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,14 +38,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1950879895843300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.06, y: -7.74, z: 0}
+  m_LocalPosition: {x: 43.405518, y: -15.400181, z: 0}
   m_LocalScale: {x: 2.3527, y: 2.3527, z: 2.3527}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60753040702046860
-PolygonCollider2D:
+--- !u!58 &58656869092114164
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,38 +56,9 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.96, y: 1.12}
-    newSize: {x: 0.96, y: 1.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.2752445, y: -0.13}
-      - {x: 0.29314488, y: -0.09243267}
-      - {x: 0.2662943, y: -0.074752994}
-      - {x: 0.24629904, y: 0.010000061}
-      - {x: 0.25, y: 0.06}
-      - {x: 0.2678995, y: 0.12944445}
-      - {x: 0.17999949, y: 0.1678391}
-      - {x: 0.040000245, y: 0.1946913}
-      - {x: -0.11265574, y: 0.273148}
-      - {x: -0.16679145, y: 0.061049424}
-      - {x: -0.2209888, y: -0.096852034}
-      - {x: -0.24783614, y: -0.2158027}
-      - {x: -0.23784176, y: -0.2658022}
-      - {x: -0.14574228, y: -0.32895055}
-      - {x: -0.11944622, y: -0.45895052}
-      - {x: -0.14999999, y: -0.47}
-      - {x: -0.06, y: -0.5}
-      - {x: 0.12209885, y: -0.49999982}
-      - {x: 0.19524725, y: -0.43999988}
-      - {x: 0.19524725, y: -0.3500001}
+  m_Offset: {x: -0.06529788, y: -0.16790588}
+  serializedVersion: 2
+  m_Radius: 0.3267962
 --- !u!95 &95881922261039708
 Animator:
   serializedVersion: 3
@@ -116,10 +88,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de16f48229fc01459544af1388b0dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skullHP: 1
   contactexplode: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
     type: 2}
   damage: 6
   followspeed: 8
+--- !u!114 &114752001300927164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950879895843300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59a4b977d6ca8d4ba20283f2c77ca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  contactexplode: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
+    type: 2}
 --- !u!212 &212479010384173936
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -155,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 921422323
   m_SortingLayer: 9
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 255138a21c357c84cbfe1a52320a5efc, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 255138a21c357c84cbfe1a52320a5efc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 212071457264341786}
   - component: {fileID: 95996469635328170}
   - component: {fileID: 114146230078824948}
+  - component: {fileID: 60015363256926338}
   m_Layer: 0
   m_Name: EnemyFireball
   m_TagString: Untagged
@@ -72,6 +73,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60015363256926338
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504694759372998}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.08, y: 0.19}
+    newSize: {x: 0.08, y: 0.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.04, y: 0.095}
+      - {x: -0.04, y: -0.055}
+      - {x: -0.03, y: -0.095}
+      - {x: 0.04, y: -0.095}
+      - {x: 0.04, y: 0.095}
 --- !u!95 &95996469635328170
 Animator:
   serializedVersion: 3
@@ -142,7 +172,6 @@ MonoBehaviour:
   lifeTime: 5
   distance: 1
   damage: 15
-  SFX: {fileID: 1432811798886568, guid: 841baf0595429b645aa01bffc9415d2b, type: 2}
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 3072

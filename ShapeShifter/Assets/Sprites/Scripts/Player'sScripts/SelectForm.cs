@@ -22,8 +22,11 @@ public class SelectForm : MonoBehaviour {
     // Use this for initialization
     void Start() {
         PlayerSelect = 1;
-
-        baseform_inactive.SetActive(false);
+        if (baseform_inactive != null)
+        {
+            baseform_inactive.SetActive(false);
+        }
+        
     }
 
     // Update is called once per frame
@@ -66,10 +69,14 @@ public class SelectForm : MonoBehaviour {
             Archer.SetActive(false);
 
             //UI
-            baseform.SetActive(true);
-            shape1.SetActive(false);
-            shape2.SetActive(false);
-            shape3.SetActive(false);
+            if (baseform != null && shape1 != null && shape2 != null && shape3 != null)
+            {
+                baseform.SetActive(true);
+                shape1.SetActive(false);
+                shape2.SetActive(false);
+                shape3.SetActive(false);
+            }
+            
         }
         else if (PlayerSelect == 2)
         {
@@ -79,10 +86,13 @@ public class SelectForm : MonoBehaviour {
             Archer.SetActive(false);
 
             //UI
-            baseform.SetActive(false);
-            shape1.SetActive(true);
-            shape2.SetActive(false);
-            shape3.SetActive(false);
+            if (baseform != null && shape1 != null && shape2 != null && shape3 != null)
+            {
+                baseform.SetActive(false);
+                shape1.SetActive(true);
+                shape2.SetActive(false);
+                shape3.SetActive(false);
+            }
         }
         else if (PlayerSelect == 3)
         {
@@ -92,10 +102,13 @@ public class SelectForm : MonoBehaviour {
             Archer.SetActive(false);
 
             //UI
-            baseform.SetActive(false);
-            shape1.SetActive(false);
-            shape2.SetActive(true);
-            shape3.SetActive(false);
+            if (baseform != null && shape1 != null && shape2 != null && shape3 != null)
+            {
+                baseform.SetActive(false);
+                shape1.SetActive(false);
+                shape2.SetActive(true);
+                shape3.SetActive(false);
+            }
         }
         else if (PlayerSelect == 4)
         {
@@ -105,10 +118,13 @@ public class SelectForm : MonoBehaviour {
             Archer.SetActive(true);
 
             //UI
-            baseform.SetActive(false);
-            shape1.SetActive(false);
-            shape2.SetActive(false);
-            shape3.SetActive(true);
+            if (baseform != null && shape1 != null && shape2 != null && shape3 != null)
+            {
+                baseform.SetActive(false);
+                shape1.SetActive(false);
+                shape2.SetActive(false);
+                shape3.SetActive(true);
+            }
         }
 
 

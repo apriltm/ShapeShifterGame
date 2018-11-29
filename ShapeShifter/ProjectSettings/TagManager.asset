@@ -14,6 +14,11 @@ TagManager:
   - boss
   - darkness
   - bossp2
+  - PlayerArrow
+  - FxTemporaire
+  - Skull
+  - hitskull
+  - PlayerFireball
   layers:
   - Default
   - TransparentFX

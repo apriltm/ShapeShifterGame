@@ -62,8 +62,9 @@ public class EnemyFireball : MonoBehaviour {
         {
             Audio.PlaySound("BowHit");
             player = collision.GetComponent<PlayerHealth>();
-            player.TakeDamage(damage);
             Destroy(gameObject);
+            player.TakeDamage(damage);
+            
         }
     }
 }

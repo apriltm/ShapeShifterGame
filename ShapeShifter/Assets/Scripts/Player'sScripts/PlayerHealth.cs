@@ -31,7 +31,11 @@ public class PlayerHealth : MonoBehaviour {
         AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
 
-        changescene = GameObject.Find("SceneManager").GetComponent<SceneTransition>();
+        if (changescene != null)
+        {
+            changescene = GameObject.Find("SceneManager").GetComponent<SceneTransition>();
+        }
+        
 	}
 
 	// Update is called once per frame
@@ -67,9 +71,11 @@ public class PlayerHealth : MonoBehaviour {
     public void UpdateHealthBar()
     {
         float ratio = currentHealth / maxHealth;
-        currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        HPText.text = currentHealth.ToString();
-
+        if (currentHPBar != null)
+        {
+            currentHPBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        }
+       
         /*
         if (currentHealth > 60)
         {
