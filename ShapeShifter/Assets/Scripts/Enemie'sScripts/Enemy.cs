@@ -22,6 +22,8 @@ public class Enemy : Character {
     private float meleeRange;
     protected ShakeControl Cam;
 
+    Rigidbody2D rb;
+
     public bool InAttackRange
     {
         get
@@ -49,7 +51,7 @@ public class Enemy : Character {
         drops = false;
 		currentHealth = maxHealth;
         ChangeState(new IdleState());
-       
+        rb = GetComponent<Rigidbody2D>();
 	}
 
     void StartingDir()
@@ -61,7 +63,9 @@ public class Enemy : Character {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        rb.velocity = new Vector2(0, rb.velocity.y);
         if (!IsDead) {
             currentState.Execute();
             LookAtTarget();
@@ -86,7 +90,7 @@ public class Enemy : Character {
         currentState = newState;
         currentState.Enter(this);
     }
-
+    
     public void Move()
     {
         if (!Attack)
@@ -94,12 +98,11 @@ public class Enemy : Character {
             MyAnimator.SetFloat("Speed", 1);
             transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
         }
-
     }
 
     public void setSpeed(float speed)
     {
-        movementSpeed = speed; 
+        movementSpeed = speed;
     }
 
 
@@ -130,7 +133,6 @@ public class Enemy : Character {
 
 			Instantiate (Drop, transform.position, transform.rotation);
 			Destroy (gameObject, 1.5f);
-
 		}
 	}
 

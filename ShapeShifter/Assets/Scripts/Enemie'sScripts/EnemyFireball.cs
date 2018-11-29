@@ -8,7 +8,7 @@ public class EnemyFireball : MonoBehaviour {
 	public float lifeTime;
 	public float distance;
 	public int damage;
-    public GameObject SFX;
+    private PlayerHealth player;
 
 	public LayerMask whatIsSolid;
 
@@ -23,7 +23,6 @@ public class EnemyFireball : MonoBehaviour {
         playerPosition = GameObject.Find("Player").transform.position;
         direction = playerPosition - transform.position;
         
-        Debug.Log("Fireball Created");
         Debug.DrawRay(transform.position, direction, Color.red, 3);
 
         var rad = Mathf.Atan2(direction.y, direction.x);
@@ -35,30 +34,36 @@ public class EnemyFireball : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        /*RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitinfo.collider != null) {
 			if (hitinfo.collider.CompareTag("Player")) {
-                Debug.Log("Player hit!!!");
                 Audio.PlaySound("BowHit");
                 hitinfo.collider.GetComponent<PlayerHealth>().TakeDamage(damage);
                 DestroyProjectile(0);
 			}
-		}
+		}*/
         
         // Moves the fireball
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
         // Particle Effects
-        Destroy(Instantiate(SFX, transform.position, Quaternion.identity), 0.3f);
+        
+        //Destroy(Instantiate(SFX, transform.position, Quaternion.identity), 0.3f);
     }
 
 	void DestroyProjectile(float time) {
-		Destroy(Instantiate(SFX, transform.position, Quaternion.identity), time);
+		//Destroy(Instantiate(SFX, transform.position, Quaternion.identity), time);
         Destroy(gameObject, time);
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            Audio.PlaySound("BowHit");
+            player = collision.GetComponent<PlayerHealth>();
+            player.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
 }
-/*
- * fireball invisible
- * not going towards player
- * 
- */ 

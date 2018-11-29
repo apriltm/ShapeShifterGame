@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4487603380381610
 Transform:
   m_ObjectHideFlags: 1
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1518757856832574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.139, y: -0.112, z: 0}
+  m_LocalPosition: {x: 0.236, y: -0.077, z: 0}
   m_LocalScale: {x: 0.13614447, y: 0.12804098, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4818249606012552}
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1561857752662856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.78, y: -9.58, z: 0}
-  m_LocalScale: {x: 7.3451395, y: 7.8100004, z: 5}
+  m_LocalPosition: {x: 70.4, y: -9.89, z: 0}
+  m_LocalScale: {x: 7.2533255, y: 6.213831, z: 5}
   m_Children:
   - {fileID: 4487603380381610}
   m_Father: {fileID: 0}
@@ -106,9 +106,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022931034, y: -0.1397778}
+  m_Offset: {x: 0.025321424, y: -0.1847413}
   serializedVersion: 2
-  m_Radius: 0.1660332
+  m_Radius: 0.12106944
 --- !u!61 &61201253348812264
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -180,6 +180,9 @@ MonoBehaviour:
   attackRange: 1.4
   health: 100
   isdead: 0
+  deatheffect1: {fileID: 100000, guid: 7b56cd9b663f23f429e131a54ec87db0, type: 2}
+  deatheffect2: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 2}
+  Phase2boss: {fileID: 0}
 --- !u!212 &212352144713293618
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -213,7 +216,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -926175953
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb03b61b825a52045b60178e3ba5140d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

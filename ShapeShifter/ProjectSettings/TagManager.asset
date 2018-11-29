@@ -13,6 +13,7 @@ TagManager:
   - ScreenShake
   - boss
   - darkness
+  - bossp2
   layers:
   - Default
   - TransparentFX
