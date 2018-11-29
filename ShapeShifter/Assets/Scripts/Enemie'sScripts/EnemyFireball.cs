@@ -20,21 +20,23 @@ public class EnemyFireball : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        
-        
         playerPosition = GameObject.Find("Player").transform.position;
         direction = playerPosition - transform.position;
         
         Debug.Log("Fireball Created");
         Debug.DrawRay(transform.position, direction, Color.red, 3);
+        Vector3 norm = new Vector3(direction.normalized.x, 0, direction.normalized.y);
+        Debug.Log(direction);
+        Debug.Log(Quaternion.LookRotation(Vector3.forward));
+        //transform.rotation = Quaternion.LookRotation(direction.normalized, Vector3.right);
 
+        var rad = Mathf.Atan2(direction.y, direction.x);
+        var deg = rad * (180 / Mathf.PI);
 
-        //DestroyProjectile(lifeTime);
+        transform.rotation = Quaternion.Euler(0, 0, deg + 270);
 
-        //Vector3 playerPos = new Vector3(player.position.x, player.position.y + 1, player.position.z);
-
-        // Aim bullet in player's direction.
-        //transform.rotation = Quaternion.LookRotation(playerPos);
+        //transform.rotation = Quaternion.Euler(0, 0, direction.x);
+        //transform.LookAt(GameObject.Find("Player").transform);
     }
 
     // Update is called once per frame
@@ -42,9 +44,9 @@ public class EnemyFireball : MonoBehaviour {
     {
         //transform.position += transform.forward * speed * Time.deltaTime;
         
-        RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
+        //RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
+        RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitinfo.collider != null) {
-            Debug.Log("Colliding with " + hitinfo.collider);
 			if (hitinfo.collider.CompareTag("Player")) {
                 Debug.Log("Player hit!!!");
                 Audio.PlaySound("BowHit");
@@ -54,13 +56,16 @@ public class EnemyFireball : MonoBehaviour {
 			// DestroyProjectile(0);
 		}
         
-		transform.Translate (direction.normalized * speed * Time.deltaTime);
-        
+		//transform.Translate(direction.normalized * speed * Time.deltaTime);
+        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+
+        Destroy(Instantiate(SFX, transform.position, Quaternion.identity), 0.3f);
     }
 
 	void DestroyProjectile(float time) {
         //Instantiate (destroyEffect , transform.position, Quaternion.identity);
-		Destroy(Instantiate(SFX, transform.position, Quaternion.identity),time);
+		Destroy(Instantiate(SFX, transform.position, Quaternion.identity), time);
         Destroy(gameObject, time);
 	}
 }

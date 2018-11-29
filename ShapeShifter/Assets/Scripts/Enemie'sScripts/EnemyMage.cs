@@ -31,16 +31,19 @@ public class EnemyMage : Enemy {
 
     public void ShootFireball()
     {
-        
+
+        Vector3 difference = GameObject.Find("Player").transform.position - transform.position;
+        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //convert angle to degrees
+        var rotation = Quaternion.Euler(0f, 0f, rotZ + 0);
+
+
         Vector3 relativePos = GameObject.Find("Player").transform.position - transform.position;
-        //Debug.DrawRay(transform.position, relativePos, Color.red, 3);
         
         Ray ray = new Ray(transform.position, relativePos);
-        // the second argument, upwards, defaults to Vector3.up
-        //Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-        Debug.Log("Shoot Fireball");
-        
-        Instantiate(projectile, transform.position, transform.rotation);
+
+        Debug.Log("Direction = " + ray.direction);
+
+        Instantiate(projectile, transform.position, rotation);
         //Instantiate(projectile, transform.position, Quaternion.LookRotation(ray.direction));
     }
     

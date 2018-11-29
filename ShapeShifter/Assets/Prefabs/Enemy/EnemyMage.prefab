@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0.5
-  facingRight: 0
+  facingRight: 1
   maxHealth: 200
   currentHealth: 200
   Drop: {fileID: 1388223377404892, guid: 15808a6f870c09c40a42fb8489383663, type: 2}
