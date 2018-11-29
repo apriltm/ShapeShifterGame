@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
     public bool wallCheck;
     public bool isGrounded;
 
+    public int maxJumps;
+    private int jumpsLeft;
     
 
     // Use this for initialization
@@ -26,7 +28,9 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         Forms = gameObject.GetComponent<SelectForm>();
         animator = gameObject.GetComponent<AnimatorController>();
-        
+
+        maxJumps = 2;
+        jumpsLeft = maxJumps;
     }
 	
 	// Update is called once per frame
@@ -103,7 +107,9 @@ public class PlayerMovement : MonoBehaviour {
         {
             animator.MainAnimator.SetBool("isJumping", false);
             animator.MainAnimator.SetBool("isFalling", false);
-            extraJump = true;
+            //extraJump = true;
+
+            jumpsLeft = maxJumps;
            
         }
         if (isGrounded == false)
@@ -119,17 +125,20 @@ public class PlayerMovement : MonoBehaviour {
             
             rb.velocity = Vector2.up * jumpForce;
             if (Forms.PlayerSelect != 1)
-                extraJump = false;
+                jumpsLeft = 0;
+            //extraJump = false;
+            jumpsLeft--;
             
         }
-        else if (Input.GetButtonDown("Jump")  
-            && extraJump)
+        else if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
         {
             
             HandleJumpAndFall();
             Audio.PlaySound("Jumping");
             rb.velocity = Vector2.up * jumpForce;
-            extraJump = false;
+            //extraJump = false;
+
+            jumpsLeft--;
         }
 
 
