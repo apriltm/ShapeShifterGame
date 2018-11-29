@@ -23,11 +23,11 @@ public class LevelLoader : MonoBehaviour {
     IEnumerator LoadAsynchronously (int sceneNum)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneNum);
+        loaderanim.SetTrigger("end");
 
 
 
-        
-        
+
         while (!operation.isDone)
         {
             if (operation.progress < 0.9f)
@@ -61,4 +61,13 @@ public class LevelLoader : MonoBehaviour {
         loadProgress = "Load Complete";
         Debug.Log(loadProgress);
     }
+
+
+    public void ReloadLevel()
+    {
+
+        SceneManager.LoadScene(sceneName: "NEWNATHAN");
+        loaderanim.SetTrigger("end");
+    }
+   
 }

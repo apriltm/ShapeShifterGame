@@ -1007,8 +1007,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2053558850}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+        m_MethodName: ReloadLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1213,6 +1213,11 @@ Prefab:
       propertyPath: slider
       value: 
       objectReference: {fileID: 1883721066}
+    - target: {fileID: 114860285667526844, guid: 089bdb67e42bcb241b56f333d425e908,
+        type: 2}
+      propertyPath: loaderanim
+      value: 
+      objectReference: {fileID: 1258395342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089bdb67e42bcb241b56f333d425e908, type: 2}
   m_IsPrefabAsset: 0
