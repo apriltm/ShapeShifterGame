@@ -9,8 +9,6 @@ public class AttackState : IEnemyState
     private float attackTimer;
     public float attackCooldown = 2.0f;
     private bool canAttack = true;
-   
-
 
     public void Enter(Enemy enemy)
     {
@@ -66,10 +64,8 @@ public class AttackState : IEnemyState
     {
         if (canAttack)
         {
-            Debug.Log("Attack Player");
             canAttack = false;
             enemy.MyAnimator.SetTrigger("Attack");
-            //enemy.EPoint.SetActive(true);
         }
     }
     

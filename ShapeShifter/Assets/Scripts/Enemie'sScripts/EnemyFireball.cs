@@ -23,7 +23,6 @@ public class EnemyFireball : MonoBehaviour {
         playerPosition = GameObject.Find("Player").transform.position;
         direction = playerPosition - transform.position;
         
-        Debug.Log("Fireball Created");
         Debug.DrawRay(transform.position, direction, Color.red, 3);
 
         var rad = Mathf.Atan2(direction.y, direction.x);
@@ -38,7 +37,6 @@ public class EnemyFireball : MonoBehaviour {
         RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitinfo.collider != null) {
 			if (hitinfo.collider.CompareTag("Player")) {
-                Debug.Log("Player hit!!!");
                 Audio.PlaySound("BowHit");
                 hitinfo.collider.GetComponent<PlayerHealth>().TakeDamage(damage);
                 DestroyProjectile(0);
@@ -57,8 +55,3 @@ public class EnemyFireball : MonoBehaviour {
         Destroy(gameObject, time);
 	}
 }
-/*
- * fireball invisible
- * not going towards player
- * 
- */ 
