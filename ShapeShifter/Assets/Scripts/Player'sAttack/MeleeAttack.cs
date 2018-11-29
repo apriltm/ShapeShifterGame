@@ -6,9 +6,11 @@ public class MeleeAttack : MonoBehaviour {
 
     public Animator animator;
     private PlayerMovement player;
-    
+    float temp;
+    private float startFreeze;
+    private float FreezeTimer;
 
-    private float timeBtwAttack;
+    private float timeBtwAttack =.5f;
     public float startTimeBtwAttack;
 
     public Transform attackPos;
@@ -30,24 +32,42 @@ public class MeleeAttack : MonoBehaviour {
 
     void AttackAnimation()
     {
-        if (Input.GetMouseButtonDown(0) && player.isGrounded && timeBtwAttack <= 0)
+        if (Input.GetMouseButtonDown(0) && timeBtwAttack <= 0 )
         {
-            Cam.ShakeCamera(.3f); 
-            animator.SetBool("isAttacking", true);
-            timeBtwAttack = startTimeBtwAttack;
-            player.canMove = false;
-            Invoke("resetAttack", .25f);
+            if (!player.isGrounded)
+            {
+                animator.SetTrigger("AirAttack");
+                Cam.ShakeCamera(.3f);
+                //animator.SetBool("isAttacking", true);
+                timeBtwAttack = startTimeBtwAttack;
+                player.canMove = false;
+                Invoke("resetAttack", .25f);
+            }
+            if (player.isGrounded)
+            {
+                Cam.ShakeCamera(.3f);
+                animator.SetBool("isAttacking", true);
+                timeBtwAttack = startTimeBtwAttack;
+                player.canMove = false;
+                Invoke("resetAttack", .25f);
+            }
         } else
         {
+
+            //FreezeTimer -= Time.deltaTime;
             timeBtwAttack -= Time.deltaTime;
             animator.SetBool("isAttacking", false);
         }
+
+
     }
 
     void resetAttack()
     {
         player.canMove = true;
     }
+
+
 
     void DealDamage(int damage)
     {

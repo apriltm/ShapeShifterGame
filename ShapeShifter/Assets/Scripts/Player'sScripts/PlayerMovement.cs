@@ -148,6 +148,11 @@ public class PlayerMovement : MonoBehaviour {
                 animator.MainAnimator.SetBool("isJumping", false);
                 animator.MainAnimator.SetBool("isFalling", true);
             }
+            else
+            {
+                animator.MainAnimator.SetBool("isJumping", false);
+                animator.MainAnimator.SetBool("isFalling", false);
+            }
         }
     }
 
@@ -158,7 +163,7 @@ public class PlayerMovement : MonoBehaviour {
             transform.parent = other.transform;
         }
 
-        Debug.Log("HITTING SOMETHING");
+        //Debug.Log("HITTING SOMETHING");
     }
 
     void OnCollisionExit2D(Collision2D other)

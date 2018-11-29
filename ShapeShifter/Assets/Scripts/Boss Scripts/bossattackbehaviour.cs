@@ -8,32 +8,38 @@ public class bossattackbehaviour : StateMachineBehaviour {
     private SpriteRenderer playerrender;
     public float speed;
     private float distance;
-    
+    private int rand;
+    private GameObject boss;
+    private Vector2 target;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        rand = Random.Range(0, 2);
         playerpos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
         animator.SetInteger("howmanyattacks", animator.GetInteger("howmanyattacks") + 1);
-        Debug.Log("ATTACK # " + animator.GetInteger("howmanyattacks"));
-        
-    }
-	
-	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        
+        Debug.Log("ATTAACKS " + animator.GetInteger("howmanyattacks"));
+
+        boss = GameObject.FindGameObjectWithTag("boss");
+
         if (animator.GetBool("facingright"))
         {
-            Vector2 target = new Vector2(playerpos.position.x + 10f, animator.transform.position.y);
-            animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
+            target = new Vector2(playerpos.position.x + 7f, boss.transform.position.y);
+           
         }
         else
         {
-            Vector2 target = new Vector2(playerpos.position.x - 10f, animator.transform.position.y);
-            animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
+            target = new Vector2(playerpos.position.x - 7f, boss.transform.position.y);
+           
         }
-        
+    }
+	
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
-        distance = animator.transform.position.x - playerpos.position.x;
+        boss.transform.position = Vector2.MoveTowards(boss.transform.position, target, speed * Time.deltaTime);
+
+
+
+        distance = boss.transform.position.x - playerpos.position.x;
         if (distance < 0)
         {
             
@@ -41,26 +47,27 @@ public class bossattackbehaviour : StateMachineBehaviour {
         }
 
        
-        
-        if ((distance > 5) && (animator.GetInteger("howmanyattacks") < 3))
+
+        if (distance > 5)
         {
            animator.SetTrigger("run");
+           
                 
-        }else if (animator.GetInteger("howmanyattacks") >= 3)
-        {
-            animator.SetTrigger("idle");
-            animator.SetInteger("howmanyattacks", 0);
         }
+
         
-       
-        
+
+
+
     }
 
 	
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        
-        
-	}
+      
+
+     
+
+    }
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
 	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

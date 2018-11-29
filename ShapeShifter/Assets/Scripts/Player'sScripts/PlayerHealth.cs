@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
     
@@ -13,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
     private MeleeAttack MAattack;
     private Aimming AimAttack;
     private float hurtTime = 1.0f;
-    
+    SceneTransition changescene;
 
     public Image currentHPBar;
     public Text HPText;
@@ -29,6 +30,8 @@ public class PlayerHealth : MonoBehaviour {
         MAattack = gameObject.GetComponentInChildren<MeleeAttack>();
         AimAttack = gameObject.GetComponentInChildren<Aimming>();
         UpdateHealthBar();
+
+        changescene = GameObject.Find("SceneManager").GetComponent<SceneTransition>();
 	}
 
 	// Update is called once per frame
@@ -48,9 +51,9 @@ public class PlayerHealth : MonoBehaviour {
             select.enabled = false;
             player.enabled = false;
             AimAttack.enabled = false;
-			
-			FindObjectOfType<GameManager>().EndGame();
-		}
+
+            changescene.LoadScene("Game Over");
+        }
 
 	}
 

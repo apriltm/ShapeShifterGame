@@ -7,24 +7,30 @@ public class runbehaviour : StateMachineBehaviour {
     private float distance;
     private SpriteRenderer bossrender;
     public float speed;
+    private GameObject boss;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         playerpos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         bossrender = GameObject.FindGameObjectWithTag("boss").GetComponent<SpriteRenderer>();
+        boss = GameObject.FindGameObjectWithTag("boss");
     }
 
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-     
+        if (animator.GetInteger("howmanyattacks") == 4)
+        {
+            animator.SetTrigger("idle");
 
-        Vector2 target = new Vector2(playerpos.position.x, animator.transform.position.y);
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
+        }
+
+        Vector2 target = new Vector2(playerpos.position.x, boss.transform.position.y);
+        boss.transform.position = Vector2.MoveTowards(boss.transform.position, target, speed * Time.deltaTime);
         
-        distance = animator.transform.position.x - playerpos.position.x;
+        distance = boss.transform.position.x - playerpos.position.x;
         if (distance < 0)
         {
             bossrender.flipX = false;
-            animator.SetBool("facingright", true);
+            animator.SetBool("facingright", true); 
             distance = distance * (-1);
         }
         else
@@ -35,7 +41,7 @@ public class runbehaviour : StateMachineBehaviour {
 
         if (distance <= 5)
         {
-            animator.SetTrigger("attack");
+            animator.SetTrigger("chargeforattack");
         }
 
 
